@@ -28,6 +28,11 @@
 @property (weak, nonatomic) IBOutlet UIButton *avatarChangeButton;
 @property (weak, nonatomic) IBOutlet UIButton *findLocationButton;
 @property (weak, nonatomic) IBOutlet UILabel *findLocationLabel;
+@property (weak, nonatomic) IBOutlet UITextField *websiteTextField;
+@property (weak, nonatomic) IBOutlet UIButton *websiteButton;
+@property (weak, nonatomic) IBOutlet UIButton *saveChangesButton;
+@property (weak, nonatomic) IBOutlet UILabel *tagsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *tagsListingLabel;
 
 @end
 
@@ -61,13 +66,20 @@
         self.usernameTextField.enabled = NO;
         self.locationTextField.borderStyle = UITextBorderStyleNone;
         self.locationTextField.enabled = NO;
+        self.saveChangesButton.alpha = 0.0;
+
+        // choose what to call the searched leader
+        // deal with the website button check
+        
+        self.contactButton.layer.cornerRadius = 5.0f;
     }
     else
     {
         // this is if it's your own profile
         self.currentUser = [PFUser currentUser];
 
-        self.contactButton.layer.cornerRadius = 5.0f;
+        self.websiteButton.alpha = 0.0;
+        self.contactButton.alpha = 0.0;
         
         self.findLocationLabel.layer.cornerRadius = 5.0f;
         self.findLocationButton.alpha = 1.0;
@@ -213,6 +225,43 @@
     NSLog(@"reverseGeocoder:%@ didFailWithError:%@", geocoder, error);
     
     // put an alert here that says they aren't connected to the internet or something to that effect
+    UIAlertView *noConnectionAlert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"You must have an internet connection to find your location." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    [noConnectionAlert show];
+}
+
+#pragma mark - text view related methods
+
+- (IBAction)onUsernameDidEndOnExit:(id)sender
+{
+    [self.usernameTextField endEditing:YES];
+}
+
+- (IBAction)onExpertiseTextViewDidEndOnExit:(id)sender
+{
+    [self.expertiseTextField endEditing:YES];
+}
+
+- (IBAction)onExpertiseTextViewEditingDidEnd:(id)sender
+{
+    NSLog(@"ya");
+    if (![self.expertiseTextField.text isEqualToString:self.currentUser[@"expertise"]])
+    {
+        NSLog(@"different");
+        self.currentUser[@"expertise"] = self.expertiseTextField.text;
+        [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            UIAlertView *needTagsAlert = [[UIAlertView alloc] initWithTitle:@"Thanks!" message:@"Please add one or more tags to this Expertise so users can better find you!" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+            [needTagsAlert show];
+        }];
+    }
+    [self.expertiseTextField endEditing:YES];
+}
+
+- (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    // the user clicked one of the OK/Cancel buttons
+    if (buttonIndex == 0)
+    {
+        [self performSegueWithIdentifier:@"ExpertiseEditedSegue" sender:self];
+    }
 }
 
 #pragma mark - button methods
@@ -223,6 +272,23 @@
     self.locationManager.delegate = self;
     self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
     [self.locationManager startUpdatingLocation];
+}
+
+- (IBAction)onContactButtonPressed:(id)sender
+{
+    
+}
+
+- (IBAction)onSaveChangesButtonPressed:(id)sender
+{
+    self.currentUser.username = self.usernameTextField.text;
+    self.currentUser[@"expertise"] = self.expertiseTextField.text;
+//    self.currentUser.password = self.passwordTextField.text;
+//    self.currentUser.email = self.emailTextField.text;
+    self.currentUser[@"aboutMe"] = self.aboutMeTextView.text;
+    self.currentUser[@"website"] = self.websiteTextField.text;
+    
+    [self.currentUser saveInBackground];
 }
 
 - (IBAction)onAvatarChangeButtonPressed:(id)sender

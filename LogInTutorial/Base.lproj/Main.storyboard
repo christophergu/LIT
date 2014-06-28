@@ -107,7 +107,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="LS5-Jf-LY4">
-                                        <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LS5-Jf-LY4" id="7r3-mm-THP">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -142,10 +142,10 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gGD-i3-sPz">
-                                        <rect key="frame" x="0.0" y="-22" width="320" height="502"/>
+                                        <rect key="frame" x="0.0" y="-87" width="320" height="583"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default_user" translatesAutoresizingMaskIntoConstraints="NO" id="ayM-lM-obi">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default_user" translatesAutoresizingMaskIntoConstraints="NO" id="ayM-lM-obi">
                                                 <rect key="frame" x="107" y="20" width="110" height="110"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             </imageView>
@@ -154,12 +154,19 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="onUsernameDidEndOnExit:" destination="ek2-Ss-HTz" eventType="editingDidEndOnExit" id="OpP-TS-Mqu"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Expertise / What You Can Share" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1xM-2V-qbU">
                                                 <rect key="frame" x="45" y="176" width="235" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="onExpertiseTextViewDidEndOnExit:" destination="ek2-Ss-HTz" eventType="editingDidEndOnExit" id="6ky-Hi-sUF"/>
+                                                    <action selector="onExpertiseTextViewEditingDidEnd:" destination="ek2-Ss-HTz" eventType="editingDidEnd" id="uMX-gY-Kse"/>
+                                                </connections>
                                             </textField>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HoJ-Nt-uKw">
                                                 <rect key="frame" x="45" y="252" width="235" height="128"/>
@@ -182,12 +189,15 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Usi-OO-FL3">
-                                                <rect key="frame" x="45" y="426" width="235" height="30"/>
+                                                <rect key="frame" x="45" y="473" width="235" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.81960784310000001" green="0.92941176469999998" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Contact">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="onContactButtonPressed:" destination="ek2-Ss-HTz" eventType="touchUpInside" id="PHm-R7-btM"/>
+                                                </connections>
                                             </button>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OQ5-Sh-fxe">
                                                 <rect key="frame" x="45" y="214" width="235" height="30"/>
@@ -220,12 +230,36 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dpg-mn-G9P">
-                                                <rect key="frame" x="45" y="464" width="235" height="30"/>
+                                                <rect key="frame" x="45" y="511" width="235" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Save Changes">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="onSaveChangesButtonPressed:" destination="ek2-Ss-HTz" eventType="touchUpInside" id="faS-Y0-zes"/>
+                                                </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P3k-Rd-qod">
+                                                <rect key="frame" x="45" y="388" width="235" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Website Button">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="tags:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7y2-r2-ZA8">
+                                                <rect key="frame" x="45" y="422" width="30" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="13"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="197" translatesAutoresizingMaskIntoConstraints="NO" id="sbn-jC-4Ds">
+                                                <rect key="frame" x="83" y="419" width="197" height="46"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="13"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     </view>
@@ -263,9 +297,15 @@
                         <outlet property="findLocationLabel" destination="CDb-lW-vH2" id="3BN-3n-fbk"/>
                         <outlet property="locationTextField" destination="OQ5-Sh-fxe" id="VwL-oh-otd"/>
                         <outlet property="logoutBarButtonItem" destination="6op-l9-pq4" id="wGf-Yb-kBv"/>
+                        <outlet property="saveChangesButton" destination="Dpg-mn-G9P" id="ZPy-4V-Zye"/>
                         <outlet property="scrollView" destination="abY-i9-1E1" id="imn-gu-uLB"/>
+                        <outlet property="tagsLabel" destination="7y2-r2-ZA8" id="X11-nL-Bvm"/>
+                        <outlet property="tagsListingLabel" destination="sbn-jC-4Ds" id="bwe-Ca-COe"/>
                         <outlet property="uiViewForScrollView" destination="gGD-i3-sPz" id="fUL-RX-n6U"/>
                         <outlet property="usernameTextField" destination="Mf3-TB-3EK" id="yHB-8H-j5S"/>
+                        <outlet property="websiteButton" destination="P3k-Rd-qod" id="6kD-lD-M2d"/>
+                        <outlet property="websiteTextField" destination="h76-eT-SJx" id="UZY-pQ-lZ5"/>
+                        <segue destination="FwW-Uh-qZs" kind="modal" identifier="ExpertiseEditedSegue" id="x2x-jk-G7d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F06-4P-iXi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -296,7 +336,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TagsReuseCellID" id="8mc-e5-sHc" customClass="TagsCollectionViewCell">
-                                        <rect key="frame" x="0.0" y="64" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -400,6 +440,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="x2x-jk-G7d"/>
         <segue reference="TN2-a3-TRZ"/>
     </inferredMetricsTieBreakers>
 </document>
