@@ -8,6 +8,7 @@
 
 #import "TagsViewController.h"
 #import "TagsCollectionViewCell.h"
+#import <Parse/Parse.h>
 
 @interface TagsViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 @property (copy, nonatomic) NSArray *categoriesArray;
@@ -16,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *tagImageView02;
 @property (weak, nonatomic) IBOutlet UIImageView *tagImageView03;
 @property (strong, nonatomic) NSMutableArray *selectedTagsMutableArray;
+@property (strong, nonatomic) PFUser *currentUser;
 
 
 
@@ -27,7 +29,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    self.currentUser = [PFUser currentUser];
+    
     NSDictionary *categoryArt = @{@"Art": [UIImage imageNamed:@"art"]};
     NSDictionary *categoryCooking = @{@"Cooking": [UIImage imageNamed:@"cooking"]};
     self.categoriesArray = @[categoryArt, categoryCooking];
@@ -72,7 +76,26 @@
 
 - (IBAction)onDoneButtonPressed:(id)sender
 {
-    [self performSegueWithIdentifier:@"TagsToResultsSegue" sender:self];
+    NSLog(@"%@",self.selectedTagsMutableArray);
+    if (self.selectedTagsMutableArray && (self.selectedTagsMutableArray.count > 0))
+    {
+        if (self.choosingTagsForExpertise)
+        {
+            self.currentUser[@"tags"] = self.selectedTagsMutableArray;
+            [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                [self performSegueWithIdentifier:@"UnwindFromTagsSegue" sender:self];
+            }];
+        }
+        else
+        {
+            [self performSegueWithIdentifier:@"TagsToResultsSegue" sender:self];
+        }
+    }
+    else
+    {
+        UIAlertView *tagsRequiredAlert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"You need to select at least one tag." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [tagsRequiredAlert show];
+    }
 }
 
 @end

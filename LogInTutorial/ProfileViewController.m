@@ -7,6 +7,7 @@
 //
 
 #import "ProfileViewController.h"
+#import "TagsViewController.h"
 #import <Parse/Parse.h>
 #import <MapKit/MapKit.h>
 #import <AddressBook/AddressBook.h>
@@ -291,6 +292,8 @@
     [self.currentUser saveInBackground];
 }
 
+#pragma mark - image picker methods
+
 - (IBAction)onAvatarChangeButtonPressed:(id)sender
 {
     UIImagePickerController * picker = [[UIImagePickerController alloc] init];
@@ -327,6 +330,20 @@
     }];
     
     [user saveInBackground];
+}
+
+- (IBAction)unwindFromTags:(UIStoryboardSegue *)unwindSegue
+{
+    
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"ExpertiseEditedSegue"])
+    {
+        TagsViewController *tvc = segue.destinationViewController;
+        tvc.choosingTagsForExpertise = 1;
+    }
 }
 
 @end
