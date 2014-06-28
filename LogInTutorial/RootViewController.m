@@ -7,6 +7,8 @@
 //
 
 #import "RootViewController.h"
+#import "ProfileViewController.h"
+#import <Parse/Parse.h>
 
 @interface RootViewController ()
 
@@ -14,36 +16,38 @@
 
 @implementation RootViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning
+- (IBAction)onLoginButtonPressed:(id)sender
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    PFUser *userNow = [PFUser currentUser];
+    if (userNow)
+    {
+        [self performSegueWithIdentifier:@"RootToProfileSegue" sender:self];
+    }
+    else
+    {
+        [self performSegueWithIdentifier:@"RootToLogInSegue" sender:self];
+    }
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (IBAction)unwindToBeginning:(UIStoryboardSegue *)unwindSegue
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    [PFUser logOut];
 }
-*/
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"RootToProfileSegue"])
+    {
+        ProfileViewController *pvc = segue.destinationViewController;
+        pvc.ownProfile = 1;
+    }
+}
+
 
 @end

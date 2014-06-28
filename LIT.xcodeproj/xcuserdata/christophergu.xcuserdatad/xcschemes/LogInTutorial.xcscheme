@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DF5D6063192325450022C498"
-               BuildableName = "LogInTutorial.app"
-               BlueprintName = "LogInTutorial"
-               ReferencedContainer = "container:LogInTutorial.xcodeproj">
+               BuildableName = "LIT.app"
+               BlueprintName = "LIT"
+               ReferencedContainer = "container:LIT.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DF5D6084192325450022C498"
-               BuildableName = "LogInTutorialTests.xctest"
-               BlueprintName = "LogInTutorialTests"
-               ReferencedContainer = "container:LogInTutorial.xcodeproj">
+               BuildableName = "LITTests.xctest"
+               BlueprintName = "LITTests"
+               ReferencedContainer = "container:LIT.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DF5D6063192325450022C498"
-            BuildableName = "LogInTutorial.app"
-            BlueprintName = "LogInTutorial"
-            ReferencedContainer = "container:LogInTutorial.xcodeproj">
+            BuildableName = "LIT.app"
+            BlueprintName = "LIT"
+            ReferencedContainer = "container:LIT.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DF5D6063192325450022C498"
-            BuildableName = "LogInTutorial.app"
-            BlueprintName = "LogInTutorial"
-            ReferencedContainer = "container:LogInTutorial.xcodeproj">
+            BuildableName = "LIT.app"
+            BlueprintName = "LIT"
+            ReferencedContainer = "container:LIT.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DF5D6063192325450022C498"
-            BuildableName = "LogInTutorial.app"
-            BlueprintName = "LogInTutorial"
-            ReferencedContainer = "container:LogInTutorial.xcodeproj">
+            BuildableName = "LIT.app"
+            BlueprintName = "LIT"
+            ReferencedContainer = "container:LIT.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

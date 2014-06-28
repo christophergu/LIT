@@ -7,43 +7,84 @@
 //
 
 #import "LogInViewController.h"
+#import "ProfileViewController.h"
 
-@interface LogInViewController ()
+@interface LogInViewController ()<PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 
 @end
 
 @implementation LogInViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+//    PFUser *userNow = [PFUser currentUser];
+//    if (userNow)
+//    {
+//        [self performSegueWithIdentifier:@"LogInToProfileSegue" sender:self];
+//    }
+    
+    self.delegate = self;
+    self.signUpController.delegate = self;
 }
 
-- (void)didReceiveMemoryWarning
+
+- (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+//    if (self.becauseLoginRequired)
+//    {
+//        
+//        
+//        [self performSegueWithIdentifier:@"LoginToConversationVCSegue" sender:self];
+//        
+//        NSMutableArray *navigationArray = [[NSMutableArray alloc] initWithArray:self.navigationController.viewControllers];
+//        [navigationArray removeObjectAtIndex:4];
+//        self.navigationController.viewControllers = navigationArray;
+//    }
+//    else
+//    {
+        [self performSegueWithIdentifier:@"LogInToProfileSegue" sender:self];
+        [self removeLogInSignUpFromStack];
+//    }
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+//    if (self.becauseLoginRequired)
+//    {
+//        [self performSegueWithIdentifier:@"LoginToConversationVCSegue" sender:self];
+//        
+//        NSMutableArray *navigationArray = [[NSMutableArray alloc] initWithArray:self.navigationController.viewControllers];
+//        [navigationArray removeObjectAtIndex:4];
+//        self.navigationController.viewControllers = navigationArray;
+//    }
+//    else
+//    {
+        [self dismissViewControllerAnimated:NO completion:^{
+            [self performSegueWithIdentifier:@"LogInToProfileSegue" sender:self];
+        }];
+        
+        [self removeLogInSignUpFromStack];
+//    }
 }
-*/
+
+- (void)removeLogInSignUpFromStack
+{
+    NSMutableArray *navigationArray = [[NSMutableArray alloc] initWithArray:self.navigationController.viewControllers];
+    [navigationArray removeObjectAtIndex:1];
+    self.navigationController.viewControllers = navigationArray;
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"LogInToProfileSegue"])
+    {
+        ProfileViewController *pvc = segue.destinationViewController;
+        pvc.ownProfile = 1;
+    }
+}
+
 
 @end

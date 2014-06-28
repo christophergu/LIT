@@ -7,43 +7,72 @@
 //
 
 #import "TagsViewController.h"
+#import "TagsCollectionViewCell.h"
 
-@interface TagsViewController ()
+@interface TagsViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
+@property (copy, nonatomic) NSArray *categoriesArray;
+@property (copy, nonatomic) NSArray *categoriesKeysArray;
+@property (weak, nonatomic) IBOutlet UIImageView *tagImageView01;
+@property (weak, nonatomic) IBOutlet UIImageView *tagImageView02;
+@property (weak, nonatomic) IBOutlet UIImageView *tagImageView03;
+@property (strong, nonatomic) NSMutableArray *selectedTagsMutableArray;
+
+
+
 
 @end
 
 @implementation TagsViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSDictionary *categoryArt = @{@"Art": [UIImage imageNamed:@"art"]};
+    NSDictionary *categoryCooking = @{@"Cooking": [UIImage imageNamed:@"cooking"]};
+    self.categoriesArray = @[categoryArt, categoryCooking];
+    self.categoriesKeysArray = @[@"Art", @"Cooking"];
+    self.selectedTagsMutableArray = [NSMutableArray new];
 }
 
-- (void)didReceiveMemoryWarning
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    return [self.categoriesArray count];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
+    TagsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"TagsReuseCellID" forIndexPath:indexPath];
+    
+    cell.myImageView.image = self.categoriesArray[indexPath.row][self.categoriesKeysArray[indexPath.row]];
+    cell.myLabel.text = self.categoriesKeysArray[indexPath.row];
+    
+    return cell;
 }
-*/
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (!self.tagImageView01.image)
+    {
+        [self.selectedTagsMutableArray addObject:self.categoriesKeysArray[indexPath.row]];
+        self.tagImageView01.image = self.categoriesArray[indexPath.row][self.categoriesKeysArray[indexPath.row]];
+    }
+    else if (!self.tagImageView02.image)
+    {
+        [self.selectedTagsMutableArray addObject:self.categoriesKeysArray[indexPath.row]];
+        self.tagImageView02.image = self.categoriesArray[indexPath.row][self.categoriesKeysArray[indexPath.row]];
+    }
+    else if (!self.tagImageView03.image)
+    {
+        [self.selectedTagsMutableArray addObject:self.categoriesKeysArray[indexPath.row]];
+        self.tagImageView03.image = self.categoriesArray[indexPath.row][self.categoriesKeysArray[indexPath.row]];
+    }
+}
+
+- (IBAction)onDoneButtonPressed:(id)sender
+{
+    [self performSegueWithIdentifier:@"TagsToResultsSegue" sender:self];
+}
 
 @end
