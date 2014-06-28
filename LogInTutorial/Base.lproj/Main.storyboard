@@ -89,10 +89,10 @@
             </objects>
             <point key="canvasLocation" x="-23" y="-716"/>
         </scene>
-        <!--View Controller-->
+        <!--Search Results View Controller-->
         <scene sceneID="pRk-VG-x1b">
             <objects>
-                <viewController id="LRp-8Y-dkU" sceneMemberID="viewController">
+                <viewController id="LRp-8Y-dkU" customClass="SearchResultsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VGb-lW-EQ2"/>
                         <viewControllerLayoutGuide type="bottom" id="1q4-VN-6ga"/>
@@ -106,7 +106,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="LS5-Jf-LY4">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResultsCellReuseID" id="LS5-Jf-LY4">
                                         <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LS5-Jf-LY4" id="7r3-mm-THP">
@@ -115,6 +115,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="LRp-8Y-dkU" id="WCH-9O-2Ca"/>
+                                    <outlet property="delegate" destination="LRp-8Y-dkU" id="uHN-Qg-Aad"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

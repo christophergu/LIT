@@ -7,6 +7,7 @@
 //
 
 #import "TagsViewController.h"
+#import "SearchResultsViewController.h"
 #import "TagsCollectionViewCell.h"
 #import <Parse/Parse.h>
 
@@ -95,6 +96,15 @@
     {
         UIAlertView *tagsRequiredAlert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"You need to select at least one tag." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [tagsRequiredAlert show];
+    }
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"TagsToResultsSegue"])
+    {
+        SearchResultsViewController *srvc = segue.destinationViewController;
+        srvc.selectedTagsArray = self.selectedTagsMutableArray;
     }
 }
 
