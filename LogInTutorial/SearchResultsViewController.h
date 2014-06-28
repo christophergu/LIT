@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface SearchResultsViewController : UIViewController
+@property (copy, nonatomic) NSArray *selectedTagsArray;
 
 @end
