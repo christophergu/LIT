@@ -79,8 +79,37 @@
         // this is if it's your own profile
         self.currentUser = [PFUser currentUser];
 
-        self.websiteButton.alpha = 0.0;
-        self.contactButton.alpha = 0.0;
+        if (self.currentUser[@"avatar"])
+        {
+            [self.currentUser[@"avatar"] getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+                if (!error) {
+                    UIImage *photo = [UIImage imageWithData:data];
+                    self.avatarImageView.image = photo;
+                }
+            }];
+        }
+        
+        self.usernameTextField.text = self.currentUser.username;
+        self.expertiseTextField.text = self.currentUser[@"expertise"];
+        
+        if (self.currentUser[@"aboutMe"])
+        {
+            self.aboutMeTextView.text = self.currentUser[@"aboutMe"];
+        }
+        else
+        {
+            self.aboutMeTextView.text = @"About Me";
+            self.aboutMeTextView.textAlignment = NSTextAlignmentCenter;
+        }
+        
+        if ([self.aboutMeTextView.text isEqualToString:@"About Me"])
+        {
+            self.aboutMeTextView.textColor = [UIColor colorWithWhite: 0.8 alpha:1]; //optional
+        }
+        [self.aboutMeTextView.layer setBorderColor:[[UIColor colorWithWhite: 0.8 alpha:1] CGColor]];
+        [self.aboutMeTextView.layer setBorderWidth:0.5];
+        self.aboutMeTextView.layer.cornerRadius = 5;
+        self.aboutMeTextView.clipsToBounds = YES;
         
         self.findLocationLabel.layer.cornerRadius = 5.0f;
         self.findLocationButton.alpha = 1.0;
@@ -96,34 +125,21 @@
             self.findLocationLabel.alpha = 1.0;
         }
         
-        if (self.currentUser[@"avatar"])
-        {
-            [self.currentUser[@"avatar"] getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-                if (!error) {
-                    UIImage *photo = [UIImage imageWithData:data];
-                    self.avatarImageView.image = photo;
-                }
-            }];
-        }
+        self.websiteButton.alpha = 0.0;
+        self.contactButton.alpha = 0.0;
+        
+    }
+}
 
-        self.usernameTextField.text = self.currentUser.username;
-        self.expertiseTextField.text = self.currentUser[@"expertise"];
-        
-        if (self.currentUser[@"aboutMe"])
-        {
-            self.aboutMeTextView.text = self.currentUser[@"aboutMe"];
-        }
-        else
-        {
-            self.aboutMeTextView.text = @"About Me";
-            self.aboutMeTextView.textAlignment = NSTextAlignmentCenter;
-        }
-        
-        self.aboutMeTextView.textColor = [UIColor colorWithWhite: 0.8 alpha:1]; //optional
-        [self.aboutMeTextView.layer setBorderColor:[[UIColor colorWithWhite: 0.8 alpha:1] CGColor]];
-        [self.aboutMeTextView.layer setBorderWidth:0.5];
-        self.aboutMeTextView.layer.cornerRadius = 5;
-        self.aboutMeTextView.clipsToBounds = YES;
+ -(void)viewWillAppear:(BOOL)animated
+{
+    NSArray *tempTagArray = self.currentUser[@"tags"];
+    
+    if (tempTagArray && (tempTagArray.count > 0))
+    {
+        self.tagsListingLabel.text = [tempTagArray componentsJoinedByString:@", "];
+        [self.tagsListingLabel setNumberOfLines:0];
+        [self.tagsListingLabel sizeToFit];
     }
 }
 
@@ -149,7 +165,7 @@
     if ([self.aboutMeTextView.text isEqualToString:@"About Me"]) {
         self.aboutMeTextView.text = @"";
         self.aboutMeTextView.textColor = [UIColor blackColor]; //optional
-        self.aboutMeTextView.textAlignment = NSTextAlignmentLeft;
+//        self.aboutMeTextView.textAlignment = NSTextAlignmentLeft;
         //        [self.aboutMeTextView becomeFirstResponder];
     }
 }
@@ -159,7 +175,7 @@
     if ([self.aboutMeTextView.text isEqualToString:@""]) {
         self.aboutMeTextView.text = @"About Me";
         self.aboutMeTextView.textColor = [UIColor colorWithWhite: 0.8 alpha:1]; //optional
-        self.aboutMeTextView.textAlignment = NSTextAlignmentCenter;
+//        self.aboutMeTextView.textAlignment = NSTextAlignmentCenter;
         [self.aboutMeTextView resignFirstResponder];
     }
 }
