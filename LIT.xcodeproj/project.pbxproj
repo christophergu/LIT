@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DF0F1FDE195F567A003B15A3 /* SearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0F1FDD195F567A003B15A3 /* SearchResultsViewController.m */; };
+		DF0F1FE119608531003B15A3 /* SearchResultsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0F1FE019608531003B15A3 /* SearchResultsTableViewCell.m */; };
 		DF5D6068192325450022C498 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF5D6067192325450022C498 /* Foundation.framework */; };
 		DF5D606A192325450022C498 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF5D6069192325450022C498 /* CoreGraphics.framework */; };
 		DF5D606C192325450022C498 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF5D606B192325450022C498 /* UIKit.framework */; };
@@ -59,6 +60,8 @@
 /* Begin PBXFileReference section */
 		DF0F1FDC195F567A003B15A3 /* SearchResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultsViewController.h; sourceTree = "<group>"; };
 		DF0F1FDD195F567A003B15A3 /* SearchResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsViewController.m; sourceTree = "<group>"; };
+		DF0F1FDF19608531003B15A3 /* SearchResultsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultsTableViewCell.h; sourceTree = "<group>"; };
+		DF0F1FE019608531003B15A3 /* SearchResultsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsTableViewCell.m; sourceTree = "<group>"; };
 		DF5D6064192325450022C498 /* LIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF5D6067192325450022C498 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DF5D6069192325450022C498 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -214,6 +217,8 @@
 				DF5D607F192325450022C498 /* Images.xcassets */,
 				DFFFF52A195CA0A30002A215 /* TagsCollectionViewCell.h */,
 				DFFFF52B195CA0A30002A215 /* TagsCollectionViewCell.m */,
+				DF0F1FDF19608531003B15A3 /* SearchResultsTableViewCell.h */,
+				DF0F1FE019608531003B15A3 /* SearchResultsTableViewCell.m */,
 				DF5D606E192325450022C498 /* Supporting Files */,
 			);
 			name = LIT;
@@ -355,6 +360,7 @@
 				DFFFF529195CA07B0002A215 /* TagsViewController.m in Sources */,
 				DF5D6074192325450022C498 /* main.m in Sources */,
 				DFFFF526195C9D060002A215 /* RootViewController.m in Sources */,
+				DF0F1FE119608531003B15A3 /* SearchResultsTableViewCell.m in Sources */,
 				DF0F1FDE195F567A003B15A3 /* SearchResultsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
