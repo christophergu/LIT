@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface SearchResultsTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *myImageView;
+@property (weak, nonatomic) IBOutlet UILabel *myExpertiseLabel;
+@property (weak, nonatomic) IBOutlet UILabel *myUsernameLabel;
 
 @end
