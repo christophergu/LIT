@@ -8,12 +8,12 @@
 
 #import "ProfileViewController.h"
 #import "TagsViewController.h"
-#import <Parse/Parse.h>
 #import <MapKit/MapKit.h>
 #import <AddressBook/AddressBook.h>
 #import <QuartzCore/QuartzCore.h>
+#import <MessageUI/MessageUI.h>
 
-@interface ProfileViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate, CLLocationManagerDelegate, MKMapViewDelegate>
+@interface ProfileViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate, CLLocationManagerDelegate, MKMapViewDelegate, MFMailComposeViewControllerDelegate>
 
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *logoutBarButtonItem;
@@ -43,15 +43,6 @@
 {
     [super viewDidLoad];
 
-//    if (self.fromSearch || self.fromSearchEnthusiast)
-//    {
-//        [self.leaderChosenFromSearch[@"avatar"] getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-//            if (!error) {
-//                UIImage *photo = [UIImage imageWithData:data];
-//                self.avatarImageView.image = photo;
-//            }
-//        }];
-//    }
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
                                    initWithTarget:self
                                    action:@selector(dismissKeyboard)];
@@ -60,17 +51,66 @@
     
     if (!self.ownProfile)
     {
+        // if this is not your profile, but someone you searched
+        
         [self.logoutBarButtonItem setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor clearColor]} forState:UIControlStateNormal];
         self.logoutBarButtonItem.enabled = NO;
         self.aboutMeTextView.editable = NO;
         self.usernameTextField.borderStyle = UITextBorderStyleNone;
         self.usernameTextField.enabled = NO;
+        self.expertiseTextField.borderStyle = UITextBorderStyleNone;
+        self.expertiseTextField.enabled = NO;
+        self.findLocationButton.alpha = 0.0;
+        self.findLocationLabel.alpha = 0.0;
         self.locationTextField.borderStyle = UITextBorderStyleNone;
         self.locationTextField.enabled = NO;
+        self.websiteTextField.borderStyle = UITextBorderStyleNone;
+        self.websiteTextField.enabled = NO;
         self.saveChangesButton.alpha = 0.0;
 
-        // choose what to call the searched leader
-        // deal with the website button check
+        if (self.selectedUserProfile[@"avatar"])
+        {
+            [self.selectedUserProfile[@"avatar"] getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+                if (!error) {
+                    UIImage *photo = [UIImage imageWithData:data];
+                    self.avatarImageView.image = photo;
+                }
+            }];
+        }
+        
+        self.usernameTextField.text = self.selectedUserProfile.username;
+        self.expertiseTextField.text = self.selectedUserProfile[@"expertise"];
+        
+        if ([self.selectedUserProfile[@"aboutMe"] isEqualToString:@"About Me"])
+        {
+            NSLog(@"ya");
+            self.aboutMeTextView.text = @"This user has not yet provided \"About Me\" details.";
+//            self.aboutMeTextView.textAlignment = NSTextAlignmentCenter;
+            self.aboutMeTextView.textColor = [UIColor colorWithWhite: 0.8 alpha:1];
+        }
+        else if (self.selectedUserProfile[@"aboutMe"])
+        {
+            self.aboutMeTextView.text = self.selectedUserProfile[@"aboutMe"];
+        }
+        
+        if (self.selectedUserProfile[@"city"] && self.selectedUserProfile[@"state"])
+        {
+            self.locationTextField.text = [NSString stringWithFormat:@"%@, %@",self.selectedUserProfile[@"city"],self.selectedUserProfile[@"state"]];
+        }
+        else
+        {
+            self.locationTextField.text = @"This use has not yet provided \"Location\" details.";
+        }
+        
+        if (self.selectedUserProfile[@"website"])
+        {
+            self.websiteTextField.alpha = 0.0;
+            [self.websiteButton setTitle:self.selectedUserProfile[@"website"] forState:UIControlStateNormal];
+        }
+        else
+        {
+            self.websiteButton.alpha = 0.0;
+        }
         
         self.contactButton.layer.cornerRadius = 5.0f;
     }
@@ -99,7 +139,7 @@
         else
         {
             self.aboutMeTextView.text = @"About Me";
-            self.aboutMeTextView.textAlignment = NSTextAlignmentCenter;
+//            self.aboutMeTextView.textAlignment = NSTextAlignmentCenter;
         }
         
         if ([self.aboutMeTextView.text isEqualToString:@"About Me"])
@@ -127,20 +167,34 @@
         
         self.websiteButton.alpha = 0.0;
         self.contactButton.alpha = 0.0;
-        
     }
 }
 
  -(void)viewWillAppear:(BOOL)animated
 {
-    NSArray *tempTagArray = self.currentUser[@"tags"];
-    
-    if (tempTagArray && (tempTagArray.count > 0))
+    if (self.ownProfile)
     {
-        self.tagsListingLabel.text = [tempTagArray componentsJoinedByString:@", "];
-        [self.tagsListingLabel setNumberOfLines:0];
-        [self.tagsListingLabel sizeToFit];
+        NSArray *tempTagArray = self.currentUser[@"tags"];
+        
+        if (tempTagArray && (tempTagArray.count > 0))
+        {
+            self.tagsListingLabel.text = [tempTagArray componentsJoinedByString:@", "];
+            [self.tagsListingLabel setNumberOfLines:0];
+            [self.tagsListingLabel sizeToFit];
+        }
     }
+    else
+    {
+        NSArray *tempTagArray = self.selectedUserProfile[@"tags"];
+        
+        if (tempTagArray && (tempTagArray.count > 0))
+        {
+            self.tagsListingLabel.text = [tempTagArray componentsJoinedByString:@", "];
+            [self.tagsListingLabel setNumberOfLines:0];
+            [self.tagsListingLabel sizeToFit];
+        }
+    }
+
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -291,11 +345,6 @@
     [self.locationManager startUpdatingLocation];
 }
 
-- (IBAction)onContactButtonPressed:(id)sender
-{
-    
-}
-
 - (IBAction)onSaveChangesButtonPressed:(id)sender
 {
     self.currentUser.username = self.usernameTextField.text;
@@ -347,6 +396,52 @@
     
     [user saveInBackground];
 }
+#pragma mark - email methods
+
+- (IBAction)showEmail:(id)sender {
+    // Email Subject
+    NSString *emailTitle;
+    // Email Content
+    NSString *messageBody;
+    // To address
+    NSArray *toRecipents = [NSArray arrayWithObject:self.selectedUserProfile.email];
+    
+    MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+    mc.mailComposeDelegate = self;
+    [mc setSubject:emailTitle];
+    [mc setMessageBody:messageBody isHTML:NO];
+    [mc setToRecipients:toRecipents];
+    
+    // Present mail view controller on screen
+    [self presentViewController:mc animated:YES completion:NULL];
+    
+}
+
+- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    switch (result)
+    {
+        case MFMailComposeResultCancelled:
+            NSLog(@"Mail cancelled");
+            break;
+        case MFMailComposeResultSaved:
+            NSLog(@"Mail saved");
+            break;
+        case MFMailComposeResultSent:
+            NSLog(@"Mail sent");
+            break;
+        case MFMailComposeResultFailed:
+            NSLog(@"Mail sent failure: %@", [error localizedDescription]);
+            break;
+        default:
+            break;
+    }
+    
+    // Close the Mail Interface
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+#pragma mark - segue methods
 
 - (IBAction)unwindFromTags:(UIStoryboardSegue *)unwindSegue
 {

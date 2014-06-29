@@ -8,11 +8,13 @@
 
 #import "SearchResultsViewController.h"
 #import "SearchResultsTableViewCell.h"
+#import "ProfileViewController.h"
 #import <Parse/Parse.h>
 
 @interface SearchResultsViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (copy, nonatomic) NSArray *searchResultsArray;
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
+@property (strong, nonatomic) NSIndexPath *chosenIndexPath;
 
 @end
 
@@ -53,6 +55,20 @@
     cell.myExpertiseLabel.text = self.searchResultsArray[indexPath.row][@"expertise"];
     cell.myUsernameLabel.text = self.searchResultsArray[indexPath.row][@"username"];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.chosenIndexPath = indexPath;
+    [self performSegueWithIdentifier:@"SearchToProfileSegue" sender:self];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    ProfileViewController *pvc = segue.destinationViewController;
+    {
+        pvc.selectedUserProfile = self.searchResultsArray[self.chosenIndexPath.row];
+    }
 }
 
 @end

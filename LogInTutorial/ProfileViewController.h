@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface ProfileViewController : UIViewController
 @property (assign, nonatomic) BOOL ownProfile;
+@property (strong, nonatomic) PFUser *selectedUserProfile;
 
 @end
