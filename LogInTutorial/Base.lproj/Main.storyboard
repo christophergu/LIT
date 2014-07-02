@@ -484,6 +484,16 @@
                                             <action selector="onTagImageView03ButtonPressed:" destination="FwW-Uh-qZs" eventType="touchUpInside" id="8YV-6x-JBO"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4mu-GA-MHR">
+                                        <rect key="frame" x="245" y="105" width="51" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="view all">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="LRp-8Y-dkU" kind="push" identifier="ViewAllSegue" id="f8G-lG-SKo"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -535,7 +545,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="JIc-FW-Uga"/>
         <segue reference="x2x-jk-G7d"/>
+        <segue reference="JIc-FW-Uga"/>
+        <segue reference="f8G-lG-SKo"/>
     </inferredMetricsTieBreakers>
 </document>

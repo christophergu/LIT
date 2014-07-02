@@ -10,5 +10,6 @@
 
 @interface SearchResultsViewController : UIViewController
 @property (copy, nonatomic) NSDictionary *selectedTagsDictionary;
+@property (assign, nonatomic) BOOL viewAllChosen;
 
 @end

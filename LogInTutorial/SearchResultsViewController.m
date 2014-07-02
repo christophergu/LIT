@@ -25,12 +25,44 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    PFQuery *usersWithMatchingTagsQuery = [PFUser query];
-    [usersWithMatchingTagsQuery whereKey:@"tags" containsAllObjectsInArray:[self.selectedTagsDictionary allKeys]];
-    [usersWithMatchingTagsQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        self.searchResultsArray = objects;
-        [self.myTableView reloadData];
-    }];
+    if (self.viewAllChosen)
+    {
+        PFQuery *allUsersQuery = [PFUser query];
+//        [allUsersQuery orderByAscending:@"expertise"];
+        NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey: @"expertise"
+                                                                     ascending: YES
+                                                                      selector: @selector(caseInsensitiveCompare:)];
+        [allUsersQuery orderBySortDescriptor: descriptor];
+        [allUsersQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            
+            self.searchResultsArray = [objects sortedArrayUsingComparator:^NSComparisonResult(PFUser *user1, PFUser *user2) {
+                NSString *expertise1 = [user1[@"expertise"] lowercaseString];
+                NSString *expertise2 = [user2[@"expertise"] lowercaseString];
+
+                if ([expertise1 compare: expertise2] == NSOrderedAscending)
+                {
+                    NSLog(@"1 %@",expertise1);
+                    NSLog(@"2 %@",expertise2);
+                    return NSOrderedAscending;
+                }
+                else{
+                    return NSOrderedDescending;
+                }
+            }];
+            
+//            self.searchResultsArray = objects;
+            [self.myTableView reloadData];
+        }];
+    }
+    else
+    {
+        PFQuery *usersWithMatchingTagsQuery = [PFUser query];
+        [usersWithMatchingTagsQuery whereKey:@"tags" containsAllObjectsInArray:[self.selectedTagsDictionary allKeys]];
+        [usersWithMatchingTagsQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            self.searchResultsArray = objects;
+            [self.myTableView reloadData];
+        }];
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

@@ -125,7 +125,7 @@
     {
         if (self.choosingTagsForExpertise)
         {
-            self.currentUser[@"tags"] = self.selectedTagsMutableDictionary;
+            self.currentUser[@"tags"] = [self.selectedTagsMutableDictionary allKeys];
             [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                 [self performSegueWithIdentifier:@"UnwindFromTagsSegue" sender:self];
             }];
@@ -144,10 +144,15 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    SearchResultsViewController *srvc = segue.destinationViewController;
+
     if ([segue.identifier isEqualToString:@"TagsToResultsSegue"])
     {
-        SearchResultsViewController *srvc = segue.destinationViewController;
         srvc.selectedTagsDictionary = self.selectedTagsMutableDictionary;
+    }
+    if ([segue.identifier isEqualToString:@"ViewAllSegue"])
+    {
+        srvc.viewAllChosen = 1;
     }
 }
 
