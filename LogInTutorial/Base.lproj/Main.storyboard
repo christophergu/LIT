@@ -454,6 +454,36 @@
                                         <rect key="frame" x="240" y="7" width="60" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2A1-74-ZQC" customClass="TagsSelectButton">
+                                        <rect key="frame" x="20" y="9" width="60" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onTagImageView01ButtonPressed:" destination="FwW-Uh-qZs" eventType="touchUpInside" id="dar-HD-zDw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3e-PD-dFp" customClass="TagsSelectButton">
+                                        <rect key="frame" x="130" y="9" width="60" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onTagImageView02ButtonPressed:" destination="FwW-Uh-qZs" eventType="touchUpInside" id="Bnj-vK-UB3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aB9-PG-62W" customClass="TagsSelectButton">
+                                        <rect key="frame" x="240" y="9" width="60" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onTagImageView03ButtonPressed:" destination="FwW-Uh-qZs" eventType="touchUpInside" id="8YV-6x-JBO"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -465,6 +495,9 @@
                         <outlet property="tagImageView01" destination="VAm-Jm-GWb" id="NhS-4l-h3r"/>
                         <outlet property="tagImageView02" destination="b6h-kU-Yv9" id="m7B-by-bkJ"/>
                         <outlet property="tagImageView03" destination="Pxa-SS-jc8" id="R9r-gp-q9x"/>
+                        <outlet property="tagSelectButton01" destination="2A1-74-ZQC" id="Ovv-Cn-65k"/>
+                        <outlet property="tagSelectButton02" destination="j3e-PD-dFp" id="Lvs-wJ-faU"/>
+                        <outlet property="tagSelectButton03" destination="aB9-PG-62W" id="maF-qa-Bvt"/>
                         <segue destination="LRp-8Y-dkU" kind="push" identifier="TagsToResultsSegue" id="yqc-fY-4jf"/>
                         <segue destination="vTM-jN-f2l" kind="unwind" identifier="UnwindFromTagsSegue" unwindAction="unwindFromTags:" id="kZ4-sx-1ps"/>
                     </connections>

@@ -39,6 +39,7 @@
 		DF5D60BE19232BBA0022C498 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF5D60BD19232BBA0022C498 /* Accounts.framework */; };
 		DF5D60C019232BC60022C498 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DF5D60BF19232BC60022C498 /* libsqlite3.dylib */; };
 		DF5D60C219232BD40022C498 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF5D60C119232BD40022C498 /* Social.framework */; };
+		DFEC6FAA1964A9820025345A /* TagsSelectButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DFEC6FA91964A9820025345A /* TagsSelectButton.m */; };
 		DFFFF526195C9D060002A215 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFFFF525195C9D060002A215 /* RootViewController.m */; };
 		DFFFF529195CA07B0002A215 /* TagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFFFF528195CA07B0002A215 /* TagsViewController.m */; };
 		DFFFF52C195CA0A30002A215 /* TagsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFFFF52B195CA0A30002A215 /* TagsCollectionViewCell.m */; };
@@ -97,6 +98,8 @@
 		DF5D60BD19232BBA0022C498 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		DF5D60BF19232BC60022C498 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		DF5D60C119232BD40022C498 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		DFEC6FA81964A9820025345A /* TagsSelectButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagsSelectButton.h; sourceTree = "<group>"; };
+		DFEC6FA91964A9820025345A /* TagsSelectButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagsSelectButton.m; sourceTree = "<group>"; };
 		DFFFF524195C9D060002A215 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		DFFFF525195C9D060002A215 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		DFFFF527195CA07B0002A215 /* TagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagsViewController.h; sourceTree = "<group>"; };
@@ -217,6 +220,8 @@
 				DF5D607F192325450022C498 /* Images.xcassets */,
 				DFFFF52A195CA0A30002A215 /* TagsCollectionViewCell.h */,
 				DFFFF52B195CA0A30002A215 /* TagsCollectionViewCell.m */,
+				DFEC6FA81964A9820025345A /* TagsSelectButton.h */,
+				DFEC6FA91964A9820025345A /* TagsSelectButton.m */,
 				DF0F1FDF19608531003B15A3 /* SearchResultsTableViewCell.h */,
 				DF0F1FE019608531003B15A3 /* SearchResultsTableViewCell.m */,
 				DF5D606E192325450022C498 /* Supporting Files */,
@@ -361,6 +366,7 @@
 				DF5D6074192325450022C498 /* main.m in Sources */,
 				DFFFF526195C9D060002A215 /* RootViewController.m in Sources */,
 				DF0F1FE119608531003B15A3 /* SearchResultsTableViewCell.m in Sources */,
+				DFEC6FAA1964A9820025345A /* TagsSelectButton.m in Sources */,
 				DF0F1FDE195F567A003B15A3 /* SearchResultsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

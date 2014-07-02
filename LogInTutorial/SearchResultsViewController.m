@@ -26,7 +26,7 @@
     // Do any additional setup after loading the view.
     
     PFQuery *usersWithMatchingTagsQuery = [PFUser query];
-    [usersWithMatchingTagsQuery whereKey:@"tags" containsAllObjectsInArray:self.selectedTagsArray];
+    [usersWithMatchingTagsQuery whereKey:@"tags" containsAllObjectsInArray:[self.selectedTagsDictionary allKeys]];
     [usersWithMatchingTagsQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         self.searchResultsArray = objects;
         [self.myTableView reloadData];

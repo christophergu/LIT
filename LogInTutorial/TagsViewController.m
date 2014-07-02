@@ -9,6 +9,7 @@
 #import "TagsViewController.h"
 #import "SearchResultsViewController.h"
 #import "TagsCollectionViewCell.h"
+#import "TagsSelectButton.h"
 #import <Parse/Parse.h>
 
 @interface TagsViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
@@ -17,10 +18,11 @@
 @property (weak, nonatomic) IBOutlet UIImageView *tagImageView01;
 @property (weak, nonatomic) IBOutlet UIImageView *tagImageView02;
 @property (weak, nonatomic) IBOutlet UIImageView *tagImageView03;
-@property (strong, nonatomic) NSMutableArray *selectedTagsMutableArray;
+@property (strong, nonatomic) NSMutableDictionary *selectedTagsMutableDictionary;
 @property (strong, nonatomic) PFUser *currentUser;
-
-
+@property (weak, nonatomic) IBOutlet TagsSelectButton *tagSelectButton01;
+@property (weak, nonatomic) IBOutlet TagsSelectButton *tagSelectButton02;
+@property (weak, nonatomic) IBOutlet TagsSelectButton *tagSelectButton03;
 
 
 @end
@@ -37,7 +39,11 @@
     NSDictionary *categoryCooking = @{@"Cooking": [UIImage imageNamed:@"cooking"]};
     self.categoriesArray = @[categoryArt, categoryCooking];
     self.categoriesKeysArray = @[@"Art", @"Cooking"];
-    self.selectedTagsMutableArray = [NSMutableArray new];
+    self.selectedTagsMutableDictionary = [NSMutableDictionary new];
+    
+    self.tagImageView01.clipsToBounds = YES;
+    self.tagImageView02.clipsToBounds = YES;
+    self.tagImageView03.clipsToBounds = YES;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -58,31 +64,68 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (!self.tagImageView01.image)
+    if (![[self.selectedTagsMutableDictionary allKeys] containsObject:[self.categoriesArray[indexPath.row] allKeys].firstObject])
     {
-        [self.selectedTagsMutableArray addObject:self.categoriesKeysArray[indexPath.row]];
-        self.tagImageView01.image = self.categoriesArray[indexPath.row][self.categoriesKeysArray[indexPath.row]];
+        if (!self.tagImageView01.image)
+        {
+            
+            [self.selectedTagsMutableDictionary addEntriesFromDictionary:self.categoriesArray[indexPath.row]];
+            self.tagSelectButton01.selectedCategoryDictionary = self.categoriesArray[indexPath.row];
+            self.tagImageView01.image = self.categoriesArray[indexPath.row][self.categoriesKeysArray[indexPath.row]];
+        }
+        else if (!self.tagImageView02.image)
+        {
+            [self.selectedTagsMutableDictionary addEntriesFromDictionary:self.categoriesArray[indexPath.row]];
+            self.tagSelectButton02.selectedCategoryDictionary = self.categoriesArray[indexPath.row];
+            self.tagImageView02.image = self.categoriesArray[indexPath.row][self.categoriesKeysArray[indexPath.row]];
+        }
+        else if (!self.tagImageView03.image)
+        {
+            [self.selectedTagsMutableDictionary addEntriesFromDictionary:self.categoriesArray[indexPath.row]];
+            self.tagSelectButton03.selectedCategoryDictionary = self.categoriesArray[indexPath.row];
+            self.tagImageView03.image = self.categoriesArray[indexPath.row][self.categoriesKeysArray[indexPath.row]];
+        }
     }
-    else if (!self.tagImageView02.image)
+}
+
+- (IBAction)onTagImageView01ButtonPressed:(id)sender
+{
+    if (self.tagImageView01.image)
     {
-        [self.selectedTagsMutableArray addObject:self.categoriesKeysArray[indexPath.row]];
-        self.tagImageView02.image = self.categoriesArray[indexPath.row][self.categoriesKeysArray[indexPath.row]];
+        [self.selectedTagsMutableDictionary removeObjectsForKeys: [self.tagSelectButton01.selectedCategoryDictionary allKeys]];
+        self.tagImageView01.image = nil;
+        NSLog(@"%@",self.selectedTagsMutableDictionary);
     }
-    else if (!self.tagImageView03.image)
+}
+
+- (IBAction)onTagImageView02ButtonPressed:(id)sender
+{
+    if (self.tagImageView01.image)
     {
-        [self.selectedTagsMutableArray addObject:self.categoriesKeysArray[indexPath.row]];
-        self.tagImageView03.image = self.categoriesArray[indexPath.row][self.categoriesKeysArray[indexPath.row]];
+        [self.selectedTagsMutableDictionary removeObjectsForKeys: [self.tagSelectButton02.selectedCategoryDictionary allKeys]];
+        self.tagImageView02.image = nil;
+        NSLog(@"%@",self.selectedTagsMutableDictionary);
+    }
+}
+
+- (IBAction)onTagImageView03ButtonPressed:(id)sender
+{
+    if (self.tagImageView01.image)
+    {
+        [self.selectedTagsMutableDictionary removeObjectsForKeys: [self.tagSelectButton03.selectedCategoryDictionary allKeys]];
+        self.tagImageView03.image = nil;
+        NSLog(@"%@",self.selectedTagsMutableDictionary);
     }
 }
 
 - (IBAction)onDoneButtonPressed:(id)sender
 {
-    NSLog(@"%@",self.selectedTagsMutableArray);
-    if (self.selectedTagsMutableArray && (self.selectedTagsMutableArray.count > 0))
+    NSLog(@"%@",self.selectedTagsMutableDictionary);
+    if (self.selectedTagsMutableDictionary && (self.selectedTagsMutableDictionary.count > 0))
     {
         if (self.choosingTagsForExpertise)
         {
-            self.currentUser[@"tags"] = self.selectedTagsMutableArray;
+            self.currentUser[@"tags"] = self.selectedTagsMutableDictionary;
             [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                 [self performSegueWithIdentifier:@"UnwindFromTagsSegue" sender:self];
             }];
@@ -104,7 +147,7 @@
     if ([segue.identifier isEqualToString:@"TagsToResultsSegue"])
     {
         SearchResultsViewController *srvc = segue.destinationViewController;
-        srvc.selectedTagsArray = self.selectedTagsMutableArray;
+        srvc.selectedTagsDictionary = self.selectedTagsMutableDictionary;
     }
 }
 
