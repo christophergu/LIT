@@ -47,6 +47,7 @@
     if (self.viewAllChosen)
     {
         PFQuery *allUsersQuery = [PFUser query];
+        [allUsersQuery whereKey:@"expertise" notEqualTo:[NSNull null]];
         NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey: @"expertise"
                                                                      ascending: YES
                                                                       selector: @selector(caseInsensitiveCompare:)];
@@ -72,6 +73,7 @@
     else
     {
         PFQuery *usersWithMatchingTagsQuery = [PFUser query];
+        [usersWithMatchingTagsQuery whereKey:@"expertise" notEqualTo:[NSNull null]];
         [usersWithMatchingTagsQuery whereKey:@"tags" containsAllObjectsInArray:[self.selectedTagsDictionary allKeys]];
         [usersWithMatchingTagsQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             self.searchResultsArray = objects;
@@ -116,7 +118,22 @@
 
 - (IBAction)radiusTextFieldDidEndOnExit:(id)sender
 {
-    NSLog(@"nanna");
+    NSMutableArray *radiusFilteredMutableArray = [NSMutableArray new];
+    
+    for (PFUser *user in self.searchResultsArray)
+    {
+        CLLocation *locA = [[CLLocation alloc] initWithLatitude:[self.currentUser[@"latitude"] doubleValue] longitude:[self.currentUser[@"longitude"] doubleValue]];
+        CLLocation *locB = [[CLLocation alloc] initWithLatitude:[user[@"latitude"] doubleValue] longitude:[user[@"longitude"] doubleValue]];
+        CLLocationDistance distance = [locA distanceFromLocation:locB]/1000;
+        NSLog(@"user %@ distance %f",user.username, distance);
+        
+        if (distance < [self.radiusTextField.text intValue]) {
+            [radiusFilteredMutableArray addObject:user];
+        }
+    }
+    
+    self.searchResultsArray = [radiusFilteredMutableArray copy];
+    [self.myTableView reloadData];
 }
 
 #pragma mark - button methods
