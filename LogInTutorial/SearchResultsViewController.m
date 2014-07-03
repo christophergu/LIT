@@ -9,12 +9,21 @@
 #import "SearchResultsViewController.h"
 #import "SearchResultsTableViewCell.h"
 #import "ProfileViewController.h"
+#import <MapKit/MapKit.h>
+#import <AddressBook/AddressBook.h>
 #import <Parse/Parse.h>
 
-@interface SearchResultsViewController ()<UITableViewDataSource, UITableViewDelegate>
+@interface SearchResultsViewController ()<UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate, MKMapViewDelegate>
 @property (copy, nonatomic) NSArray *searchResultsArray;
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 @property (strong, nonatomic) NSIndexPath *chosenIndexPath;
+@property (weak, nonatomic) IBOutlet UITextField *distanceTextField;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *mySegmentedControl;
+@property (weak, nonatomic) IBOutlet UIButton *locationCheckButton;
+@property (strong, nonatomic) PFUser *currentUser;
+@property (strong, nonatomic) CLLocationManager *locationManager;
+@property (weak, nonatomic) IBOutlet UITextField *radiusTextField;
+
 
 @end
 
@@ -25,10 +34,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.currentUser = [PFUser currentUser];
+    if (self.currentUser[@"latitude"] && self.currentUser[@"longitude"])
+    {
+        self.locationCheckButton.alpha = 0.0;
+    }
+    else
+    {
+        NSLog(@"yaasdf");
+    }
+    
     if (self.viewAllChosen)
     {
         PFQuery *allUsersQuery = [PFUser query];
-//        [allUsersQuery orderByAscending:@"expertise"];
         NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey: @"expertise"
                                                                      ascending: YES
                                                                       selector: @selector(caseInsensitiveCompare:)];
@@ -41,8 +59,6 @@
 
                 if ([expertise1 compare: expertise2] == NSOrderedAscending)
                 {
-                    NSLog(@"1 %@",expertise1);
-                    NSLog(@"2 %@",expertise2);
                     return NSOrderedAscending;
                 }
                 else{
@@ -50,7 +66,6 @@
                 }
             }];
             
-//            self.searchResultsArray = objects;
             [self.myTableView reloadData];
         }];
     }
@@ -64,6 +79,8 @@
         }];
     }
 }
+
+#pragma mark - table view methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -94,6 +111,85 @@
     self.chosenIndexPath = indexPath;
     [self performSegueWithIdentifier:@"SearchToProfileSegue" sender:self];
 }
+
+#pragma mark - text field methods
+
+- (IBAction)radiusTextFieldDidEndOnExit:(id)sender
+{
+    NSLog(@"nanna");
+}
+
+#pragma mark - button methods
+
+- (IBAction)onLocationCheckButtonPressed:(id)sender
+{
+    if (self.currentUser)
+    {
+        self.locationManager = [CLLocationManager new];
+        self.locationManager.delegate = self;
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
+        [self.locationManager startUpdatingLocation];
+    }
+    else
+    {
+        UIAlertView *needToBeSignedInAlert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"You must be signed in to search for experiences around you by radius." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [needToBeSignedInAlert show];
+    }
+    self.locationCheckButton.enabled = NO;
+}
+
+#pragma mark - location methods
+// this delegate is called when the app successfully finds your current location
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    // this creates a MKReverseGeocoder to find a placemark using the found coordinates
+    MKReverseGeocoder *geoCoder = [[MKReverseGeocoder alloc] initWithCoordinate:newLocation.coordinate];
+    geoCoder.delegate = self;
+    [geoCoder start];
+}
+
+
+// this delegate method is called if an error occurs in locating your current location
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    NSLog(@"locationManager:%@ didFailWithError:%@", manager, error);
+}
+
+// update these deprecated with CLGeocoder
+
+// this delegate is called when the reverseGeocoder finds a placemark
+- (void)reverseGeocoder:(MKReverseGeocoder *)geocoder didFindPlacemark:(MKPlacemark *)placemark
+{
+    MKPlacemark * myPlacemark = placemark;
+    // with the placemark you can now retrieve the city name
+    NSString *city = [myPlacemark.addressDictionary objectForKey:(NSString*) kABPersonAddressCityKey];
+    NSString *state = [myPlacemark.addressDictionary objectForKey:(NSString*) kABPersonAddressStateKey];
+    
+    [self.locationManager stopUpdatingLocation];
+    
+    self.currentUser[@"city"] = city;
+    self.currentUser[@"state"] = state;
+    self.currentUser[@"latitude"] = @(self.locationManager.location.coordinate.latitude);
+    self.currentUser[@"longitude"] = @(self.locationManager.location.coordinate.longitude);
+
+    [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        self.locationCheckButton.alpha = 0.0;
+        
+        [self.radiusTextField becomeFirstResponder];
+    }];
+}
+
+// this delegate is called when the reversegeocoder fails to find a placemark
+- (void)reverseGeocoder:(MKReverseGeocoder *)geocoder didFailWithError:(NSError *)error
+{
+    NSLog(@"reverseGeocoder:%@ didFailWithError:%@", geocoder, error);
+    
+    // put an alert here that says they aren't connected to the internet or something to that effect
+    UIAlertView *noConnectionAlert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"You must have an internet connection to find your location." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    [noConnectionAlert show];
+}
+
+#pragma mark - segue methods
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
