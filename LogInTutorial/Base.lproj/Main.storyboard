@@ -171,6 +171,9 @@
                                             <segment title="Alphabetical"/>
                                             <segment title="Distance"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="onSegmentedControlChanged:" destination="LRp-8Y-dkU" eventType="valueChanged" id="Ln7-VP-rwC"/>
+                                        </connections>
                                     </segmentedControl>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPJ-Lz-lsN">
                                         <rect key="frame" x="194" y="2" width="106" height="30"/>

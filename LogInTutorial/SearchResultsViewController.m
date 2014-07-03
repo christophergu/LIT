@@ -24,7 +24,6 @@
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (weak, nonatomic) IBOutlet UITextField *radiusTextField;
 
-
 @end
 
 @implementation SearchResultsViewController
@@ -38,10 +37,6 @@
     if (self.currentUser[@"latitude"] && self.currentUser[@"longitude"])
     {
         self.locationCheckButton.alpha = 0.0;
-    }
-    else
-    {
-        NSLog(@"yaasdf");
     }
     
     if (self.viewAllChosen)
@@ -112,6 +107,48 @@
 {
     self.chosenIndexPath = indexPath;
     [self performSegueWithIdentifier:@"SearchToProfileSegue" sender:self];
+}
+
+#pragma mark - segmented control method
+
+- (IBAction)onSegmentedControlChanged:(id)sender
+{
+    if (self.mySegmentedControl.selectedSegmentIndex == 0)
+    {
+        NSArray *tempSearchResultsArray = self.searchResultsArray;
+        
+        self.searchResultsArray = [tempSearchResultsArray sortedArrayUsingComparator:^NSComparisonResult(PFUser *user1, PFUser *user2) {
+            NSString *expertise1 = [user1[@"expertise"] lowercaseString];
+            NSString *expertise2 = [user2[@"expertise"] lowercaseString];
+            
+            if ([expertise1 compare: expertise2] == NSOrderedAscending)
+            {
+                return NSOrderedAscending;
+            }
+            else{
+                return NSOrderedDescending;
+            }
+        }];
+        
+        [self.myTableView reloadData];
+    }
+    else if (self.mySegmentedControl.selectedSegmentIndex == 1)
+    {
+        CLLocation *locA = [[CLLocation alloc] initWithLatitude:[self.currentUser[@"latitude"] doubleValue] longitude:[self.currentUser[@"longitude"] doubleValue]];
+        
+        self.searchResultsArray = [self.searchResultsArray sortedArrayUsingComparator:^NSComparisonResult(PFUser *user1, PFUser *user2) {
+            float distance1 = [[[CLLocation alloc] initWithLatitude:[user1[@"latitude"] doubleValue] longitude:[user1[@"longitude"] doubleValue]] distanceFromLocation:locA];
+            float distance2 = [[[CLLocation alloc] initWithLatitude:[user2[@"latitude"] doubleValue] longitude:[user2[@"longitude"] doubleValue]] distanceFromLocation:locA];
+            if (distance1 < distance2) {
+                return NSOrderedAscending;
+            }
+            else{
+                return NSOrderedDescending;
+            }
+        }];
+        
+        [self.myTableView reloadData];
+    }
 }
 
 #pragma mark - text field methods
