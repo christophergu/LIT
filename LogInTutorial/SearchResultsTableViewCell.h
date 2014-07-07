@@ -12,5 +12,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *myImageView;
 @property (weak, nonatomic) IBOutlet UILabel *myExpertiseLabel;
 @property (weak, nonatomic) IBOutlet UILabel *myUsernameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *myDistanceLabel;
 
 @end

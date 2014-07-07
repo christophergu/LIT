@@ -268,7 +268,14 @@
     self.currentUser[@"state"] = state;
     self.currentUser[@"latitude"] = @(self.locationManager.location.coordinate.latitude);
     self.currentUser[@"longitude"] = @(self.locationManager.location.coordinate.longitude);
-    [self.currentUser saveInBackground];
+    if (self.locationManager.location.coordinate.latitude && self.locationManager.location.coordinate.longitude)
+    {
+        [self.currentUser saveInBackground];
+    }
+    else
+    {
+        NSLog(@"something was nil/null");
+    }
     
     // findLocationLabel animations
     [UIView animateKeyframesWithDuration:2.0f delay:0.0f options:0 animations:^{
@@ -414,7 +421,6 @@
     
     // Present mail view controller on screen
     [self presentViewController:mc animated:YES completion:NULL];
-    
 }
 
 - (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error

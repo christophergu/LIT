@@ -23,6 +23,7 @@
 @property (strong, nonatomic) PFUser *currentUser;
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (weak, nonatomic) IBOutlet UITextField *radiusTextField;
+@property (strong, nonatomic) NSMutableArray *distanceMutableArray;
 
 @end
 
@@ -39,6 +40,9 @@
         self.locationCheckButton.alpha = 0.0;
     }
     
+    self.distanceMutableArray = [NSMutableArray new];
+    
+    // view all teachers or search using tags results
     if (self.viewAllChosen)
     {
         PFQuery *allUsersQuery = [PFUser query];
@@ -61,7 +65,7 @@
                     return NSOrderedDescending;
                 }
             }];
-            
+            [self addTheDistances];
             [self.myTableView reloadData];
         }];
     }
@@ -72,6 +76,7 @@
         [usersWithMatchingTagsQuery whereKey:@"tags" containsAllObjectsInArray:[self.selectedTagsDictionary allKeys]];
         [usersWithMatchingTagsQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             self.searchResultsArray = objects;
+            [self addTheDistances];
             [self.myTableView reloadData];
         }];
     }
@@ -97,9 +102,19 @@
             }
         }];
     }
+    else
+    {
+        cell.myImageView.image = [UIImage imageNamed:@"default_user"];
+    }
     
     cell.myExpertiseLabel.text = self.searchResultsArray[indexPath.row][@"expertise"];
     cell.myUsernameLabel.text = self.searchResultsArray[indexPath.row][@"username"];
+    
+    if (self.distanceMutableArray && self.distanceMutableArray.count)
+    {
+        cell.myDistanceLabel.text = self.distanceMutableArray[indexPath.row];
+    }
+    
     return cell;
 }
 
@@ -113,6 +128,9 @@
 
 - (IBAction)onSegmentedControlChanged:(id)sender
 {
+    self.distanceMutableArray = nil;
+    self.distanceMutableArray = [NSMutableArray new];
+    
     if (self.mySegmentedControl.selectedSegmentIndex == 0)
     {
         NSArray *tempSearchResultsArray = self.searchResultsArray;
@@ -129,8 +147,6 @@
                 return NSOrderedDescending;
             }
         }];
-        
-        [self.myTableView reloadData];
     }
     else if (self.mySegmentedControl.selectedSegmentIndex == 1)
     {
@@ -146,9 +162,36 @@
                 return NSOrderedDescending;
             }
         }];
-        
-        [self.myTableView reloadData];
     }
+    
+    [self addTheDistances];
+    [self.myTableView reloadData];
+}
+
+#pragma mark - helper methods
+
+- (void)addTheDistances
+{
+    self.distanceMutableArray = nil;
+    self.distanceMutableArray = [NSMutableArray new];
+    
+    for (PFUser *user in self.searchResultsArray)
+    {
+        CLLocation *userLocation = [[CLLocation alloc] initWithLatitude:[self.currentUser[@"latitude"] doubleValue] longitude:[self.currentUser[@"longitude"] doubleValue]];
+        
+        if (user[@"latitude"] && user[@"longitude"])
+        {
+            float distance = [[[CLLocation alloc] initWithLatitude:[user[@"latitude"] doubleValue] longitude:[user[@"longitude"] doubleValue]] distanceFromLocation:userLocation];
+            
+            [self.distanceMutableArray addObject:[NSString stringWithFormat:@"%.1f miles away",distance/1609.34]];
+        }
+        else
+        {
+            [self.distanceMutableArray addObject:@" "];
+        }
+    }
+    
+    NSLog(@"%@",self.distanceMutableArray);
 }
 
 #pragma mark - text field methods
