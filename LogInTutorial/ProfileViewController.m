@@ -264,18 +264,16 @@
     
     [self.locationManager stopUpdatingLocation];
     
-    self.currentUser[@"city"] = city;
-    self.currentUser[@"state"] = state;
+    if (city && state)
+    {
+        self.currentUser[@"city"] = city;
+        self.currentUser[@"state"] = state;
+    }
     self.currentUser[@"latitude"] = @(self.locationManager.location.coordinate.latitude);
     self.currentUser[@"longitude"] = @(self.locationManager.location.coordinate.longitude);
-    if (self.locationManager.location.coordinate.latitude && self.locationManager.location.coordinate.longitude)
-    {
-        [self.currentUser saveInBackground];
-    }
-    else
-    {
-        NSLog(@"something was nil/null");
-    }
+    
+    [self.currentUser saveInBackground];
+
     
     // findLocationLabel animations
     [UIView animateKeyframesWithDuration:2.0f delay:0.0f options:0 animations:^{

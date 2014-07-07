@@ -183,7 +183,7 @@
         {
             float distance = [[[CLLocation alloc] initWithLatitude:[user[@"latitude"] doubleValue] longitude:[user[@"longitude"] doubleValue]] distanceFromLocation:userLocation];
             
-            [self.distanceMutableArray addObject:[NSString stringWithFormat:@"%.1f miles away",distance/1609.34]];
+            [self.distanceMutableArray addObject:[NSString stringWithFormat:@"%.1f miles",distance/1609.34]];
         }
         else
         {
