@@ -25,6 +25,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *contactButton;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIView *uiViewForScrollView;
+@property (weak, nonatomic) IBOutlet UIView *achievementUIView;
+@property (weak, nonatomic) IBOutlet UIView *aboutMeUIView;
 @property (strong, nonatomic) PFUser *currentUser;
 @property (weak, nonatomic) IBOutlet UIButton *avatarChangeButton;
 @property (weak, nonatomic) IBOutlet UIButton *findLocationButton;
@@ -34,6 +36,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *saveChangesButton;
 @property (weak, nonatomic) IBOutlet UILabel *tagsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *tagsListingLabel;
+@property CGFloat containerViewHeight;
+
 
 @end
 
@@ -110,6 +114,7 @@
         else
         {
             self.websiteButton.alpha = 0.0;
+            self.websiteTextField.text = @"No Website";
         }
         
         self.contactButton.layer.cornerRadius = 5.0f;
@@ -166,7 +171,7 @@
         }
         
         self.websiteButton.alpha = 0.0;
-        self.contactButton.alpha = 0.0;
+        self.contactButton.enabled = NO;
     }
 }
 
@@ -199,10 +204,19 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    self.scrollView.contentSize = CGSizeMake(320, 720);
+    self.scrollView.contentSize = CGSizeMake(320, 536 + 216);
     self.scrollView.scrollEnabled = YES;
     self.scrollView.userInteractionEnabled = YES;
     [self.scrollView addSubview:self.uiViewForScrollView];
+    if (self.currentUser[@"aboutMe"])
+    {
+        NSLog(@"about me");
+    }
+    else
+    {
+        NSLog(@"not about me");
+    }
+
 }
 
 -(void)dismissKeyboard
