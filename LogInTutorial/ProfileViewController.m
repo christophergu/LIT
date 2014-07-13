@@ -177,6 +177,10 @@
             self.findLocationLabel.alpha = 1.0;
         }
         
+        if (self.currentUser[@"website"])
+        {
+            self.websiteTextField.text = self.currentUser[@"website"];
+        }
         self.websiteButton.alpha = 0.0;
         self.contactButton.enabled = NO;
     }
