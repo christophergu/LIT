@@ -13,6 +13,9 @@
 #import <QuartzCore/QuartzCore.h>
 #import <MessageUI/MessageUI.h>
 
+#define allTrim( object ) [object stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet] ]
+#define isiPhone5  ([[UIScreen mainScreen] bounds].size.height == 568)?TRUE:FALSE
+
 @interface ProfileViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate, CLLocationManagerDelegate, MKMapViewDelegate, MFMailComposeViewControllerDelegate>
 
 @property (strong, nonatomic) CLLocationManager *locationManager;
@@ -37,7 +40,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *tagsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *tagsListingLabel;
 @property CGFloat containerViewHeight;
-
+@property (weak, nonatomic) IBOutlet UITextView *achievementsTextView;
 
 @end
 
@@ -114,10 +117,10 @@
         else
         {
             self.websiteButton.alpha = 0.0;
-            self.websiteTextField.text = @"No Website";
+            self.websiteTextField.placeholder = @"";
         }
         
-        self.contactButton.layer.cornerRadius = 5.0f;
+//        self.contactButton.layer.cornerRadius = 5.0f;
     }
     else
     {
@@ -143,7 +146,7 @@
         }
         else
         {
-            self.aboutMeTextView.text = @"About Me";
+//            self.aboutMeTextView.text = @"About Me";
 //            self.aboutMeTextView.textAlignment = NSTextAlignmentCenter;
         }
         
@@ -151,10 +154,10 @@
         {
             self.aboutMeTextView.textColor = [UIColor colorWithWhite: 0.8 alpha:1]; //optional
         }
-        [self.aboutMeTextView.layer setBorderColor:[[UIColor colorWithWhite: 0.8 alpha:1] CGColor]];
-        [self.aboutMeTextView.layer setBorderWidth:0.5];
-        self.aboutMeTextView.layer.cornerRadius = 5;
-        self.aboutMeTextView.clipsToBounds = YES;
+//        [self.aboutMeTextView.layer setBorderColor:[[UIColor colorWithWhite: 0.8 alpha:1] CGColor]];
+//        [self.aboutMeTextView.layer setBorderWidth:0.5];
+//        self.aboutMeTextView.layer.cornerRadius = 5;
+//        self.aboutMeTextView.clipsToBounds = YES;
         
         self.findLocationLabel.layer.cornerRadius = 5.0f;
         self.findLocationButton.alpha = 1.0;
@@ -204,19 +207,19 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    self.scrollView.contentSize = CGSizeMake(320, 536 + 216);
-    self.scrollView.scrollEnabled = YES;
-    self.scrollView.userInteractionEnabled = YES;
-    [self.scrollView addSubview:self.uiViewForScrollView];
-    if (self.currentUser[@"aboutMe"])
+    if (isiPhone5)
     {
-        NSLog(@"about me");
+        // this is iphone 4 inch
+        self.scrollView.contentSize = CGSizeMake(320, 466 + 216);
     }
     else
     {
-        NSLog(@"not about me");
+        NSLog(@"small");
+        self.scrollView.contentSize = CGSizeMake(320, 466 + 216 + 88);
     }
-
+    self.scrollView.scrollEnabled = YES;
+    self.scrollView.userInteractionEnabled = YES;
+    [self.scrollView addSubview:self.uiViewForScrollView];
 }
 
 -(void)dismissKeyboard
@@ -224,27 +227,40 @@
     [self.usernameTextField resignFirstResponder];
     [self.expertiseTextField resignFirstResponder];
     [self.aboutMeTextView resignFirstResponder];
+    [self.achievementsTextView resignFirstResponder];
+    [self.websiteTextField resignFirstResponder];
+
 }
 
 #pragma mark - about me text view delegate methods (for placehoder text to exist)
 
-- (void)textViewDidBeginEditing:(UITextView *)textView
-{
-    if ([self.aboutMeTextView.text isEqualToString:@"About Me"]) {
-        self.aboutMeTextView.text = @"";
-        self.aboutMeTextView.textColor = [UIColor blackColor]; //optional
-//        self.aboutMeTextView.textAlignment = NSTextAlignmentLeft;
-        //        [self.aboutMeTextView becomeFirstResponder];
-    }
-}
-
+//- (void)textViewDidBeginEditing:(UITextView *)textView
+//{
+//    if ([self.aboutMeTextView.text isEqualToString:@"About Me"]) {
+//        self.aboutMeTextView.text = @"";
+//        self.aboutMeTextView.textColor = [UIColor blackColor]; //optional
+////        self.aboutMeTextView.textAlignment = NSTextAlignmentLeft;
+//        //        [self.aboutMeTextView becomeFirstResponder];
+//    }
+//}
+//
 - (void)textViewDidEndEditing:(UITextView *)textView
 {
-    if ([self.aboutMeTextView.text isEqualToString:@""]) {
-        self.aboutMeTextView.text = @"About Me";
-        self.aboutMeTextView.textColor = [UIColor colorWithWhite: 0.8 alpha:1]; //optional
-//        self.aboutMeTextView.textAlignment = NSTextAlignmentCenter;
-        [self.aboutMeTextView resignFirstResponder];
+//    if ([self.aboutMeTextView.text isEqualToString:@""]) {
+//        self.aboutMeTextView.text = @"About Me";
+//        self.aboutMeTextView.textColor = [UIColor colorWithWhite: 0.8 alpha:1]; //optional
+////        self.aboutMeTextView.textAlignment = NSTextAlignmentCenter;
+//        [self.aboutMeTextView resignFirstResponder];
+//    }
+    if (!(allTrim(self.aboutMeTextView.text).length == 0))
+    {
+        self.currentUser[@"aboutMe"] = self.aboutMeTextView.text;
+        [self.currentUser saveInBackground];
+    }
+    if (!(allTrim(self.achievementsTextView.text).length == 0))
+    {
+        self.currentUser[@"achievements"] = self.achievementsTextView.text;
+        [self.currentUser saveInBackground];
     }
 }
 

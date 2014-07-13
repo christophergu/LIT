@@ -56,7 +56,7 @@
     
     TagsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"TagsReuseCellID" forIndexPath:indexPath];
     
-    cell.myImageView.image = self.categoriesArray[indexPath.row][self.categoriesKeysArray[indexPath.row]];
+//    cell.myImageView.image = self.categoriesArray[indexPath.row][self.categoriesKeysArray[indexPath.row]];
     cell.myLabel.text = self.categoriesKeysArray[indexPath.row];
     
     return cell;
@@ -71,21 +71,36 @@
             
             [self.selectedTagsMutableDictionary addEntriesFromDictionary:self.categoriesArray[indexPath.row]];
             self.tagSelectButton01.selectedCategoryDictionary = self.categoriesArray[indexPath.row];
-            self.tagImageView01.image = self.categoriesArray[indexPath.row][self.categoriesKeysArray[indexPath.row]];
+//            self.tagImageView01.image = self.categoriesArray[indexPath.row][self.categoriesKeysArray[indexPath.row]];
+            self.tagImageView01.image = [UIImage imageNamed:@"tagBackground"];
         }
         else if (!self.tagImageView02.image)
         {
             [self.selectedTagsMutableDictionary addEntriesFromDictionary:self.categoriesArray[indexPath.row]];
             self.tagSelectButton02.selectedCategoryDictionary = self.categoriesArray[indexPath.row];
-            self.tagImageView02.image = self.categoriesArray[indexPath.row][self.categoriesKeysArray[indexPath.row]];
+//            self.tagImageView02.image = self.categoriesArray[indexPath.row][self.categoriesKeysArray[indexPath.row]];
+            self.tagImageView02.image = [UIImage imageNamed:@"tagBackground"];
+
         }
         else if (!self.tagImageView03.image)
         {
             [self.selectedTagsMutableDictionary addEntriesFromDictionary:self.categoriesArray[indexPath.row]];
             self.tagSelectButton03.selectedCategoryDictionary = self.categoriesArray[indexPath.row];
-            self.tagImageView03.image = self.categoriesArray[indexPath.row][self.categoriesKeysArray[indexPath.row]];
+//            self.tagImageView03.image = self.categoriesArray[indexPath.row][self.categoriesKeysArray[indexPath.row]];
+            self.tagImageView03.image = [UIImage imageNamed:@"tagBackground"];
+
         }
     }
+}
+
+#pragma mark collection view cell paddings
+- (UIEdgeInsets)collectionView:(UICollectionView*)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    return UIEdgeInsetsMake(2, 2, 2, 2); // top, left, bottom, right
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+    
+    return 4.0;
 }
 
 - (IBAction)onTagImageView01ButtonPressed:(id)sender
@@ -100,7 +115,7 @@
 
 - (IBAction)onTagImageView02ButtonPressed:(id)sender
 {
-    if (self.tagImageView01.image)
+    if (self.tagImageView02.image)
     {
         [self.selectedTagsMutableDictionary removeObjectsForKeys: [self.tagSelectButton02.selectedCategoryDictionary allKeys]];
         self.tagImageView02.image = nil;
@@ -110,7 +125,7 @@
 
 - (IBAction)onTagImageView03ButtonPressed:(id)sender
 {
-    if (self.tagImageView01.image)
+    if (self.tagImageView03.image)
     {
         [self.selectedTagsMutableDictionary removeObjectsForKeys: [self.tagSelectButton03.selectedCategoryDictionary allKeys]];
         self.tagImageView03.image = nil;
