@@ -7,6 +7,7 @@
 //
 
 #import "ProfileViewController.h"
+#import "WebViewController.h"
 #import "TagsViewController.h"
 #import <MapKit/MapKit.h>
 #import <AddressBook/AddressBook.h>
@@ -111,11 +112,14 @@
         
         if (self.selectedUserProfile[@"website"])
         {
+            NSLog(@"website");
             self.websiteTextField.alpha = 0.0;
+            self.websiteButton.alpha = 1.0;
             [self.websiteButton setTitle:self.selectedUserProfile[@"website"] forState:UIControlStateNormal];
         }
         else
         {
+            NSLog(@"no website");
             self.websiteButton.alpha = 0.0;
             self.websiteTextField.placeholder = @"";
         }
@@ -342,6 +346,14 @@
     [self.usernameTextField endEditing:YES];
 }
 
+
+- (IBAction)onWebsiteTextFieldDidEndOnExit:(id)sender
+{
+    self.currentUser[@"website"] = self.websiteTextField.text;
+    [self.currentUser saveInBackground];
+    [self.websiteTextField endEditing:YES];
+}
+
 - (IBAction)onExpertiseTextViewDidEndOnExit:(id)sender
 {
     [self.expertiseTextField endEditing:YES];
@@ -488,6 +500,11 @@
     {
         TagsViewController *tvc = segue.destinationViewController;
         tvc.choosingTagsForExpertise = 1;
+    }
+    else if ([segue.identifier isEqualToString:@"ToWebSegue"])
+    {
+        WebViewController *wvc = segue.destinationViewController;
+        wvc.urlString = self.websiteButton.titleLabel.text;
     }
 }
 

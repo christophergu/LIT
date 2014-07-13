@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DF0F1FDE195F567A003B15A3 /* SearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0F1FDD195F567A003B15A3 /* SearchResultsViewController.m */; };
 		DF0F1FE119608531003B15A3 /* SearchResultsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0F1FE019608531003B15A3 /* SearchResultsTableViewCell.m */; };
+		DF3546CA197347AD00C00F9D /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3546C9197347AD00C00F9D /* WebViewController.m */; };
 		DF5D6068192325450022C498 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF5D6067192325450022C498 /* Foundation.framework */; };
 		DF5D606A192325450022C498 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF5D6069192325450022C498 /* CoreGraphics.framework */; };
 		DF5D606C192325450022C498 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF5D606B192325450022C498 /* UIKit.framework */; };
@@ -63,6 +64,8 @@
 		DF0F1FDD195F567A003B15A3 /* SearchResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsViewController.m; sourceTree = "<group>"; };
 		DF0F1FDF19608531003B15A3 /* SearchResultsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultsTableViewCell.h; sourceTree = "<group>"; };
 		DF0F1FE019608531003B15A3 /* SearchResultsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsTableViewCell.m; sourceTree = "<group>"; };
+		DF3546C8197347AD00C00F9D /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		DF3546C9197347AD00C00F9D /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		DF5D6064192325450022C498 /* LIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF5D6067192325450022C498 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DF5D6069192325450022C498 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -216,6 +219,8 @@
 				DF0F1FDD195F567A003B15A3 /* SearchResultsViewController.m */,
 				DFFFF57D195E02D80002A215 /* ProfileViewController.h */,
 				DFFFF57E195E02D80002A215 /* ProfileViewController.m */,
+				DF3546C8197347AD00C00F9D /* WebViewController.h */,
+				DF3546C9197347AD00C00F9D /* WebViewController.m */,
 				DF5D6079192325450022C498 /* Main.storyboard */,
 				DF5D607F192325450022C498 /* Images.xcassets */,
 				DFFFF52A195CA0A30002A215 /* TagsCollectionViewCell.h */,
@@ -360,6 +365,7 @@
 			files = (
 				DF5D60B5192328EF0022C498 /* LogInViewController.m in Sources */,
 				DFFFF52C195CA0A30002A215 /* TagsCollectionViewCell.m in Sources */,
+				DF3546CA197347AD00C00F9D /* WebViewController.m in Sources */,
 				DFFFF57F195E02D80002A215 /* ProfileViewController.m in Sources */,
 				DF5D6078192325450022C498 /* AppDelegate.m in Sources */,
 				DFFFF529195CA07B0002A215 /* TagsViewController.m in Sources */,

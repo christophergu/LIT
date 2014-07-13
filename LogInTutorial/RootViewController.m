@@ -20,6 +20,21 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:195/255.0f green:140/255.0f blue:69/255.0f alpha:1.0f];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+//    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    
+    [self.navigationController.navigationBar setTitleTextAttributes:@{UITextAttributeFont:[UIFont fontWithName:@"Futura" size:21.0f]}];
+    
+//    NSShadow* shadow = [NSShadow new];
+//    shadow.shadowOffset = CGSizeMake(0.0f, 1.0f);
+//    shadow.shadowColor = [UIColor redColor];
+//    [[UINavigationBar appearance] setTitleTextAttributes: @{
+//                                                            NSForegroundColorAttributeName: [UIColor whiteColor],
+//                                                            NSFontAttributeName: [UIFont fontWithName:@"Futura" size:20.0f],
+//                                                            NSShadowAttributeName: shadow
+//                                                            }];
 }
 
 - (IBAction)onLoginButtonPressed:(id)sender
