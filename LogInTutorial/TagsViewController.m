@@ -23,6 +23,9 @@
 @property (weak, nonatomic) IBOutlet TagsSelectButton *tagSelectButton01;
 @property (weak, nonatomic) IBOutlet TagsSelectButton *tagSelectButton02;
 @property (weak, nonatomic) IBOutlet TagsSelectButton *tagSelectButton03;
+@property (weak, nonatomic) IBOutlet UILabel *tagLabel01;
+@property (weak, nonatomic) IBOutlet UILabel *tagLabel02;
+@property (weak, nonatomic) IBOutlet UILabel *tagLabel03;
 
 
 @end
@@ -44,6 +47,17 @@
     self.tagImageView01.clipsToBounds = YES;
     self.tagImageView02.clipsToBounds = YES;
     self.tagImageView03.clipsToBounds = YES;
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    self.selectedTagsMutableDictionary = [NSMutableDictionary new];
+    self.tagImageView01.image = nil;
+    self.tagImageView02.image = nil;
+    self.tagImageView03.image = nil;
+    self.tagLabel01.text = @"";
+    self.tagLabel02.text = @"";
+    self.tagLabel03.text = @"";
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -73,6 +87,7 @@
             self.tagSelectButton01.selectedCategoryDictionary = self.categoriesArray[indexPath.row];
 //            self.tagImageView01.image = self.categoriesArray[indexPath.row][self.categoriesKeysArray[indexPath.row]];
             self.tagImageView01.image = [UIImage imageNamed:@"tagBackground"];
+            self.tagLabel01.text = self.categoriesKeysArray[indexPath.row];
         }
         else if (!self.tagImageView02.image)
         {
@@ -80,6 +95,7 @@
             self.tagSelectButton02.selectedCategoryDictionary = self.categoriesArray[indexPath.row];
 //            self.tagImageView02.image = self.categoriesArray[indexPath.row][self.categoriesKeysArray[indexPath.row]];
             self.tagImageView02.image = [UIImage imageNamed:@"tagBackground"];
+            self.tagLabel02.text = self.categoriesKeysArray[indexPath.row];
 
         }
         else if (!self.tagImageView03.image)
@@ -88,7 +104,7 @@
             self.tagSelectButton03.selectedCategoryDictionary = self.categoriesArray[indexPath.row];
 //            self.tagImageView03.image = self.categoriesArray[indexPath.row][self.categoriesKeysArray[indexPath.row]];
             self.tagImageView03.image = [UIImage imageNamed:@"tagBackground"];
-
+            self.tagLabel03.text = self.categoriesKeysArray[indexPath.row];
         }
     }
 }
@@ -109,6 +125,7 @@
     {
         [self.selectedTagsMutableDictionary removeObjectsForKeys: [self.tagSelectButton01.selectedCategoryDictionary allKeys]];
         self.tagImageView01.image = nil;
+        self.tagLabel01.text = @"";
         NSLog(@"%@",self.selectedTagsMutableDictionary);
     }
 }
@@ -119,6 +136,7 @@
     {
         [self.selectedTagsMutableDictionary removeObjectsForKeys: [self.tagSelectButton02.selectedCategoryDictionary allKeys]];
         self.tagImageView02.image = nil;
+        self.tagLabel02.text = @"";
         NSLog(@"%@",self.selectedTagsMutableDictionary);
     }
 }
@@ -129,6 +147,7 @@
     {
         [self.selectedTagsMutableDictionary removeObjectsForKeys: [self.tagSelectButton03.selectedCategoryDictionary allKeys]];
         self.tagImageView03.image = nil;
+        self.tagLabel03.text = @"";
         NSLog(@"%@",self.selectedTagsMutableDictionary);
     }
 }
