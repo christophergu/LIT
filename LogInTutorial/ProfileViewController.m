@@ -64,6 +64,7 @@
         [self.logoutBarButtonItem setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor clearColor]} forState:UIControlStateNormal];
         self.logoutBarButtonItem.enabled = NO;
         self.aboutMeTextView.editable = NO;
+        self.achievementsTextView.editable = NO;
         self.usernameTextField.borderStyle = UITextBorderStyleNone;
         self.usernameTextField.enabled = NO;
         self.expertiseTextField.borderStyle = UITextBorderStyleNone;
@@ -99,6 +100,11 @@
         else if (self.selectedUserProfile[@"aboutMe"])
         {
             self.aboutMeTextView.text = self.selectedUserProfile[@"aboutMe"];
+        }
+        
+        if (self.selectedUserProfile[@"achievements"])
+        {
+            self.achievementsTextView.text = self.selectedUserProfile[@"achievements"];
         }
         
         if (self.selectedUserProfile[@"city"] && self.selectedUserProfile[@"state"])
@@ -162,6 +168,11 @@
 //        [self.aboutMeTextView.layer setBorderWidth:0.5];
 //        self.aboutMeTextView.layer.cornerRadius = 5;
 //        self.aboutMeTextView.clipsToBounds = YES;
+        
+        if (self.currentUser[@"achievements"])
+        {
+            self.achievementsTextView.text = self.currentUser[@"achievements"];
+        }
         
         self.findLocationLabel.layer.cornerRadius = 5.0f;
         self.findLocationButton.alpha = 1.0;
@@ -262,14 +273,16 @@
 //    }
     if (!(allTrim(self.aboutMeTextView.text).length == 0))
     {
+        NSLog(@"save about me pls");
         self.currentUser[@"aboutMe"] = self.aboutMeTextView.text;
-        [self.currentUser saveInBackground];
     }
     if (!(allTrim(self.achievementsTextView.text).length == 0))
     {
+        NSLog(@"save achievements pls");
         self.currentUser[@"achievements"] = self.achievementsTextView.text;
-        [self.currentUser saveInBackground];
     }
+    [self.currentUser saveInBackground];
+
 }
 
 
