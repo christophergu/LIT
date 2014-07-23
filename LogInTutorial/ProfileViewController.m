@@ -9,6 +9,7 @@
 #import "ProfileViewController.h"
 #import "WebViewController.h"
 #import "TagsViewController.h"
+#import "GalleryViewController.h"
 #import <MapKit/MapKit.h>
 #import <AddressBook/AddressBook.h>
 #import <QuartzCore/QuartzCore.h>
@@ -409,17 +410,11 @@
     [self.locationManager startUpdatingLocation];
 }
 
-- (IBAction)onSaveChangesButtonPressed:(id)sender
+- (IBAction)onGalleryButtonPressed:(id)sender
 {
-    self.currentUser.username = self.usernameTextField.text;
-    self.currentUser[@"expertise"] = self.expertiseTextField.text;
-//    self.currentUser.password = self.passwordTextField.text;
-//    self.currentUser.email = self.emailTextField.text;
-    self.currentUser[@"aboutMe"] = self.aboutMeTextView.text;
-    self.currentUser[@"website"] = self.websiteTextField.text;
-    
-    [self.currentUser saveInBackground];
+    [self performSegueWithIdentifier:@"ToGallerySegue" sender:self];
 }
+
 
 #pragma mark - image picker methods
 
@@ -522,6 +517,12 @@
     {
         WebViewController *wvc = segue.destinationViewController;
         wvc.urlString = self.websiteButton.titleLabel.text;
+    }
+    else if ([segue.identifier isEqualToString:@"ToGallerySegue"])
+    {
+        GalleryViewController *gvc = segue.destinationViewController;
+        gvc.ownProfile = self.ownProfile;
+        gvc.selectedUserProfile = self.selectedUserProfile;
     }
 }
 

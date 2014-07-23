@@ -48,6 +48,8 @@
 		DF5D60C019232BC60022C498 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DF5D60BF19232BC60022C498 /* libsqlite3.dylib */; };
 		DF5D60C219232BD40022C498 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF5D60C119232BD40022C498 /* Social.framework */; };
 		DFEC6FAA1964A9820025345A /* TagsSelectButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DFEC6FA91964A9820025345A /* TagsSelectButton.m */; };
+		DFF9C8CC197FC3A5008D6F15 /* GalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF9C8CB197FC3A5008D6F15 /* GalleryViewController.m */; };
+		DFF9C8CF197FC6B5008D6F15 /* GalleryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF9C8CE197FC6B5008D6F15 /* GalleryCollectionViewCell.m */; };
 		DFFFF526195C9D060002A215 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFFFF525195C9D060002A215 /* RootViewController.m */; };
 		DFFFF529195CA07B0002A215 /* TagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFFFF528195CA07B0002A215 /* TagsViewController.m */; };
 		DFFFF52C195CA0A30002A215 /* TagsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFFFF52B195CA0A30002A215 /* TagsCollectionViewCell.m */; };
@@ -120,6 +122,10 @@
 		DF5D60C119232BD40022C498 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		DFEC6FA81964A9820025345A /* TagsSelectButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagsSelectButton.h; sourceTree = "<group>"; };
 		DFEC6FA91964A9820025345A /* TagsSelectButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagsSelectButton.m; sourceTree = "<group>"; };
+		DFF9C8CA197FC3A5008D6F15 /* GalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryViewController.h; sourceTree = "<group>"; };
+		DFF9C8CB197FC3A5008D6F15 /* GalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryViewController.m; sourceTree = "<group>"; };
+		DFF9C8CD197FC6B5008D6F15 /* GalleryCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryCollectionViewCell.h; sourceTree = "<group>"; };
+		DFF9C8CE197FC6B5008D6F15 /* GalleryCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryCollectionViewCell.m; sourceTree = "<group>"; };
 		DFFFF524195C9D060002A215 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		DFFFF525195C9D060002A215 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		DFFFF527195CA07B0002A215 /* TagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagsViewController.h; sourceTree = "<group>"; };
@@ -244,6 +250,8 @@
 				DF0F1FDD195F567A003B15A3 /* SearchResultsViewController.m */,
 				DFFFF57D195E02D80002A215 /* ProfileViewController.h */,
 				DFFFF57E195E02D80002A215 /* ProfileViewController.m */,
+				DFF9C8CA197FC3A5008D6F15 /* GalleryViewController.h */,
+				DFF9C8CB197FC3A5008D6F15 /* GalleryViewController.m */,
 				DF2A6135197F98FD00DA6FE2 /* VideoViewController.h */,
 				DF2A6136197F98FD00DA6FE2 /* VideoViewController.m */,
 				DF2A6132197F980800DA6FE2 /* RecordVideoViewController.h */,
@@ -258,6 +266,8 @@
 				DFEC6FA91964A9820025345A /* TagsSelectButton.m */,
 				DF0F1FDF19608531003B15A3 /* SearchResultsTableViewCell.h */,
 				DF0F1FE019608531003B15A3 /* SearchResultsTableViewCell.m */,
+				DFF9C8CD197FC6B5008D6F15 /* GalleryCollectionViewCell.h */,
+				DFF9C8CE197FC6B5008D6F15 /* GalleryCollectionViewCell.m */,
 				DF2A6138197F9B8000DA6FE2 /* PushNoAnimationSegue.h */,
 				DF2A6139197F9B8000DA6FE2 /* PushNoAnimationSegue.m */,
 				DF5D606E192325450022C498 /* Supporting Files */,
@@ -407,7 +417,9 @@
 				DF0F1FDE195F567A003B15A3 /* SearchResultsViewController.m in Sources */,
 				DF2A613A197F9B8000DA6FE2 /* PushNoAnimationSegue.m in Sources */,
 				DF2A6137197F98FD00DA6FE2 /* VideoViewController.m in Sources */,
+				DFF9C8CF197FC6B5008D6F15 /* GalleryCollectionViewCell.m in Sources */,
 				DF2A6134197F980800DA6FE2 /* RecordVideoViewController.m in Sources */,
+				DFF9C8CC197FC3A5008D6F15 /* GalleryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
