@@ -30,11 +30,11 @@
 {
     if (self.ownProfile)
     {
-        return 1;
+        return [self.currentUser[@"gallery"] count];
     }
     else
     {
-        return 0;
+        return [self.selectedUserProfile[@"gallery"] count];
     }
 }
 
@@ -57,20 +57,24 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     GalleryCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"GalleryReuseCellID" forIndexPath:indexPath];
-    UIImage *photo;
+    __block UIImage *photo;
     
-    NSArray *galleryArray = self.currentUser[@"gallery"];
+    PFFile *image;
     
     if (self.ownProfile)
     {
-        photo = [UIImage imageWithData:galleryArray[indexPath.row]];
+        image = self.currentUser[@"gallery"][indexPath.row];
     }
-//    else
-//    {
-//        photo = [UIImage imageWithData:self.selectedUserProfile[@"gallery"][indexPath.row]];
-//    }
-    cell.myImageView.image = photo;
-    
+    else
+    {
+        image = self.selectedUserProfile[@"gallery"][indexPath.row];
+    }
+
+    [image getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+        photo = [UIImage imageWithData:data];
+        cell.myImageView.image = photo;
+    }];
+
     return cell;
 }
 
