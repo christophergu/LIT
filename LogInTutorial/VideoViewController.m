@@ -29,8 +29,14 @@
                                     target:nil
                                     action:nil];
     [[self navigationItem] setBackBarButtonItem:newBackButton];
-    
+
     [self performSegueWithIdentifier:@"RecordVideoSegue" sender:self];
 }
+
+- (IBAction)unwindToVideoVC:(UIStoryboardSegue *)unwindSegue
+{
+
+}
+
 
 @end
