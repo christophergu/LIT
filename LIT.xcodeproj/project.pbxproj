@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DF0F1FDE195F567A003B15A3 /* SearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0F1FDD195F567A003B15A3 /* SearchResultsViewController.m */; };
 		DF0F1FE119608531003B15A3 /* SearchResultsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0F1FE019608531003B15A3 /* SearchResultsTableViewCell.m */; };
+		DF28A8DE19801F4D00B39177 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF28A8DD19801F4D00B39177 /* PhotoViewController.m */; };
 		DF2A6134197F980800DA6FE2 /* RecordVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2A6133197F980800DA6FE2 /* RecordVideoViewController.m */; };
 		DF2A6137197F98FD00DA6FE2 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2A6136197F98FD00DA6FE2 /* VideoViewController.m */; };
 		DF2A613A197F9B8000DA6FE2 /* PushNoAnimationSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2A6139197F9B8000DA6FE2 /* PushNoAnimationSegue.m */; };
@@ -73,6 +74,8 @@
 		DF0F1FDD195F567A003B15A3 /* SearchResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsViewController.m; sourceTree = "<group>"; };
 		DF0F1FDF19608531003B15A3 /* SearchResultsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultsTableViewCell.h; sourceTree = "<group>"; };
 		DF0F1FE019608531003B15A3 /* SearchResultsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsTableViewCell.m; sourceTree = "<group>"; };
+		DF28A8DC19801F4D00B39177 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		DF28A8DD19801F4D00B39177 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
 		DF2A6132197F980800DA6FE2 /* RecordVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordVideoViewController.h; sourceTree = "<group>"; };
 		DF2A6133197F980800DA6FE2 /* RecordVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordVideoViewController.m; sourceTree = "<group>"; };
 		DF2A6135197F98FD00DA6FE2 /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
@@ -252,6 +255,8 @@
 				DFFFF57E195E02D80002A215 /* ProfileViewController.m */,
 				DFF9C8CA197FC3A5008D6F15 /* GalleryViewController.h */,
 				DFF9C8CB197FC3A5008D6F15 /* GalleryViewController.m */,
+				DF28A8DC19801F4D00B39177 /* PhotoViewController.h */,
+				DF28A8DD19801F4D00B39177 /* PhotoViewController.m */,
 				DF2A6135197F98FD00DA6FE2 /* VideoViewController.h */,
 				DF2A6136197F98FD00DA6FE2 /* VideoViewController.m */,
 				DF2A6132197F980800DA6FE2 /* RecordVideoViewController.h */,
@@ -413,6 +418,7 @@
 				DF5D6074192325450022C498 /* main.m in Sources */,
 				DFFFF526195C9D060002A215 /* RootViewController.m in Sources */,
 				DF0F1FE119608531003B15A3 /* SearchResultsTableViewCell.m in Sources */,
+				DF28A8DE19801F4D00B39177 /* PhotoViewController.m in Sources */,
 				DFEC6FAA1964A9820025345A /* TagsSelectButton.m in Sources */,
 				DF0F1FDE195F567A003B15A3 /* SearchResultsViewController.m in Sources */,
 				DF2A613A197F9B8000DA6FE2 /* PushNoAnimationSegue.m in Sources */,

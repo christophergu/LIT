@@ -8,6 +8,7 @@
 
 #import "GalleryViewController.h"
 #import "GalleryCollectionViewCell.h"
+#import "PhotoViewController.h"
 
 @interface GalleryViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -62,6 +63,14 @@
     }
     
     [self.myCollectionView reloadData];
+    
+//    // makes the navigation bar not animate
+//    CATransition *navTransition = [CATransition animation];
+//    navTransition.duration = 1;
+//    navTransition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+//    navTransition.type = kCATransitionPush;
+//    navTransition.subtype = kCATransitionPush;
+//    [self.navigationController.navigationBar.layer addAnimation:navTransition forKey:nil];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -80,7 +89,6 @@
         image = self.selectedUserProfile[@"gallery"][indexPath.row];
     }
 
-    // try and get this data before reloading to minimize flickering on reload data
     [image getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
         photo = [UIImage imageWithData:data];
         cell.myImageView.image = photo;
@@ -104,6 +112,8 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     [[picker presentingViewController] dismissViewControllerAnimated:YES completion:nil];
+
+    self.instructionsUIView.alpha = 0.0;
     
     // saving a uiimage to pffile
     UIImage *pickedImage = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
@@ -111,7 +121,24 @@
     PFFile *imageFile = [PFFile fileWithData:data];
     [self.currentUser addUniqueObject:imageFile forKey:@"gallery"];
     
-    [self.currentUser saveInBackground];
+    [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+
+    }];
+}
+
+- (IBAction)unwindToGalleryVC:(UIStoryboardSegue *)unwindSegue
+{
+    
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    PhotoViewController *pvc = segue.destinationViewController;
+    pvc.ownProfile = self.ownProfile;
+    pvc.selectedUserProfile = self.selectedUserProfile;
+    
+    NSIndexPath *indexPath = [self.myCollectionView indexPathForCell:sender];
+    pvc.startingIndexPathRow = indexPath.row;
 }
 
 @end
