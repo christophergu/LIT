@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIView *instructionsUIView;
 @property (strong, nonatomic) PFUser *currentUser;
 @property (weak, nonatomic) IBOutlet UICollectionView *myCollectionView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *addBarButton;
 
 @end
 
@@ -38,17 +39,26 @@
     }
 }
 
-- (void)viewDidAppear:(BOOL)animated
+- (void)viewWillAppear:(BOOL)animated
 {
-    if (![self.currentUser[@"gallery"] isEqual:[NSNull null]] && !(self.currentUser[@"gallery"] == nil))
+    if (self.ownProfile)
     {
-        NSLog(@"there is a gallery");
-        self.instructionsUIView.alpha = 0.0;
+        if (([self.currentUser[@"gallery"] count] > 0))
+        {
+            self.instructionsUIView.alpha = 0.0;
+        }
+        else
+        {
+            self.instructionsUIView.alpha = 1.0;
+        }
+        [self.addBarButton setEnabled:YES];
+        [self.addBarButton setTintColor: [UIColor whiteColor]];
     }
     else
     {
-        NSLog(@"there isn't a gallery");
-        self.instructionsUIView.alpha = 1.0;
+        [self.addBarButton setEnabled:NO];
+        [self.addBarButton setTintColor: [UIColor clearColor]];
+        self.instructionsUIView.alpha = 0.0;
     }
     
     [self.myCollectionView reloadData];
@@ -70,6 +80,7 @@
         image = self.selectedUserProfile[@"gallery"][indexPath.row];
     }
 
+    // try and get this data before reloading to minimize flickering on reload data
     [image getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
         photo = [UIImage imageWithData:data];
         cell.myImageView.image = photo;
@@ -96,7 +107,7 @@
     
     // saving a uiimage to pffile
     UIImage *pickedImage = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
-    NSData* data = UIImageJPEGRepresentation(pickedImage,1.0f);
+    NSData* data = UIImagePNGRepresentation(pickedImage);
     PFFile *imageFile = [PFFile fileWithData:data];
     [self.currentUser addUniqueObject:imageFile forKey:@"gallery"];
     
