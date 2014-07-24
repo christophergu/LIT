@@ -67,8 +67,7 @@
                 }
             }];
             
-            [self addTheDistances];
-            [self.myTableView reloadData];
+            [self radiusHelper];
         }];
     }
     else
@@ -92,8 +91,8 @@
                     return NSOrderedDescending;
                 }
             }];
-            [self addTheDistances];
-            [self.myTableView reloadData];
+            
+            [self radiusHelper];
         }];
     }
 }
@@ -269,6 +268,13 @@
         if (![self.radiusTextField.text isEqualToString:@"0"] && ![allTrim(self.radiusTextField.text) isEqualToString:@""])
         {
             if (distance < [self.radiusTextField.text intValue])
+            {
+                [radiusFilteredMutableArray addObject:user];
+            }
+        }
+        else
+        {
+            if (distance < 50.0)
             {
                 [radiusFilteredMutableArray addObject:user];
             }
