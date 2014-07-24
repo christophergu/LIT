@@ -8,8 +8,11 @@
 
 #import "VideoViewController.h"
 #import "RecordVideoViewController.h"
+#import <MobileCoreServices/UTCoreTypes.h>
+#import <Parse/Parse.h>
 
-@interface VideoViewController ()
+@interface VideoViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@property (nonatomic) PFUser *currentUser;
 
 @end
 
@@ -19,6 +22,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    self.currentUser = [PFUser currentUser];
 }
 
 - (IBAction)onRecordVideoPressed:(id)sender
@@ -32,6 +37,44 @@
 
     [self performSegueWithIdentifier:@"RecordVideoSegue" sender:self];
 }
+
+#pragma mark - image picker delegate methods
+
+- (IBAction)onSaveButtonPressed:(id)sender
+{
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    picker.mediaTypes = [[NSArray alloc] initWithObjects:(NSString *)kUTTypeMovie,      nil];
+    
+    [self presentViewController:picker animated:YES completion:nil];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    [[picker presentingViewController] dismissViewControllerAnimated:YES completion:nil];
+    
+    PFFile *videoFile;
+    NSString *mediaType = [info objectForKey: UIImagePickerControllerMediaType];
+    
+    if (CFStringCompare ((__bridge CFStringRef) mediaType, kUTTypeMovie, 0) == kCFCompareEqualTo) {
+        NSURL *videoUrl=(NSURL*)[info objectForKey:UIImagePickerControllerMediaURL];
+        NSString *moviePath = [videoUrl path];
+        
+        NSData *videoData = [NSData dataWithContentsOfURL:[NSURL URLWithString:moviePath]];
+        videoFile = [PFFile fileWithData:videoData];
+        
+        [self.currentUser addUniqueObject:videoFile forKey:@"video"];
+        [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            
+        }];
+    }
+    else
+    {
+        // maybe alertView that it is not a video, test what happens first
+    }
+}
+
 
 - (IBAction)unwindToVideoVC:(UIStoryboardSegue *)unwindSegue
 {

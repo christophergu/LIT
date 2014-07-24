@@ -643,6 +643,9 @@
                                 <state key="normal" title="Save">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onSaveButtonPressed:" destination="Zsa-et-FC4" eventType="touchUpInside" id="uNk-5Z-Nof"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiw-cX-zE7">
                                 <rect key="frame" x="145" y="119" width="30" height="30"/>
