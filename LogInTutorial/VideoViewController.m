@@ -38,6 +38,23 @@
     [self performSegueWithIdentifier:@"RecordVideoSegue" sender:self];
 }
 
+- (IBAction)onPlayButtonPressed:(id)sender
+{
+    NSBundle *bundle = [NSBundle mainBundle];
+    
+    // retrieve the path from parse
+    NSString *moviePath = [bundle pathForResource:@"disc" ofType:@"mp4"];
+    NSURL *movieURL = [NSURL fileURLWithPath:moviePath];
+    
+    MPMoviePlayerController *theMoviPlayer = [[MPMoviePlayerController alloc] initWithContentURL:movieURL];
+    theMoviPlayer.controlStyle = MPMovieControlStyleFullscreen;
+    theMoviPlayer.view.transform = CGAffineTransformConcat(theMoviPlayer.view.transform, CGAffineTransformMakeRotation(M_PI_2));
+    UIWindow *backgroundWindow = [[UIApplication sharedApplication] keyWindow];
+    [theMoviPlayer.view setFrame:backgroundWindow.frame];
+    [backgroundWindow addSubview:theMoviPlayer.view];
+    [theMoviPlayer play];
+}
+
 #pragma mark - image picker delegate methods
 
 - (IBAction)onSaveButtonPressed:(id)sender
