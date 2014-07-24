@@ -13,6 +13,8 @@
 #import <AddressBook/AddressBook.h>
 #import <Parse/Parse.h>
 
+#define allTrim( object ) [object stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet] ]
+
 @interface SearchResultsViewController ()<UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate, MKMapViewDelegate>
 @property (copy, nonatomic) NSArray *searchResultsArray;
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
@@ -52,11 +54,10 @@
                                                                       selector: @selector(caseInsensitiveCompare:)];
         [allUsersQuery orderBySortDescriptor: descriptor];
         [allUsersQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-            
             self.searchResultsArray = [objects sortedArrayUsingComparator:^NSComparisonResult(PFUser *user1, PFUser *user2) {
                 NSString *expertise1 = [user1[@"expertise"] lowercaseString];
                 NSString *expertise2 = [user2[@"expertise"] lowercaseString];
-
+                
                 if ([expertise1 compare: expertise2] == NSOrderedAscending)
                 {
                     return NSOrderedAscending;
@@ -65,6 +66,7 @@
                     return NSOrderedDescending;
                 }
             }];
+            
             [self addTheDistances];
             [self.myTableView reloadData];
         }];
@@ -76,6 +78,20 @@
         [usersWithMatchingTagsQuery whereKey:@"tags" containsAllObjectsInArray:[self.selectedTagsDictionary allKeys]];
         [usersWithMatchingTagsQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             self.searchResultsArray = objects;
+            NSArray *tempSearchResultsArray = self.searchResultsArray;
+            
+            self.searchResultsArray = [tempSearchResultsArray sortedArrayUsingComparator:^NSComparisonResult(PFUser *user1, PFUser *user2) {
+                NSString *expertise1 = [user1[@"expertise"] lowercaseString];
+                NSString *expertise2 = [user2[@"expertise"] lowercaseString];
+                
+                if ([expertise1 compare: expertise2] == NSOrderedAscending)
+                {
+                    return NSOrderedAscending;
+                }
+                else{
+                    return NSOrderedDescending;
+                }
+            }];
             [self addTheDistances];
             [self.myTableView reloadData];
         }];
@@ -175,6 +191,8 @@
     self.distanceMutableArray = nil;
     self.distanceMutableArray = [NSMutableArray new];
     
+    
+    
     for (PFUser *user in self.searchResultsArray)
     {
         CLLocation *userLocation = [[CLLocation alloc] initWithLatitude:[self.currentUser[@"latitude"] doubleValue] longitude:[self.currentUser[@"longitude"] doubleValue]];
@@ -198,21 +216,71 @@
 
 - (IBAction)radiusTextFieldDidEndOnExit:(id)sender
 {
+    if (self.viewAllChosen)
+    {
+        PFQuery *allUsersQuery = [PFUser query];
+        [allUsersQuery whereKey:@"expertise" notEqualTo:[NSNull null]];
+        NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey: @"expertise"
+                                                                     ascending: YES
+                                                                      selector: @selector(caseInsensitiveCompare:)];
+        [allUsersQuery orderBySortDescriptor: descriptor];
+        [allUsersQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            
+            self.searchResultsArray = [objects sortedArrayUsingComparator:^NSComparisonResult(PFUser *user1, PFUser *user2) {
+                NSString *expertise1 = [user1[@"expertise"] lowercaseString];
+                NSString *expertise2 = [user2[@"expertise"] lowercaseString];
+                
+                if ([expertise1 compare: expertise2] == NSOrderedAscending)
+                {
+                    return NSOrderedAscending;
+                }
+                else{
+                    return NSOrderedDescending;
+                }
+            }];
+            
+            [self radiusHelper];
+        }];
+
+    }
+    else
+    {
+        PFQuery *usersWithMatchingTagsQuery = [PFUser query];
+        [usersWithMatchingTagsQuery whereKey:@"expertise" notEqualTo:[NSNull null]];
+        [usersWithMatchingTagsQuery whereKey:@"tags" containsAllObjectsInArray:[self.selectedTagsDictionary allKeys]];
+        [usersWithMatchingTagsQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            self.searchResultsArray = objects;
+            [self radiusHelper];
+        }];
+    }
+}
+
+-(void)radiusHelper
+{
     NSMutableArray *radiusFilteredMutableArray = [NSMutableArray new];
-    
+
     for (PFUser *user in self.searchResultsArray)
     {
         CLLocation *locA = [[CLLocation alloc] initWithLatitude:[self.currentUser[@"latitude"] doubleValue] longitude:[self.currentUser[@"longitude"] doubleValue]];
         CLLocation *locB = [[CLLocation alloc] initWithLatitude:[user[@"latitude"] doubleValue] longitude:[user[@"longitude"] doubleValue]];
-        CLLocationDistance distance = [locA distanceFromLocation:locB]/1000;
+        CLLocationDistance distance = [locA distanceFromLocation:locB]/1609.34;
         NSLog(@"user %@ distance %f",user.username, distance);
         
-        if (distance < [self.radiusTextField.text intValue]) {
-            [radiusFilteredMutableArray addObject:user];
+        if (![self.radiusTextField.text isEqualToString:@"0"] && ![allTrim(self.radiusTextField.text) isEqualToString:@""])
+        {
+            if (distance < [self.radiusTextField.text intValue])
+            {
+                [radiusFilteredMutableArray addObject:user];
+            }
         }
     }
+
+    if (radiusFilteredMutableArray.count)
+    {
+        self.searchResultsArray = [radiusFilteredMutableArray copy];
+    }
     
-    self.searchResultsArray = [radiusFilteredMutableArray copy];
+    [self addTheDistances];
     [self.myTableView reloadData];
 }
 
