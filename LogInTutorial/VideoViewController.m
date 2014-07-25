@@ -10,9 +10,12 @@
 #import "RecordVideoViewController.h"
 #import <MobileCoreServices/UTCoreTypes.h>
 #import <Parse/Parse.h>
+#import <MediaPlayer/MediaPlayer.h>
+
 
 @interface VideoViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (nonatomic) PFUser *currentUser;
+
 
 @end
 
@@ -40,19 +43,32 @@
 
 - (IBAction)onPlayButtonPressed:(id)sender
 {
-    NSBundle *bundle = [NSBundle mainBundle];
-    
-    // retrieve the path from parse
-    NSString *moviePath = [bundle pathForResource:@"disc" ofType:@"mp4"];
-    NSURL *movieURL = [NSURL fileURLWithPath:moviePath];
-    
-    MPMoviePlayerController *theMoviPlayer = [[MPMoviePlayerController alloc] initWithContentURL:movieURL];
-    theMoviPlayer.controlStyle = MPMovieControlStyleFullscreen;
-    theMoviPlayer.view.transform = CGAffineTransformConcat(theMoviPlayer.view.transform, CGAffineTransformMakeRotation(M_PI_2));
-    UIWindow *backgroundWindow = [[UIApplication sharedApplication] keyWindow];
-    [theMoviPlayer.view setFrame:backgroundWindow.frame];
-    [backgroundWindow addSubview:theMoviPlayer.view];
-    [theMoviPlayer play];
+//    NSBundle *bundle = [NSBundle mainBundle];
+//    NSString *moviePath = [bundle pathForResource:@"disc" ofType:@"mp4"];
+    if (self.currentUser[@"video"])
+    {
+        PFFile *parseVideo = self.currentUser[@"video"];
+        NSURL *parseVideoURL = [NSURL URLWithString:parseVideo.url];
+        NSLog(@"data string %@", parseVideo.url);
+        
+        MPMoviePlayerController * moviePlayer;
+        
+        moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:parseVideoURL];
+        [moviePlayer prepareToPlay];
+
+        [self.view addSubview:moviePlayer.view];
+        moviePlayer.fullscreen = YES;
+        moviePlayer.movieSourceType = MPMovieSourceTypeStreaming;
+        [moviePlayer setScalingMode:MPMovieScalingModeAspectFit];
+        moviePlayer.view.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+
+        [moviePlayer play];
+    }
+    else
+    {
+        NSLog(@"there is no video");
+    }
+
 }
 
 #pragma mark - image picker delegate methods
@@ -71,17 +87,14 @@
 {
     [[picker presentingViewController] dismissViewControllerAnimated:YES completion:nil];
     
-    PFFile *videoFile;
     NSString *mediaType = [info objectForKey: UIImagePickerControllerMediaType];
     
     if (CFStringCompare ((__bridge CFStringRef) mediaType, kUTTypeMovie, 0) == kCFCompareEqualTo) {
         NSURL *videoUrl=(NSURL*)[info objectForKey:UIImagePickerControllerMediaURL];
-        NSString *moviePath = [videoUrl path];
         
-        NSData *videoData = [NSData dataWithContentsOfURL:[NSURL URLWithString:moviePath]];
-        videoFile = [PFFile fileWithData:videoData];
-        
-        [self.currentUser addUniqueObject:videoFile forKey:@"video"];
+        NSData *videoData = [NSData dataWithContentsOfURL:videoUrl];
+        PFFile *videoFile = [PFFile fileWithData:videoData];
+        self.currentUser[@"video"] = videoFile;
         [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             
         }];
