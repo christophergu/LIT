@@ -21,10 +21,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:195/255.0f green:140/255.0f blue:69/255.0f alpha:1.0f];
+    self.navigationController.navigationBar.barTintColor = [UIColor blackColor];//[UIColor colorWithRed:195/255.0f green:140/255.0f blue:69/255.0f alpha:1.0f];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
 //    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
-    
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
+
     [self.navigationController.navigationBar setTitleTextAttributes:@{UITextAttributeFont:[UIFont fontWithName:@"Futura" size:21.0f]}];
     
 //    NSShadow* shadow = [NSShadow new];

@@ -117,7 +117,7 @@
     
     // saving a uiimage to pffile
     UIImage *pickedImage = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
-    NSData* data = UIImagePNGRepresentation(pickedImage);
+    NSData* data = UIImageJPEGRepresentation(pickedImage,1.0f);
     PFFile *imageFile = [PFFile fileWithData:data];
     [self.currentUser addUniqueObject:imageFile forKey:@"gallery"];
     

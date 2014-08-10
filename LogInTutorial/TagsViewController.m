@@ -38,10 +38,63 @@
 
     self.currentUser = [PFUser currentUser];
     
+    NSDictionary *categoryAcademics = @{@"Academics": [UIImage imageNamed:@"tagBackground"]};
+    NSDictionary *categoryAdventure = @{@"Adventure": [UIImage imageNamed:@"tagBackground"]};
     NSDictionary *categoryArt = @{@"Art": [UIImage imageNamed:@"art"]};
+    NSDictionary *categoryBusiness = @{@"Business": [UIImage imageNamed:@"tagBackground"]};
     NSDictionary *categoryCooking = @{@"Cooking": [UIImage imageNamed:@"cooking"]};
-    self.categoriesArray = @[categoryArt, categoryCooking];
-    self.categoriesKeysArray = @[@"Art", @"Cooking"];
+    NSDictionary *categoryCreative = @{@"Creative": [UIImage imageNamed:@"tagBackground"]};
+    NSDictionary *categoryExtreme = @{@"Extreme": [UIImage imageNamed:@"tagBackground"]};
+    NSDictionary *categoryFitness = @{@"Fitness": [UIImage imageNamed:@"tagBackground"]};
+    NSDictionary *categoryGaming = @{@"Gaming": [UIImage imageNamed:@"tagBackground"]};
+    NSDictionary *categoryMusic = @{@"Music": [UIImage imageNamed:@"tagBackground"]};
+    NSDictionary *categoryOutdoors = @{@"Outdoors": [UIImage imageNamed:@"tagBackground"]};
+    NSDictionary *categoryPhysical = @{@"Physical": [UIImage imageNamed:@"tagBackground"]};
+    NSDictionary *categoryRelaxation = @{@"Relaxation": [UIImage imageNamed:@"tagBackground"]};
+    NSDictionary *categorySocial = @{@"Social": [UIImage imageNamed:@"tagBackground"]};
+    NSDictionary *categorySpiritual = @{@"Spiritual": [UIImage imageNamed:@"tagBackground"]};
+    NSDictionary *categorySports = @{@"Sports": [UIImage imageNamed:@"tagBackground"]};
+    NSDictionary *categorySupport = @{@"Support": [UIImage imageNamed:@"tagBackground"]};
+    NSDictionary *categoryTechnology = @{@"Technology": [UIImage imageNamed:@"tagBackground"]};
+    
+    
+    self.categoriesArray = @[categoryAcademics,
+                             categoryAdventure,
+                             categoryArt,
+                             categoryBusiness,
+                             categoryCooking,
+                             categoryCreative,
+                             categoryExtreme,
+                             categoryFitness,
+                             categoryGaming,
+                             categoryMusic,
+                             categoryOutdoors,
+                             categoryPhysical,
+                             categoryRelaxation,
+                             categorySocial,
+                             categorySpiritual,
+                             categorySports,
+                             categorySupport,
+                             categoryTechnology];
+    
+    self.categoriesKeysArray = @[@"Academics",
+                                 @"Adventure",
+                                 @"Art",
+                                 @"Business",
+                                 @"Cooking",
+                                 @"Creative",
+                                 @"Extreme",
+                                 @"Fitness",
+                                 @"Gaming",
+                                 @"Music",
+                                 @"Outdoors",
+                                 @"Physical",
+                                 @"Relaxation",
+                                 @"Social",
+                                 @"Spiritual",
+                                 @"Sports",
+                                 @"Support",
+                                 @"Technology"];
     self.selectedTagsMutableDictionary = [NSMutableDictionary new];
     
     self.tagImageView01.clipsToBounds = YES;
@@ -111,14 +164,16 @@
 
 #pragma mark collection view cell paddings
 - (UIEdgeInsets)collectionView:(UICollectionView*)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-    return UIEdgeInsetsMake(2, 2, 2, 2); // top, left, bottom, right
+    return UIEdgeInsetsMake(4, 4, 4, 4); // top, left, bottom, right
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
-    
-    return 4.0;
+    return 2.0;
 }
 
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+    return 2.0;
+}
 - (IBAction)onTagImageView01ButtonPressed:(id)sender
 {
     if (self.tagImageView01.image)

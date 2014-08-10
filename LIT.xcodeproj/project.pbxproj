@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		DF0F1FDE195F567A003B15A3 /* SearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0F1FDD195F567A003B15A3 /* SearchResultsViewController.m */; };
 		DF0F1FE119608531003B15A3 /* SearchResultsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0F1FE019608531003B15A3 /* SearchResultsTableViewCell.m */; };
+		DF13AAE3198ACAE900823D72 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DF13AAE2198ACAE900823D72 /* libicucore.dylib */; };
+		DF13AAE5198ACB0200823D72 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DF13AAE4198ACB0200823D72 /* libc++.dylib */; };
 		DF28A8DE19801F4D00B39177 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF28A8DD19801F4D00B39177 /* PhotoViewController.m */; };
 		DF2A6134197F980800DA6FE2 /* RecordVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2A6133197F980800DA6FE2 /* RecordVideoViewController.m */; };
 		DF2A6137197F98FD00DA6FE2 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2A6136197F98FD00DA6FE2 /* VideoViewController.m */; };
@@ -74,6 +76,8 @@
 		DF0F1FDD195F567A003B15A3 /* SearchResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsViewController.m; sourceTree = "<group>"; };
 		DF0F1FDF19608531003B15A3 /* SearchResultsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultsTableViewCell.h; sourceTree = "<group>"; };
 		DF0F1FE019608531003B15A3 /* SearchResultsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsTableViewCell.m; sourceTree = "<group>"; };
+		DF13AAE2198ACAE900823D72 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		DF13AAE4198ACB0200823D72 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		DF28A8DC19801F4D00B39177 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
 		DF28A8DD19801F4D00B39177 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
 		DF2A6132197F980800DA6FE2 /* RecordVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordVideoViewController.h; sourceTree = "<group>"; };
@@ -146,6 +150,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF13AAE5198ACB0200823D72 /* libc++.dylib in Frameworks */,
+				DF13AAE3198ACAE900823D72 /* libicucore.dylib in Frameworks */,
 				DF5D60A71923263C0022C498 /* MobileCoreServices.framework in Frameworks */,
 				DF2A6142197FA15F00DA6FE2 /* MediaPlayer.framework in Frameworks */,
 				DF2A6140197FA15500DA6FE2 /* CoreMedia.framework in Frameworks */,
@@ -208,6 +214,8 @@
 		DF5D6066192325450022C498 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DF13AAE4198ACB0200823D72 /* libc++.dylib */,
+				DF13AAE2198ACAE900823D72 /* libicucore.dylib */,
 				DF2A6141197FA15F00DA6FE2 /* MediaPlayer.framework */,
 				DF2A613F197FA15500DA6FE2 /* CoreMedia.framework */,
 				DF2A613D197FA14D00DA6FE2 /* AVFoundation.framework */,
@@ -509,6 +517,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -540,6 +549,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

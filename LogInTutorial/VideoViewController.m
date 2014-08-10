@@ -11,10 +11,11 @@
 #import <MobileCoreServices/UTCoreTypes.h>
 #import <Parse/Parse.h>
 #import <MediaPlayer/MediaPlayer.h>
-
+#import <AVFoundation/AVFoundation.h>
 
 @interface VideoViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (nonatomic) PFUser *currentUser;
+@property (nonatomic) AVPlayer *avPlayer;
 
 
 @end
@@ -43,32 +44,76 @@
 
 - (IBAction)onPlayButtonPressed:(id)sender
 {
-//    NSBundle *bundle = [NSBundle mainBundle];
-//    NSString *moviePath = [bundle pathForResource:@"disc" ofType:@"mp4"];
     if (self.currentUser[@"video"])
     {
         PFFile *parseVideo = self.currentUser[@"video"];
         NSURL *parseVideoURL = [NSURL URLWithString:parseVideo.url];
-        NSLog(@"data string %@", parseVideo.url);
+        NSLog(@"parse url %@", parseVideo.url);
         
-        MPMoviePlayerController * moviePlayer;
+//        NSString *filePath = [parseVideo url];
+//        
+//        //play audiofile streaming
+//        self.avPlayer = [[AVPlayer alloc] initWithURL:[NSURL URLWithString:filePath]];
+//        self.avPlayer.volume = 1.0f;
+//        [self.avPlayer play];
         
-        moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:parseVideoURL];
-        [moviePlayer prepareToPlay];
-
-        [self.view addSubview:moviePlayer.view];
-        moviePlayer.fullscreen = YES;
-        moviePlayer.movieSourceType = MPMovieSourceTypeStreaming;
-        [moviePlayer setScalingMode:MPMovieScalingModeAspectFit];
-        moviePlayer.view.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
-
-        [moviePlayer play];
+        MPMoviePlayerViewController *moviePlayer;
+        
+//        moviePlayer = [[MPMoviePlayerViewController alloc] initWithContentURL:parseVideoURL];
+        
+        [[NSNotificationCenter defaultCenter] removeObserver:moviePlayer  name:MPMoviePlayerPlaybackDidFinishNotification object:moviePlayer.moviePlayer];
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(videoFinished:)
+                                                     name:MPMoviePlayerPlaybackDidFinishNotification
+                                                   object:moviePlayer.moviePlayer];
+        moviePlayer.moviePlayer.movieSourceType = MPMovieSourceTypeFile;
+        [moviePlayer.moviePlayer prepareToPlay];
+        
+        [self presentMoviePlayerViewControllerAnimated:moviePlayer];
+        
+        [moviePlayer.moviePlayer play];
     }
     else
     {
         NSLog(@"there is no video");
     }
+}
 
+//- (IBAction)onPlayButtonPressed:(id)sender
+//{
+//    //    NSBundle *bundle = [NSBundle mainBundle];
+//    //    NSString *moviePath = [bundle pathForResource:@"disc" ofType:@"mp4"];
+//    if (self.currentUser[@"video"])
+//    {
+//        PFFile *parseVideo = self.currentUser[@"video"];
+//        NSURL *parseVideoURL = [NSURL URLWithString:parseVideo.url];
+//        NSLog(@"data string %@", parseVideoURL);
+//        
+//        MPMoviePlayerController * moviePlayer;
+//        
+//        moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:parseVideoURL];
+//        [moviePlayer prepareToPlay];
+//        
+//        [self.view addSubview:moviePlayer.view];
+//        moviePlayer.fullscreen = YES;
+//        moviePlayer.movieSourceType = MPMovieSourceTypeStreaming;
+//        [moviePlayer setScalingMode:MPMovieScalingModeAspectFit];
+//        moviePlayer.view.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+//        
+//        [moviePlayer play];
+//    }
+//    else
+//    {
+//        NSLog(@"there is no video");
+//    }
+//    
+//}
+
+-(void)videoFinished:(NSNotification*)aNotification{
+    int value = [[aNotification.userInfo valueForKey:MPMoviePlayerPlaybackDidFinishReasonUserInfoKey] intValue];
+    if (value == MPMovieFinishReasonUserExited) {
+        [self dismissMoviePlayerViewControllerAnimated];
+    }
 }
 
 #pragma mark - image picker delegate methods
@@ -91,7 +136,7 @@
     
     if (CFStringCompare ((__bridge CFStringRef) mediaType, kUTTypeMovie, 0) == kCFCompareEqualTo) {
         NSURL *videoUrl=(NSURL*)[info objectForKey:UIImagePickerControllerMediaURL];
-        
+        NSLog(@"%@",videoUrl);
         NSData *videoData = [NSData dataWithContentsOfURL:videoUrl];
         PFFile *videoFile = [PFFile fileWithData:videoData];
         self.currentUser[@"video"] = videoFile;
