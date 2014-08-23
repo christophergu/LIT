@@ -13,6 +13,8 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import <AVFoundation/AVFoundation.h>
 
+#import "GTLYouTube.h"
+
 @interface VideoViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (nonatomic) PFUser *currentUser;
 @property (nonatomic) AVPlayer *avPlayer;

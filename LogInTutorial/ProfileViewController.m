@@ -10,6 +10,7 @@
 #import "WebViewController.h"
 #import "TagsViewController.h"
 #import "GalleryViewController.h"
+#import "InfoViewController.h"
 #import <MapKit/MapKit.h>
 #import <AddressBook/AddressBook.h>
 #import <QuartzCore/QuartzCore.h>
@@ -42,7 +43,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *tagsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *tagsListingLabel;
 @property CGFloat containerViewHeight;
-@property (weak, nonatomic) IBOutlet UITextView *achievementsTextView;
+//@property (weak, nonatomic) IBOutlet UITextView *achievementsTextView;
 
 @end
 
@@ -65,7 +66,7 @@
         [self.logoutBarButtonItem setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor clearColor]} forState:UIControlStateNormal];
         self.logoutBarButtonItem.enabled = NO;
         self.aboutMeTextView.editable = NO;
-        self.achievementsTextView.editable = NO;
+//        self.achievementsTextView.editable = NO;
         self.usernameTextField.borderStyle = UITextBorderStyleNone;
         self.usernameTextField.enabled = NO;
         self.expertiseTextField.borderStyle = UITextBorderStyleNone;
@@ -103,10 +104,10 @@
             self.aboutMeTextView.text = self.selectedUserProfile[@"aboutMe"];
         }
         
-        if (self.selectedUserProfile[@"achievements"])
-        {
-            self.achievementsTextView.text = self.selectedUserProfile[@"achievements"];
-        }
+//        if (self.selectedUserProfile[@"achievements"])
+//        {
+//            self.achievementsTextView.text = self.selectedUserProfile[@"achievements"];
+//        }
         
         if (self.selectedUserProfile[@"city"] && self.selectedUserProfile[@"state"])
         {
@@ -170,10 +171,10 @@
 //        self.aboutMeTextView.layer.cornerRadius = 5;
 //        self.aboutMeTextView.clipsToBounds = YES;
         
-        if (self.currentUser[@"achievements"])
-        {
-            self.achievementsTextView.text = self.currentUser[@"achievements"];
-        }
+//        if (self.currentUser[@"achievements"])
+//        {
+//            self.achievementsTextView.text = self.currentUser[@"achievements"];
+//        }
         
         self.findLocationLabel.layer.cornerRadius = 5.0f;
         self.findLocationButton.alpha = 1.0;
@@ -247,7 +248,7 @@
     [self.usernameTextField resignFirstResponder];
     [self.expertiseTextField resignFirstResponder];
     [self.aboutMeTextView resignFirstResponder];
-    [self.achievementsTextView resignFirstResponder];
+//    [self.achievementsTextView resignFirstResponder];
     [self.websiteTextField resignFirstResponder];
 
 }
@@ -277,11 +278,11 @@
         NSLog(@"save about me pls");
         self.currentUser[@"aboutMe"] = self.aboutMeTextView.text;
     }
-    if (!(allTrim(self.achievementsTextView.text).length == 0))
-    {
-        NSLog(@"save achievements pls");
-        self.currentUser[@"achievements"] = self.achievementsTextView.text;
-    }
+//    if (!(allTrim(self.achievementsTextView.text).length == 0))
+//    {
+//        NSLog(@"save achievements pls");
+//        self.currentUser[@"achievements"] = self.achievementsTextView.text;
+//    }
     [self.currentUser saveInBackground];
 
 }
@@ -523,6 +524,12 @@
         GalleryViewController *gvc = segue.destinationViewController;
         gvc.ownProfile = self.ownProfile;
         gvc.selectedUserProfile = self.selectedUserProfile;
+    }
+    else if ([segue.identifier isEqualToString:@"ToMoreInfoSegue"])
+    {
+        InfoViewController *ivc = segue.destinationViewController;
+        ivc.ownProfile = self.ownProfile;
+        ivc.selectedUserProfile = self.selectedUserProfile;
     }
 }
 

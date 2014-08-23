@@ -8,8 +8,11 @@
 
 #import "WebViewController.h"
 
-@interface WebViewController ()
+@interface WebViewController ()<UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet UIButton *backButton;
+@property (weak, nonatomic) IBOutlet UIButton *forwardButton;
+@property (weak, nonatomic) IBOutlet UIButton *reloadButton;
 
 @end
 
@@ -31,6 +34,28 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
     [self.webView loadRequest:request];
+}
+
+- (void) webViewDidFinishLoad: (UIWebView *)myWebView
+{
+    [self.backButton setEnabled: [myWebView canGoBack]];
+    [self.forwardButton setEnabled: [myWebView canGoForward]];
+}
+
+- (IBAction)onBackButtonPressed:(id)sender {
+    [self.webView goBack];
+}
+
+- (IBAction)onForwardButtonPressed:(id)sender {
+    [self.webView goForward];
+}
+
+//- (IBAction)onStopLoadingButtonPressed:(id)sender {
+//    [self.webView stopLoading];
+//}
+
+- (IBAction)onReloadButtonPressed:(id)sender {
+    [self.webView reload];
 }
 
 @end
