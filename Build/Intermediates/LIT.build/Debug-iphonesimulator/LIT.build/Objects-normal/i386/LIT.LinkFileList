@@ -1,6 +1,7 @@
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/LogInViewController.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/GTLYouTubeVideoSnippet.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/GTLYouTubeVideoCategory.o
+/Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/VideoData.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/TagsCollectionViewCell.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/InfoViewController.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/GTLYouTubeGuideCategoryListResponse.o
@@ -9,6 +10,7 @@
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/GTLYouTubeSubscriptionListResponse.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/GTLYouTubePlaylistSnippet.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/GTLServiceYouTube.o
+/Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/YouTubeUploadVideo.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/WebViewController.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/GTLYouTubeChannelListResponse.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/GTLYouTubeVideoContentDetails.o
@@ -39,6 +41,7 @@
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/GTLYouTubeSearchResult.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/SearchResultsTableViewCell.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/GTLYouTubePlaylistListResponse.o
+/Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/UploadController.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/GTLYouTubeSubscription.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/GTLYouTubeGuideCategorySnippet.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/GTLYouTubeChannelSnippet.o
@@ -49,6 +52,7 @@
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/SearchResultsViewController.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/GTLYouTubePlaylistItemListResponse.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/GTLYouTubeActivityContentDetails.o
+/Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/Utils.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/PushNoAnimationSegue.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/GTLQueryYouTube.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/GTLYouTubeSearchListResponse.o

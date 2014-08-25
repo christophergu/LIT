@@ -97,6 +97,10 @@
 		DF5D60BE19232BBA0022C498 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF5D60BD19232BBA0022C498 /* Accounts.framework */; };
 		DF5D60C019232BC60022C498 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DF5D60BF19232BC60022C498 /* libsqlite3.dylib */; };
 		DF5D60C219232BD40022C498 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF5D60C119232BD40022C498 /* Social.framework */; };
+		DFA1EEC019AACA6C00A6D0BE /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA1EEBD19AACA6C00A6D0BE /* Utils.m */; };
+		DFA1EEC119AACA6C00A6D0BE /* VideoData.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA1EEBF19AACA6C00A6D0BE /* VideoData.m */; };
+		DFA1EEC419AACFD800A6D0BE /* YouTubeUploadVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA1EEC319AACFD800A6D0BE /* YouTubeUploadVideo.m */; };
+		DFA1EEC819AAD29D00A6D0BE /* UploadController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA1EEC719AAD29D00A6D0BE /* UploadController.m */; };
 		DFEC6FAA1964A9820025345A /* TagsSelectButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DFEC6FA91964A9820025345A /* TagsSelectButton.m */; };
 		DFF9C8CC197FC3A5008D6F15 /* GalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF9C8CB197FC3A5008D6F15 /* GalleryViewController.m */; };
 		DFF9C8CF197FC6B5008D6F15 /* GalleryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF9C8CE197FC6B5008D6F15 /* GalleryCollectionViewCell.m */; };
@@ -330,6 +334,14 @@
 		DF5D60BD19232BBA0022C498 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		DF5D60BF19232BC60022C498 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		DF5D60C119232BD40022C498 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		DFA1EEBC19AACA6C00A6D0BE /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		DFA1EEBD19AACA6C00A6D0BE /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		DFA1EEBE19AACA6C00A6D0BE /* VideoData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoData.h; sourceTree = "<group>"; };
+		DFA1EEBF19AACA6C00A6D0BE /* VideoData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoData.m; sourceTree = "<group>"; };
+		DFA1EEC219AACFD800A6D0BE /* YouTubeUploadVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouTubeUploadVideo.h; sourceTree = "<group>"; };
+		DFA1EEC319AACFD800A6D0BE /* YouTubeUploadVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouTubeUploadVideo.m; sourceTree = "<group>"; };
+		DFA1EEC619AAD29D00A6D0BE /* UploadController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadController.h; sourceTree = "<group>"; };
+		DFA1EEC719AAD29D00A6D0BE /* UploadController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadController.m; sourceTree = "<group>"; };
 		DFEC6FA81964A9820025345A /* TagsSelectButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagsSelectButton.h; sourceTree = "<group>"; };
 		DFEC6FA91964A9820025345A /* TagsSelectButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagsSelectButton.m; sourceTree = "<group>"; };
 		DFF9C8CA197FC3A5008D6F15 /* GalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryViewController.h; sourceTree = "<group>"; };
@@ -597,6 +609,7 @@
 		DF5D606D192325450022C498 /* LIT */ = {
 			isa = PBXGroup;
 			children = (
+				DFA1EEB419AAC9AE00A6D0BE /* Youtube Other Files */,
 				DF5D6076192325450022C498 /* AppDelegate.h */,
 				DF5D6077192325450022C498 /* AppDelegate.m */,
 				DFFFF524195C9D060002A215 /* RootViewController.h */,
@@ -669,6 +682,21 @@
 				DF5D608F192325450022C498 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DFA1EEB419AAC9AE00A6D0BE /* Youtube Other Files */ = {
+			isa = PBXGroup;
+			children = (
+				DFA1EEBC19AACA6C00A6D0BE /* Utils.h */,
+				DFA1EEBD19AACA6C00A6D0BE /* Utils.m */,
+				DFA1EEBE19AACA6C00A6D0BE /* VideoData.h */,
+				DFA1EEBF19AACA6C00A6D0BE /* VideoData.m */,
+				DFA1EEC219AACFD800A6D0BE /* YouTubeUploadVideo.h */,
+				DFA1EEC319AACFD800A6D0BE /* YouTubeUploadVideo.m */,
+				DFA1EEC619AAD29D00A6D0BE /* UploadController.h */,
+				DFA1EEC719AAD29D00A6D0BE /* UploadController.m */,
+			);
+			name = "Youtube Other Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -810,6 +838,7 @@
 				DF5D60B5192328EF0022C498 /* LogInViewController.m in Sources */,
 				DF16B5E119A85BDC00463FF5 /* GTLYouTubeVideoSnippet.m in Sources */,
 				DF16B5DB19A85BDC00463FF5 /* GTLYouTubeVideoCategory.m in Sources */,
+				DFA1EEC119AACA6C00A6D0BE /* VideoData.m in Sources */,
 				DFFFF52C195CA0A30002A215 /* TagsCollectionViewCell.m in Sources */,
 				DF16827E199B004500B2FC29 /* InfoViewController.m in Sources */,
 				DF16B5C619A85BDC00463FF5 /* GTLYouTubeGuideCategoryListResponse.m in Sources */,
@@ -818,6 +847,7 @@
 				DF16B5D719A85BDC00463FF5 /* GTLYouTubeSubscriptionListResponse.m in Sources */,
 				DF16B5CF19A85BDC00463FF5 /* GTLYouTubePlaylistSnippet.m in Sources */,
 				DF16B5B919A85BDC00463FF5 /* GTLServiceYouTube.m in Sources */,
+				DFA1EEC419AACFD800A6D0BE /* YouTubeUploadVideo.m in Sources */,
 				DF3546CA197347AD00C00F9D /* WebViewController.m in Sources */,
 				DF16B5C019A85BDC00463FF5 /* GTLYouTubeChannelListResponse.m in Sources */,
 				DF16B5DE19A85BDC00463FF5 /* GTLYouTubeVideoContentDetails.m in Sources */,
@@ -848,6 +878,7 @@
 				DF16B5D319A85BDC00463FF5 /* GTLYouTubeSearchResult.m in Sources */,
 				DF0F1FE119608531003B15A3 /* SearchResultsTableViewCell.m in Sources */,
 				DF16B5CE19A85BDC00463FF5 /* GTLYouTubePlaylistListResponse.m in Sources */,
+				DFA1EEC819AAD29D00A6D0BE /* UploadController.m in Sources */,
 				DF16B5D519A85BDC00463FF5 /* GTLYouTubeSubscription.m in Sources */,
 				DF16B5C719A85BDC00463FF5 /* GTLYouTubeGuideCategorySnippet.m in Sources */,
 				DF16B5C119A85BDC00463FF5 /* GTLYouTubeChannelSnippet.m in Sources */,
@@ -858,6 +889,7 @@
 				DF0F1FDE195F567A003B15A3 /* SearchResultsViewController.m in Sources */,
 				DF16B5CC19A85BDC00463FF5 /* GTLYouTubePlaylistItemListResponse.m in Sources */,
 				DF16B5BB19A85BDC00463FF5 /* GTLYouTubeActivityContentDetails.m in Sources */,
+				DFA1EEC019AACA6C00A6D0BE /* Utils.m in Sources */,
 				DF2A613A197F9B8000DA6FE2 /* PushNoAnimationSegue.m in Sources */,
 				DF16B5B819A85BDC00463FF5 /* GTLQueryYouTube.m in Sources */,
 				DF16B5D219A85BDC00463FF5 /* GTLYouTubeSearchListResponse.m in Sources */,
@@ -928,6 +960,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -963,6 +996,7 @@
 					"-all_load",
 				);
 				SDKROOT = iphoneos;
+				VALID_ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 			};
 			name = Debug;
 		};
@@ -970,6 +1004,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -999,6 +1034,7 @@
 				);
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 			};
 			name = Release;
 		};

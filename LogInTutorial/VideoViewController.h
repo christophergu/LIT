@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VideoViewController : UIViewController
+#import "VideoData.h"
+#import "YouTubeUploadVideo.h"
+
+@interface VideoViewController : UIViewController<YouTubeUploadVideoDelegate>
+//@property(nonatomic, strong) UIWebView *webView;
+@property(nonatomic, strong) NSURL *videoUrl;
+@property(nonatomic, retain) GTLServiceYouTube *youtubeService;
+//@property(nonatomic, retain) MPMoviePlayerController *player;
+//@property(nonatomic, retain) UIScrollView *scrollView;
+//@property(nonatomic, retain) UITextField *activeField;
+@property(nonatomic, strong) YouTubeUploadVideo *uploadVideo;
 
 @end

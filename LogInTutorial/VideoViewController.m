@@ -14,6 +14,8 @@
 #import <AVFoundation/AVFoundation.h>
 
 #import "GTLYouTube.h"
+#import "Utils.h"
+#import "GTMOAuth2ViewControllerTouch.h"
 
 @interface VideoViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (nonatomic) PFUser *currentUser;
@@ -30,7 +32,76 @@
     // Do any additional setup after loading the view.
 
     self.currentUser = [PFUser currentUser];
+    
+    
+    
+//    self.youtubeService = [[GTLServiceYouTube alloc] init];
+    
+    
+    
+    _uploadVideo = [[YouTubeUploadVideo alloc] init];
+    _uploadVideo.delegate = self;
+    
+    
+    
+    
+    
+    
+    
+    
+    // Initialize the youtube service & load existing credentials from the keychain if available
+    self.youtubeService = [[GTLServiceYouTube alloc] init];
+    self.youtubeService.authorizer =
+    [GTMOAuth2ViewControllerTouch authForGoogleFromKeychainForName:kKeychainItemName
+                                                          clientID:kClientID
+                                                      clientSecret:kClientSecret];
+    if (![self isAuthorized]) {
+        NSLog(@"not authorized");
+        // Not yet authorized, request authorization and push the login UI onto the navigation stack.
+//        [[self navigationController] pushViewController:[self createAuthController] animated:NO];
+    }
 }
+
+
+// Helper to check if user is authorized
+- (BOOL)isAuthorized {
+    return [((GTMOAuth2Authentication *)self.youtubeService.authorizer) canAuthorize];
+}
+
+// Creates the auth controller for authorizing access to YouTube.
+- (GTMOAuth2ViewControllerTouch *)createAuthController
+{
+    GTMOAuth2ViewControllerTouch *authController;
+    
+    authController = [[GTMOAuth2ViewControllerTouch alloc] initWithScope:kGTLAuthScopeYouTube
+                                                                clientID:kClientID
+                                                            clientSecret:kClientSecret
+                                                        keychainItemName:kKeychainItemName
+                                                                delegate:self
+                                                        finishedSelector:@selector(viewController:finishedWithAuth:error:)];
+    return authController;
+}
+
+// Handle completion of the authorization process, and updates the YouTube service
+// with the new credentials.
+- (void)viewController:(GTMOAuth2ViewControllerTouch *)viewController
+      finishedWithAuth:(GTMOAuth2Authentication *)authResult
+                 error:(NSError *)error {
+    if (error != nil) {
+        [Utils showAlert:@"Authentication Error" message:error.localizedDescription];
+        self.youtubeService.authorizer = nil;
+    } else {
+        self.youtubeService.authorizer = authResult;
+    }
+}
+
+
+
+
+
+
+
+
 
 - (IBAction)onRecordVideoPressed:(id)sender
 {
@@ -46,39 +117,41 @@
 
 - (IBAction)onPlayButtonPressed:(id)sender
 {
-    if (self.currentUser[@"video"])
-    {
-        PFFile *parseVideo = self.currentUser[@"video"];
-        NSURL *parseVideoURL = [NSURL URLWithString:parseVideo.url];
-        NSLog(@"parse url %@", parseVideo.url);
-        
-//        NSString *filePath = [parseVideo url];
+    [[self navigationController] pushViewController:[self createAuthController] animated:NO];
+
+//    if (self.currentUser[@"video"])
+//    {
+////        PFFile *parseVideo = self.currentUser[@"video"];
+////        NSURL *parseVideoURL = [NSURL URLWithString:parseVideo.url];
+////        NSLog(@"parse url %@", parseVideo.url);
 //        
-//        //play audiofile streaming
-//        self.avPlayer = [[AVPlayer alloc] initWithURL:[NSURL URLWithString:filePath]];
-//        self.avPlayer.volume = 1.0f;
-//        [self.avPlayer play];
-        
-        MPMoviePlayerViewController *moviePlayer;
-        
-//        moviePlayer = [[MPMoviePlayerViewController alloc] initWithContentURL:parseVideoURL];
-        
-        [[NSNotificationCenter defaultCenter] removeObserver:moviePlayer  name:MPMoviePlayerPlaybackDidFinishNotification object:moviePlayer.moviePlayer];
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(videoFinished:)
-                                                     name:MPMoviePlayerPlaybackDidFinishNotification
-                                                   object:moviePlayer.moviePlayer];
-        moviePlayer.moviePlayer.movieSourceType = MPMovieSourceTypeFile;
-        [moviePlayer.moviePlayer prepareToPlay];
-        
-        [self presentMoviePlayerViewControllerAnimated:moviePlayer];
-        
-        [moviePlayer.moviePlayer play];
-    }
-    else
-    {
-        NSLog(@"there is no video");
-    }
+////        NSString *filePath = [parseVideo url];
+////        
+////        //play audiofile streaming
+////        self.avPlayer = [[AVPlayer alloc] initWithURL:[NSURL URLWithString:filePath]];
+////        self.avPlayer.volume = 1.0f;
+////        [self.avPlayer play];
+//        
+//        MPMoviePlayerViewController *moviePlayer;
+//        
+////        moviePlayer = [[MPMoviePlayerViewController alloc] initWithContentURL:parseVideoURL];
+//        
+//        [[NSNotificationCenter defaultCenter] removeObserver:moviePlayer  name:MPMoviePlayerPlaybackDidFinishNotification object:moviePlayer.moviePlayer];
+//        [[NSNotificationCenter defaultCenter] addObserver:self
+//                                                 selector:@selector(videoFinished:)
+//                                                     name:MPMoviePlayerPlaybackDidFinishNotification
+//                                                   object:moviePlayer.moviePlayer];
+//        moviePlayer.moviePlayer.movieSourceType = MPMovieSourceTypeFile;
+//        [moviePlayer.moviePlayer prepareToPlay];
+//        
+//        [self presentMoviePlayerViewControllerAnimated:moviePlayer];
+//        
+//        [moviePlayer.moviePlayer play];
+//    }
+//    else
+//    {
+//        NSLog(@"there is no video");
+//    }
 }
 
 //- (IBAction)onPlayButtonPressed:(id)sender
@@ -137,14 +210,20 @@
     NSString *mediaType = [info objectForKey: UIImagePickerControllerMediaType];
     
     if (CFStringCompare ((__bridge CFStringRef) mediaType, kUTTypeMovie, 0) == kCFCompareEqualTo) {
-        NSURL *videoUrl=(NSURL*)[info objectForKey:UIImagePickerControllerMediaURL];
-        NSLog(@"%@",videoUrl);
-        NSData *videoData = [NSData dataWithContentsOfURL:videoUrl];
-        PFFile *videoFile = [PFFile fileWithData:videoData];
-        self.currentUser[@"video"] = videoFile;
-        [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-            
-        }];
+        self.videoUrl=(NSURL*)[info objectForKey:UIImagePickerControllerMediaURL];
+        NSLog(@"%@",self.videoUrl);
+        NSData *videoData = [NSData dataWithContentsOfURL:self.videoUrl];
+        
+        [self.uploadVideo uploadYouTubeVideoWithService:_youtubeService
+                                               fileData:videoData
+                                                  title:@"test"
+                                            description:@"test"];
+        
+//        PFFile *videoFile = [PFFile fileWithData:videoData];
+//        self.currentUser[@"video"] = videoFile;
+//        [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+//            
+//        }];
     }
     else
     {
@@ -152,6 +231,13 @@
     }
 }
 
+#pragma mark - uploadYouTubeVideo
+
+- (void)uploadYouTubeVideo:(YouTubeUploadVideo *)uploadVideo
+      didFinishWithResults:(GTLYouTubeVideo *)video {
+    NSLog(@"ya?");
+    [Utils showAlert:@"Video Uploaded" message:video.identifier];
+}
 
 - (IBAction)unwindToVideoVC:(UIStoryboardSegue *)unwindSegue
 {
