@@ -12,20 +12,13 @@
 #import "TagsSelectButton.h"
 #import <Parse/Parse.h>
 
-@interface TagsViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
+@interface TagsViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (copy, nonatomic) NSArray *categoriesArray;
 @property (copy, nonatomic) NSArray *categoriesKeysArray;
-@property (weak, nonatomic) IBOutlet UIImageView *tagImageView01;
-@property (weak, nonatomic) IBOutlet UIImageView *tagImageView02;
-@property (weak, nonatomic) IBOutlet UIImageView *tagImageView03;
-@property (strong, nonatomic) NSMutableDictionary *selectedTagsMutableDictionary;
+
 @property (strong, nonatomic) PFUser *currentUser;
-@property (weak, nonatomic) IBOutlet TagsSelectButton *tagSelectButton01;
-@property (weak, nonatomic) IBOutlet TagsSelectButton *tagSelectButton02;
-@property (weak, nonatomic) IBOutlet TagsSelectButton *tagSelectButton03;
-@property (weak, nonatomic) IBOutlet UILabel *tagLabel01;
-@property (weak, nonatomic) IBOutlet UILabel *tagLabel02;
-@property (weak, nonatomic) IBOutlet UILabel *tagLabel03;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *browseRandomBarButtonItem;
+
 
 
 @end
@@ -36,199 +29,82 @@
 {
     [super viewDidLoad];
 
+    [self.browseRandomBarButtonItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                        [UIFont fontWithName:@"Futura" size:11.0], NSFontAttributeName,
+                                        [UIColor orangeColor], NSForegroundColorAttributeName,
+                                        nil] 
+                              forState:UIControlStateNormal];
+    
     self.currentUser = [PFUser currentUser];
     
-    NSDictionary *categoryAcademics = @{@"Academics": [UIImage imageNamed:@"tagBackground"]};
-    NSDictionary *categoryAdventure = @{@"Adventure": [UIImage imageNamed:@"tagBackground"]};
-    NSDictionary *categoryArt = @{@"Art": [UIImage imageNamed:@"art"]};
-    NSDictionary *categoryBusiness = @{@"Business": [UIImage imageNamed:@"tagBackground"]};
-    NSDictionary *categoryCooking = @{@"Cooking": [UIImage imageNamed:@"cooking"]};
-    NSDictionary *categoryCreative = @{@"Creative": [UIImage imageNamed:@"tagBackground"]};
-    NSDictionary *categoryExtreme = @{@"Extreme": [UIImage imageNamed:@"tagBackground"]};
-    NSDictionary *categoryFitness = @{@"Fitness": [UIImage imageNamed:@"tagBackground"]};
-    NSDictionary *categoryGaming = @{@"Gaming": [UIImage imageNamed:@"tagBackground"]};
-    NSDictionary *categoryMusic = @{@"Music": [UIImage imageNamed:@"tagBackground"]};
-    NSDictionary *categoryOutdoors = @{@"Outdoors": [UIImage imageNamed:@"tagBackground"]};
-    NSDictionary *categoryPhysical = @{@"Physical": [UIImage imageNamed:@"tagBackground"]};
-    NSDictionary *categoryRelaxation = @{@"Relaxation": [UIImage imageNamed:@"tagBackground"]};
-    NSDictionary *categorySocial = @{@"Social": [UIImage imageNamed:@"tagBackground"]};
-    NSDictionary *categorySpiritual = @{@"Spiritual": [UIImage imageNamed:@"tagBackground"]};
-    NSDictionary *categorySports = @{@"Sports": [UIImage imageNamed:@"tagBackground"]};
-    NSDictionary *categorySupport = @{@"Support": [UIImage imageNamed:@"tagBackground"]};
-    NSDictionary *categoryTechnology = @{@"Technology": [UIImage imageNamed:@"tagBackground"]};
+//    NSDictionary *categoryAcademics = @{@"Academics": [UIImage imageNamed:@"tagBackground"]};
+//    NSDictionary *categoryAdventure = @{@"Adventure": [UIImage imageNamed:@"tagBackground"]};
+//    NSDictionary *categoryArt = @{@"Art": [UIImage imageNamed:@"art"]};
+//    NSDictionary *categoryBusiness = @{@"Business": [UIImage imageNamed:@"tagBackground"]};
+//    NSDictionary *categoryCooking = @{@"Cooking": [UIImage imageNamed:@"cooking"]};
+//    NSDictionary *categoryCreative = @{@"Creative": [UIImage imageNamed:@"tagBackground"]};
+//    NSDictionary *categoryExtreme = @{@"Extreme": [UIImage imageNamed:@"tagBackground"]};
+//    NSDictionary *categoryFitness = @{@"Fitness": [UIImage imageNamed:@"tagBackground"]};
+//    NSDictionary *categoryGaming = @{@"Gaming": [UIImage imageNamed:@"tagBackground"]};
+//    NSDictionary *categoryMusic = @{@"Music": [UIImage imageNamed:@"tagBackground"]};
+//    NSDictionary *categoryOutdoors = @{@"Outdoors": [UIImage imageNamed:@"tagBackground"]};
+//    NSDictionary *categoryPhysical = @{@"Physical": [UIImage imageNamed:@"tagBackground"]};
+//    NSDictionary *categoryRelaxation = @{@"Relaxation": [UIImage imageNamed:@"tagBackground"]};
+//    NSDictionary *categorySocial = @{@"Social": [UIImage imageNamed:@"tagBackground"]};
+//    NSDictionary *categorySpiritual = @{@"Spiritual": [UIImage imageNamed:@"tagBackground"]};
+//    NSDictionary *categorySports = @{@"Sports": [UIImage imageNamed:@"tagBackground"]};
+//    NSDictionary *categorySupport = @{@"Support": [UIImage imageNamed:@"tagBackground"]};
+//    NSDictionary *categoryTechnology = @{@"Technology": [UIImage imageNamed:@"tagBackground"]};
     
     
-    self.categoriesArray = @[categoryAcademics,
-                             categoryAdventure,
-                             categoryArt,
-                             categoryBusiness,
-                             categoryCooking,
-                             categoryCreative,
-                             categoryExtreme,
-                             categoryFitness,
-                             categoryGaming,
-                             categoryMusic,
-                             categoryOutdoors,
-                             categoryPhysical,
-                             categoryRelaxation,
-                             categorySocial,
-                             categorySpiritual,
-                             categorySports,
-                             categorySupport,
-                             categoryTechnology];
+//    self.categoriesArray = @[categoryAcademics,
+//                             categoryAdventure,
+//                             categoryArt,
+//                             categoryBusiness,
+//                             categoryCooking,
+//                             categoryCreative,
+//                             categoryExtreme,
+//                             categoryFitness,
+//                             categoryGaming,
+//                             categoryMusic,
+//                             categoryOutdoors,
+//                             categoryPhysical,
+//                             categoryRelaxation,
+//                             categorySocial,
+//                             categorySpiritual,
+//                             categorySports,
+//                             categorySupport,
+//                             categoryTechnology];
     
-    self.categoriesKeysArray = @[@"Academics",
-                                 @"Adventure",
-                                 @"Art",
-                                 @"Business",
-                                 @"Cooking",
-                                 @"Creative",
-                                 @"Extreme",
-                                 @"Fitness",
-                                 @"Gaming",
-                                 @"Music",
-                                 @"Outdoors",
-                                 @"Physical",
-                                 @"Relaxation",
-                                 @"Social",
-                                 @"Spiritual",
-                                 @"Sports",
-                                 @"Support",
-                                 @"Technology"];
-    self.selectedTagsMutableDictionary = [NSMutableDictionary new];
-    
-    self.tagImageView01.clipsToBounds = YES;
-    self.tagImageView02.clipsToBounds = YES;
-    self.tagImageView03.clipsToBounds = YES;
+    self.categoriesKeysArray = @[@"ACADEMICS",
+                                 @"ART",
+                                 @"BUSINESS",
+                                 @"CULINARY",
+                                 @"FASHION & BEAUTY",
+                                 @"FITNESS & NUTRITION",
+                                 @"MILITARY",
+                                 @"MUSIC",
+                                 @"SPORTS",
+                                 @"TECHNOLOGY",
+                                 @"OTHER"];
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    self.selectedTagsMutableDictionary = [NSMutableDictionary new];
-    self.tagImageView01.image = nil;
-    self.tagImageView02.image = nil;
-    self.tagImageView03.image = nil;
-    self.tagLabel01.text = @"";
-    self.tagLabel02.text = @"";
-    self.tagLabel03.text = @"";
+
 }
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.categoriesArray count];
+    return self.categoriesKeysArray.count;
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    TagsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"TagsReuseCellID" forIndexPath:indexPath];
-    
-//    cell.myImageView.image = self.categoriesArray[indexPath.row][self.categoriesKeysArray[indexPath.row]];
-    cell.myLabel.text = self.categoriesKeysArray[indexPath.row];
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SelectReuseCellID"];
+    cell.textLabel.text = self.categoriesKeysArray[indexPath.row];
+    cell.textLabel.font = [UIFont fontWithName:@"Futura" size:25];
     return cell;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (![[self.selectedTagsMutableDictionary allKeys] containsObject:[self.categoriesArray[indexPath.row] allKeys].firstObject])
-    {
-        if (!self.tagImageView01.image)
-        {
-            
-            [self.selectedTagsMutableDictionary addEntriesFromDictionary:self.categoriesArray[indexPath.row]];
-            self.tagSelectButton01.selectedCategoryDictionary = self.categoriesArray[indexPath.row];
-//            self.tagImageView01.image = self.categoriesArray[indexPath.row][self.categoriesKeysArray[indexPath.row]];
-            self.tagImageView01.image = [UIImage imageNamed:@"tagBackground"];
-            self.tagLabel01.text = self.categoriesKeysArray[indexPath.row];
-        }
-        else if (!self.tagImageView02.image)
-        {
-            [self.selectedTagsMutableDictionary addEntriesFromDictionary:self.categoriesArray[indexPath.row]];
-            self.tagSelectButton02.selectedCategoryDictionary = self.categoriesArray[indexPath.row];
-//            self.tagImageView02.image = self.categoriesArray[indexPath.row][self.categoriesKeysArray[indexPath.row]];
-            self.tagImageView02.image = [UIImage imageNamed:@"tagBackground"];
-            self.tagLabel02.text = self.categoriesKeysArray[indexPath.row];
-
-        }
-        else if (!self.tagImageView03.image)
-        {
-            [self.selectedTagsMutableDictionary addEntriesFromDictionary:self.categoriesArray[indexPath.row]];
-            self.tagSelectButton03.selectedCategoryDictionary = self.categoriesArray[indexPath.row];
-//            self.tagImageView03.image = self.categoriesArray[indexPath.row][self.categoriesKeysArray[indexPath.row]];
-            self.tagImageView03.image = [UIImage imageNamed:@"tagBackground"];
-            self.tagLabel03.text = self.categoriesKeysArray[indexPath.row];
-        }
-    }
-}
-
-#pragma mark collection view cell paddings
-- (UIEdgeInsets)collectionView:(UICollectionView*)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-    return UIEdgeInsetsMake(4, 4, 4, 4); // top, left, bottom, right
-}
-
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
-    return 2.0;
-}
-
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
-    return 2.0;
-}
-- (IBAction)onTagImageView01ButtonPressed:(id)sender
-{
-    if (self.tagImageView01.image)
-    {
-        [self.selectedTagsMutableDictionary removeObjectsForKeys: [self.tagSelectButton01.selectedCategoryDictionary allKeys]];
-        self.tagImageView01.image = nil;
-        self.tagLabel01.text = @"";
-        NSLog(@"%@",self.selectedTagsMutableDictionary);
-    }
-}
-
-- (IBAction)onTagImageView02ButtonPressed:(id)sender
-{
-    if (self.tagImageView02.image)
-    {
-        [self.selectedTagsMutableDictionary removeObjectsForKeys: [self.tagSelectButton02.selectedCategoryDictionary allKeys]];
-        self.tagImageView02.image = nil;
-        self.tagLabel02.text = @"";
-        NSLog(@"%@",self.selectedTagsMutableDictionary);
-    }
-}
-
-- (IBAction)onTagImageView03ButtonPressed:(id)sender
-{
-    if (self.tagImageView03.image)
-    {
-        [self.selectedTagsMutableDictionary removeObjectsForKeys: [self.tagSelectButton03.selectedCategoryDictionary allKeys]];
-        self.tagImageView03.image = nil;
-        self.tagLabel03.text = @"";
-        NSLog(@"%@",self.selectedTagsMutableDictionary);
-    }
-}
-
-- (IBAction)onDoneButtonPressed:(id)sender
-{
-    NSLog(@"%@",self.selectedTagsMutableDictionary);
-    if (self.selectedTagsMutableDictionary && (self.selectedTagsMutableDictionary.count > 0))
-    {
-        if (self.choosingTagsForExpertise)
-        {
-            self.currentUser[@"tags"] = [self.selectedTagsMutableDictionary allKeys];
-            [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-                [self performSegueWithIdentifier:@"UnwindFromTagsSegue" sender:self];
-            }];
-        }
-        else
-        {
-            [self performSegueWithIdentifier:@"TagsToResultsSegue" sender:self];
-        }
-    }
-    else
-    {
-        UIAlertView *tagsRequiredAlert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"You need to select at least one tag." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
-        [tagsRequiredAlert show];
-    }
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -237,7 +113,6 @@
 
     if ([segue.identifier isEqualToString:@"TagsToResultsSegue"])
     {
-        srvc.selectedTagsDictionary = self.selectedTagsMutableDictionary;
     }
     if ([segue.identifier isEqualToString:@"ViewAllSegue"])
     {
