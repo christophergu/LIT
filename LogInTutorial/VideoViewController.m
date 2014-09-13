@@ -21,7 +21,6 @@
 @property (nonatomic) PFUser *currentUser;
 @property (nonatomic) AVPlayer *avPlayer;
 
-
 @end
 
 @implementation VideoViewController
@@ -33,21 +32,8 @@
 
     self.currentUser = [PFUser currentUser];
     
-    
-    
-//    self.youtubeService = [[GTLServiceYouTube alloc] init];
-    
-    
-    
     _uploadVideo = [[YouTubeUploadVideo alloc] init];
     _uploadVideo.delegate = self;
-    
-    
-    
-    
-    
-    
-    
     
     // Initialize the youtube service & load existing credentials from the keychain if available
     self.youtubeService = [[GTLServiceYouTube alloc] init];
@@ -55,11 +41,6 @@
     [GTMOAuth2ViewControllerTouch authForGoogleFromKeychainForName:kKeychainItemName
                                                           clientID:kClientID
                                                       clientSecret:kClientSecret];
-    if (![self isAuthorized]) {
-        NSLog(@"not authorized");
-        // Not yet authorized, request authorization and push the login UI onto the navigation stack.
-//        [[self navigationController] pushViewController:[self createAuthController] animated:NO];
-    }
 }
 
 
@@ -92,15 +73,9 @@
         self.youtubeService.authorizer = nil;
     } else {
         self.youtubeService.authorizer = authResult;
+        [self pickAndProcessAVideoToSave];
     }
 }
-
-
-
-
-
-
-
 
 
 - (IBAction)onRecordVideoPressed:(id)sender
@@ -195,6 +170,23 @@
 
 - (IBAction)onSaveButtonPressed:(id)sender
 {
+    if (![self isAuthorized]) {
+        NSLog(@"not authorized");
+        // Not yet authorized, request authorization and push the login UI onto the navigation stack.
+        //        [[self navigationController] pushViewController:[self createAuthController] animated:NO];
+        
+//        [self performSelector:@selector(createAndPushAuthController:) withObject:self afterDelay:2];
+        
+        [[self navigationController] pushViewController:[self createAuthController] animated:NO];
+    }
+    else
+    {
+        [self pickAndProcessAVideoToSave];
+    }
+}
+
+-(void) pickAndProcessAVideoToSave
+{
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
     picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
@@ -202,6 +194,11 @@
     
     [self presentViewController:picker animated:YES completion:nil];
 }
+
+//- (void)createAndPushAuthController:(UIViewController *)controller
+//{
+//    [[self navigationController] pushViewController:[self createAuthController] animated:NO];
+//}
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
@@ -218,12 +215,6 @@
                                                fileData:videoData
                                                   title:@"test"
                                             description:@"test"];
-        
-//        PFFile *videoFile = [PFFile fileWithData:videoData];
-//        self.currentUser[@"video"] = videoFile;
-//        [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-//            
-//        }];
     }
     else
     {
