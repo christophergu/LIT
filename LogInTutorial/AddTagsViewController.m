@@ -8,42 +8,64 @@
 
 #import "AddTagsViewController.h"
 
-@interface AddTagsViewController ()
+@interface AddTagsViewController ()<UITableViewDelegate,UITableViewDataSource>
+
+@property (weak, nonatomic) IBOutlet UITableView *tagsSelectTableView;
+@property (copy, nonatomic) NSArray *categoriesKeysArray;
 
 @end
 
 @implementation AddTagsViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.tagsSelectTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    
+    self.categoriesKeysArray = @[@"ACADEMICS",
+                                 @"ART",
+                                 @"BUSINESS",
+                                 @"CULINARY",
+                                 @"FASHION & BEAUTY",
+                                 @"FITNESS & NUTRITION",
+                                 @"MILITARY",
+                                 @"MUSIC",
+                                 @"SPORTS",
+                                 @"TECHNOLOGY",
+                                 @"OTHER"];
 }
 
-- (void)didReceiveMemoryWarning
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    return self.categoriesKeysArray.count;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TagCellReuseID"];
+    cell.textLabel.text = self.categoriesKeysArray[indexPath.row];
+    return cell;
 }
-*/
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryCheckmark;
+}
+
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryNone;
+}
+
+- (IBAction)doneButtonTapped:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 @end

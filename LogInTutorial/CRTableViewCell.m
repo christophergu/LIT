@@ -34,7 +34,8 @@
 #define kBlueColor                  0x236ed8
 #define kGreenColor                 0x179714
 #define kRedColor                   0xa4091c
-#define kMarkColor                  kBlueColor
+//#define kMarkColor                  kBlueColor
+#define kMarkColor                  0xf76626
 
 /* Colums and cell constants */
 #define kColumnPosition             50.0
