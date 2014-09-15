@@ -65,7 +65,6 @@
 		DF16B5E319A85BDC00463FF5 /* GTLYouTubeVideoStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = DF16B5B519A85BDC00463FF5 /* GTLYouTubeVideoStatus.m */; };
 		DF16B5E419A85BDC00463FF5 /* GTLYouTubeVideoTopicDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = DF16B5B719A85BDC00463FF5 /* GTLYouTubeVideoTopicDetails.m */; };
 		DF28A8DE19801F4D00B39177 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF28A8DD19801F4D00B39177 /* PhotoViewController.m */; };
-		DF2A6134197F980800DA6FE2 /* RecordVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2A6133197F980800DA6FE2 /* RecordVideoViewController.m */; };
 		DF2A6137197F98FD00DA6FE2 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2A6136197F98FD00DA6FE2 /* VideoViewController.m */; };
 		DF2A613A197F9B8000DA6FE2 /* PushNoAnimationSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2A6139197F9B8000DA6FE2 /* PushNoAnimationSegue.m */; };
 		DF2A613C197FA14400DA6FE2 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF2A613B197FA14400DA6FE2 /* AssetsLibrary.framework */; };
@@ -305,8 +304,6 @@
 		DF16B5B719A85BDC00463FF5 /* GTLYouTubeVideoTopicDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLYouTubeVideoTopicDetails.m; sourceTree = "<group>"; };
 		DF28A8DC19801F4D00B39177 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
 		DF28A8DD19801F4D00B39177 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
-		DF2A6132197F980800DA6FE2 /* RecordVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordVideoViewController.h; sourceTree = "<group>"; };
-		DF2A6133197F980800DA6FE2 /* RecordVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordVideoViewController.m; sourceTree = "<group>"; };
 		DF2A6135197F98FD00DA6FE2 /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
 		DF2A6136197F98FD00DA6FE2 /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
 		DF2A6138197F9B8000DA6FE2 /* PushNoAnimationSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushNoAnimationSegue.h; sourceTree = "<group>"; };
@@ -682,8 +679,6 @@
 				DF28A8DD19801F4D00B39177 /* PhotoViewController.m */,
 				DF2A6135197F98FD00DA6FE2 /* VideoViewController.h */,
 				DF2A6136197F98FD00DA6FE2 /* VideoViewController.m */,
-				DF2A6132197F980800DA6FE2 /* RecordVideoViewController.h */,
-				DF2A6133197F980800DA6FE2 /* RecordVideoViewController.m */,
 				DF3546C8197347AD00C00F9D /* WebViewController.h */,
 				DF3546C9197347AD00C00F9D /* WebViewController.m */,
 				DF5D6079192325450022C498 /* Main.storyboard */,
@@ -960,7 +955,6 @@
 				DF16B5D119A85BDC00463FF5 /* GTLYouTubeResourceId.m in Sources */,
 				DF2A6137197F98FD00DA6FE2 /* VideoViewController.m in Sources */,
 				DFF9C8CF197FC6B5008D6F15 /* GalleryCollectionViewCell.m in Sources */,
-				DF2A6134197F980800DA6FE2 /* RecordVideoViewController.m in Sources */,
 				DF16B5C319A85BDC00463FF5 /* GTLYouTubeChannelTopicDetails.m in Sources */,
 				DF0DD17219C64A26008F0FE2 /* CRTableViewCell.m in Sources */,
 				DFF9C8CC197FC3A5008D6F15 /* GalleryViewController.m in Sources */,

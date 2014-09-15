@@ -24,10 +24,11 @@ cCompileC Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-
 cCompileC Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/GTLYouTubeSearchResultSnippet.o /Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubeSearchResultSnippet.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/GTLYouTubePlaylist.o /Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubePlaylist.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/ProfileViewController.o /Users/christophergu/Development/LIT/LogInTutorial/ProfileViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/GTLYouTubeActivityListResponse.o /Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubeActivityListResponse.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/AddAReviewViewController.o /Users/christophergu/Development/LIT/LogInTutorial/AddAReviewViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/GTLYouTubeActivityListResponse.o /Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubeActivityListResponse.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/AppDelegate.o /Users/christophergu/Development/LIT/LogInTutorial/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/GTLYouTubeVideo.o /Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubeVideo.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/ReviewTableViewCell.o /Users/christophergu/Development/LIT/LogInTutorial/ReviewTableViewCell.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/GTLYouTubeConstants.o /Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubeConstants.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/GTLYouTubeVideoStatus.o /Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubeVideoStatus.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/TagsViewController.o /Users/christophergu/Development/LIT/LogInTutorial/TagsViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
@@ -76,7 +77,6 @@ cCompileC Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-
 cCompileC Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/CRTableViewCell.o /Users/christophergu/Development/LIT/LogInTutorial/CRTableViewCell.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/GalleryViewController.o /Users/christophergu/Development/LIT/LogInTutorial/GalleryViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/GTLYouTubeVideoStatistics.o /Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubeVideoStatistics.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/ReviewTableViewCell.o /Users/christophergu/Development/LIT/LogInTutorial/ReviewTableViewCell.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cLd /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LIT.app/LIT normal i386
 cCpResource FBUserSettingsViewResources.bundle Build/Products/Debug-iphonesimulator/LIT.app/FBUserSettingsViewResources.bundle
 cCopyStringsFile /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LIT.app/en.lproj/InfoPlist.strings LogInTutorial/en.lproj/InfoPlist.strings
@@ -698,8 +698,8 @@ t1410746080
 s20360
 
 N/Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/VideoViewController.o
-t1410746081
-s92808
+t1410802113
+s111272
 
 N/Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/WebViewController.o
 t1410746080
@@ -730,15 +730,15 @@ t1410746079
 s121904
 
 N/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LIT.app
-t1410756484
+t1410802114
 s340
 
 N/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LIT.app.dSYM
-t1410756165
+t1410756484
 s102
 
 N/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LIT.app/Base.lproj/Main.storyboardc
-t1410754220
+t1410802117
 s986
 
 N/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LIT.app/FBUserSettingsViewResources.bundle
@@ -750,8 +750,8 @@ t1410746084
 s923
 
 N/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LIT.app/LIT
-t1410756484
-s4929056
+t1410802114
+s4937128
 
 N/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LIT.app/PkgInfo
 t1410746084
@@ -1017,9 +1017,9 @@ t1403820682
 s2264
 
 N/Users/christophergu/Development/LIT/LogInTutorial/Base.lproj/Main.storyboard
-c00000000541666AA000000000002070D
-t1410754218
-s132877
+c00000000541721C10000000000020C1F
+t1410802113
+s134175
 
 N/Users/christophergu/Development/LIT/LogInTutorial/CRTableViewCell.h
 c0000000051B8BB8A00000000000001CD
@@ -1792,9 +1792,9 @@ t1408932406
 s710
 
 N/Users/christophergu/Development/LIT/LogInTutorial/VideoViewController.m
-c000000005403B54D000000000000227B
-t1409529165
-s8827
+c00000000541721C1000000000000244D
+t1410802113
+s9293
 
 N/Users/christophergu/Development/LIT/LogInTutorial/WebViewController.h
 c0000000053C311400000000000000110
@@ -2337,7 +2337,7 @@ r0
 
 CCheck dependencies
 r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciesa7cc5504a7c6b941^b14f5804a7c6b941^--1(21%IDEActivityLogMessage2@66"Missing dependency target "GTLTouchStaticLib (from GTL.xcodeproj)"-432449284#18446744073709551615#0#-1#-----0#1#1#--18"Check dependencies36"716EF7C5-09C2-4821-9ECB-542E8409A658-
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciesc5c7234159c7b941^43725e4159c7b941^--1(21%IDEActivityLogMessage2@66"Missing dependency target "GTLTouchStaticLib (from GTL.xcodeproj)"-432494913#18446744073709551615#0#-1#-----0#1#1#--18"Check dependencies36"0284B791-C7E4-4C7F-A5B8-7CC7FD7C8FFB-
 
 CCompileAssetCatalog /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LIT.app /Users/christophergu/Development/LIT/LogInTutorial/Images.xcassets
 s432438882.371424
@@ -4768,8 +4768,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Compile
 b04BF51C6-F32C-403D-82B8-334C0904AC11
 
 CCompileC Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/VideoViewController.o /Users/christophergu/Development/LIT/LogInTutorial/VideoViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s432438881.580044
-e432438881.880230
+s432494913.393735
+e432494913.751888
 r1
 xCompileC
 xBuild/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/VideoViewController.o
@@ -4919,8 +4919,12 @@ d/Users/christophergu/Development/LIT/Parse.framework/Headers/PFFacebookUtils.h
 d/Users/christophergu/Development/LIT/LogInTutorial/Utils.h
 d/Users/christophergu/Development/LIT/LogInTutorial/Headers/GTMOAuth2ViewControllerTouch.h
 d/Users/christophergu/Development/LIT/LogInTutorial/Headers/GTMOAuth2Authentication.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compile /Users/christophergu/Development/LIT/LogInTutorial/VideoViewController.m216"CompileC Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/VideoViewController.o LogInTutorial/VideoViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler8ae394617ec6b941^d256e1617ec6b941^---0#0#1#-19%DVTDocumentLocation2@79"file:///Users/christophergu/Development/LIT/LogInTutorial/VideoViewController.m0000000000000000^3626"CompileC Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/VideoViewController.o LogInTutorial/VideoViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/christophergu/Development/LIT    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/christophergu/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/LIT-generated-files.hmap -I/Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/LIT-own-target-headers.hmap -I/Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/LIT-all-target-headers.hmap -iquote /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/LIT-project-headers.hmap -I/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/DerivedSources/i386 -I/Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/DerivedSources -F/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator -F/Users/christophergu/Development/LIT -include /Users/christophergu/Development/LIT/Build/Intermediates/PrecompiledHeaders/LIT-Prefix-cgkilnybjhvnitbsyotolwaygmgo/LIT-Prefix.pch -MMD -MT dependencies -MF /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/VideoViewController.d --serialize-diagnostics /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/VideoViewController.dia -c /Users/christophergu/Development/LIT/LogInTutorial/VideoViewController.m -o /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/VideoViewController.o36"2475A64D-A743-48BF-A81E-EEEF32B8BFA7-
-b04BF51C6-F32C-403D-82B8-334C0904AC11
+o/Users/christophergu/Development/LIT/LogInTutorial/VideoViewController.m:194:23: warning: incompatible pointer types initializing 'NSString *__strong' with an expression of type 'CGPathRef' (aka 'const struct CGPath *') [-Wincompatible-pointer-types]
+o            NSString *moviePath = [[info objectForKey:UIImagePickerControllerMediaURL] path];
+o                      ^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+o1 warning generated.
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compile /Users/christophergu/Development/LIT/LogInTutorial/VideoViewController.m216"CompileC Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/VideoViewController.o LogInTutorial/VideoViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler2cf1644159c7b941^4e7dc04159c7b941^-459"/Users/christophergu/Development/LIT/LogInTutorial/VideoViewController.m:194:23: warning: incompatible pointer types initializing 'NSString *__strong' with an expression of type 'CGPathRef' (aka 'const struct CGPath *') [-Wincompatible-pointer-types]            NSString *moviePath = [[info objectForKey:UIImagePickerControllerMediaURL] path];                      ^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@129"Incompatible pointer types initializing 'NSString *__strong' with an expression of type 'CGPathRef' (aka 'const struct CGPath *')-432494913#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@79"file:///Users/christophergu/Development/LIT/LogInTutorial/VideoViewController.m0000000000000000^193#22#193#22#6921#0#14"Semantic Issue1(3@79"file:///Users/christophergu/Development/LIT/LogInTutorial/VideoViewController.m0000000000000000^193#34#193#92#6933#57#-0#0#1#-19%DVTDocumentLocation4@79"file:///Users/christophergu/Development/LIT/LogInTutorial/VideoViewController.m0000000000000000^3626"CompileC Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/VideoViewController.o LogInTutorial/VideoViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/christophergu/Development/LIT    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/christophergu/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/LIT-generated-files.hmap -I/Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/LIT-own-target-headers.hmap -I/Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/LIT-all-target-headers.hmap -iquote /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/LIT-project-headers.hmap -I/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/DerivedSources/i386 -I/Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/DerivedSources -F/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator -F/Users/christophergu/Development/LIT -include /Users/christophergu/Development/LIT/Build/Intermediates/PrecompiledHeaders/LIT-Prefix-cgkilnybjhvnitbsyotolwaygmgo/LIT-Prefix.pch -MMD -MT dependencies -MF /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/VideoViewController.d --serialize-diagnostics /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/VideoViewController.dia -c /Users/christophergu/Development/LIT/LogInTutorial/VideoViewController.m -o /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/VideoViewController.o36"855AA219-7DE2-4091-BDB7-2363FFBEEC57-
+bF9BD9C35-85FE-4077-89F2-9F14D82BBCB5
 
 CCompileC Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/WebViewController.o /Users/christophergu/Development/LIT/LogInTutorial/WebViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s432438880.296275
@@ -5039,14 +5043,14 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection65"Compile
 b04BF51C6-F32C-403D-82B8-334C0904AC11
 
 CCompileStoryboard /Users/christophergu/Development/LIT/LogInTutorial/Base.lproj/Main.storyboard
-s432447018.958374
-e432447020.678596
+s432494914.303215
+e432494917.372982
 r1
 xCompileStoryboard
 x/Users/christophergu/Development/LIT/LogInTutorial/Base.lproj/Main.storyboard
 onwi_state: registration failed (1000000)
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection58"CompileStoryboard LogInTutorial/Base.lproj/Main.storyboard58"CompileStoryboard LogInTutorial/Base.lproj/Main.storyboard3c69f52a9ec6b941^edb8ad2c9ec6b941^-41"nwi_state: registration failed (1000000)-0#0#1#-19%DVTDocumentLocation2@84"file:///Users/christophergu/Development/LIT/LogInTutorial/Base.lproj/Main.storyboard0000000000000000^841"CompileStoryboard LogInTutorial/Base.lproj/Main.storyboard    cd /Users/christophergu/Development/LIT    export IBSC_MINIMUM_COMPATIBILITY_VERSION=7.1    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    export XCODE_DEVELOPER_USR_PATH=/Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --minimum-deployment-target 7.1 --output-format human-readable-text --compile /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LIT.app/Base.lproj/Main.storyboardc /Users/christophergu/Development/LIT/LogInTutorial/Base.lproj/Main.storyboard36"D4A4BF35-1CB3-4D0B-ADCA-FF799F416538-
-bBA006FD0-1779-41D2-A63A-B5C787C91102
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection58"CompileStoryboard LogInTutorial/Base.lproj/Main.storyboard58"CompileStoryboard LogInTutorial/Base.lproj/Main.storyboardacac4d4259c7b941^c5725f4559c7b941^-41"nwi_state: registration failed (1000000)-0#0#1#-19%DVTDocumentLocation2@84"file:///Users/christophergu/Development/LIT/LogInTutorial/Base.lproj/Main.storyboard0000000000000000^841"CompileStoryboard LogInTutorial/Base.lproj/Main.storyboard    cd /Users/christophergu/Development/LIT    export IBSC_MINIMUM_COMPATIBILITY_VERSION=7.1    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    export XCODE_DEVELOPER_USR_PATH=/Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --minimum-deployment-target 7.1 --output-format human-readable-text --compile /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LIT.app/Base.lproj/Main.storyboardc /Users/christophergu/Development/LIT/LogInTutorial/Base.lproj/Main.storyboard36"B12450C3-5979-4AFA-9C4C-8D816A37B732-
+bF9BD9C35-85FE-4077-89F2-9F14D82BBCB5
 
 CCopyStringsFile /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LIT.app/en.lproj/InfoPlist.strings LogInTutorial/en.lproj/InfoPlist.strings
 s432438882.369488
@@ -5069,18 +5073,18 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Copy Bu
 b04BF51C6-F32C-403D-82B8-334C0904AC11
 
 CGenerateDSYMFile /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LIT.app.dSYM /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LIT.app/LIT
-s432449284.755905
-e432449284.957953
+s432494917.373641
+e432494917.558473
 r1
 xGenerateDSYMFile
 x/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LIT.app.dSYM
 x/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LIT.app/LIT
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection95"Generate /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LIT.app.dSYM115"GenerateDSYMFile Build/Products/Debug-iphonesimulator/LIT.app.dSYM Build/Products/Debug-iphonesimulator/LIT.app/LIT2e8fc104a7c6b941^ff3cf504a7c6b941^---0#0#1#-19%DVTDocumentLocation2@94"file:///Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LIT.app.dSYM/0000000000000000^631"GenerateDSYMFile Build/Products/Debug-iphonesimulator/LIT.app.dSYM Build/Products/Debug-iphonesimulator/LIT.app/LIT    cd /Users/christophergu/Development/LIT    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LIT.app/LIT -o /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LIT.app.dSYM36"6A07A1A4-DF1B-48A0-B14B-BA23E1E166F7-
-b8B5D7384-8834-4FE8-95D8-B3DB591AFD63
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection95"Generate /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LIT.app.dSYM115"GenerateDSYMFile Build/Products/Debug-iphonesimulator/LIT.app.dSYM Build/Products/Debug-iphonesimulator/LIT.app/LIT9ab25f4559c7b941^23f98e4559c7b941^---0#0#1#-19%DVTDocumentLocation2@94"file:///Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LIT.app.dSYM/0000000000000000^631"GenerateDSYMFile Build/Products/Debug-iphonesimulator/LIT.app.dSYM Build/Products/Debug-iphonesimulator/LIT.app/LIT    cd /Users/christophergu/Development/LIT    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LIT.app/LIT -o /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LIT.app.dSYM36"748C0EAC-FC53-4036-B246-0CBD74BAF6F7-
+bF9BD9C35-85FE-4077-89F2-9F14D82BBCB5
 
 CLd /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LIT.app/LIT normal i386
-s432449284.480935
-e432449284.752972
+s432494913.758326
+e432494914.301395
 r1
 xLd
 x/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LIT.app/LIT
@@ -5200,9 +5204,8 @@ d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/D
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreImage.framework/CoreImage
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/OpenGLES.framework/OpenGLES
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreText.framework/CoreText
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/AVFoundation.framework/libAVFAudio.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libc++abi.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/PrivateFrameworks/UIFoundation.framework/UIFoundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/AVFoundation.framework/libAVFAudio.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_override.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcache_sim.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcommonCrypto_sim.dylib
@@ -5225,6 +5228,7 @@ d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/D
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_configuration.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_asl.dylib
 d/usr/lib/libSystem.B.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/PrivateFrameworks/UIFoundation.framework/UIFoundation
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/host/libdyld.dylib
 d/usr/lib/system/libcache.dylib
 d/usr/lib/system/libcommonCrypto.dylib
@@ -5251,8 +5255,8 @@ d/usr/lib/system/libsystem_pthread.dylib
 d/usr/lib/system/libsystem_sandbox.dylib
 d/usr/lib/system/libunc.dylib
 d/usr/lib/system/libunwind.dylib
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection90"Link /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LIT.app/LIT63"Ld Build/Products/Debug-iphonesimulator/LIT.app/LIT normal i386d32d7b04a7c6b941^26c4c004a7c6b941^---0#0#1#--1867"Ld Build/Products/Debug-iphonesimulator/LIT.app/LIT normal i386    cd /Users/christophergu/Development/LIT    export IPHONEOS_DEPLOYMENT_TARGET=7.1    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -L/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator -F/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator -F/Users/christophergu/Development/LIT -filelist /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/LIT.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -ObjC -all_load -fobjc-arc -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=7.1 -lGTLTouchStaticLib -lc++ -licucore -framework MobileCoreServices -framework MediaPlayer -framework CoreMedia -framework AVFoundation -framework AssetsLibrary -framework AddressBook -framework MapKit -framework Social -lsqlite3 -framework Accounts -framework AdSupport -framework SystemConfiguration -framework StoreKit -framework Security -framework QuartzCore -lz -framework CoreLocation -framework CFNetwork -framework AudioToolbox -framework CoreGraphics -framework UIKit -framework Parse -framework Foundation -framework FacebookSDK -Xlinker -dependency_info -Xlinker /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/LIT_dependency_info.dat -o /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LIT.app/LIT36"4BBC512E-C6CD-43F4-A995-6EB3B34087B1-
-b8B5D7384-8834-4FE8-95D8-B3DB591AFD63
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection90"Link /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LIT.app/LIT63"Ld Build/Products/Debug-iphonesimulator/LIT.app/LIT normal i386d731c24159c7b941^98354d4259c7b941^---0#0#1#--1867"Ld Build/Products/Debug-iphonesimulator/LIT.app/LIT normal i386    cd /Users/christophergu/Development/LIT    export IPHONEOS_DEPLOYMENT_TARGET=7.1    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -L/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator -F/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator -F/Users/christophergu/Development/LIT -filelist /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/LIT.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -ObjC -all_load -fobjc-arc -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=7.1 -lGTLTouchStaticLib -lc++ -licucore -framework MobileCoreServices -framework MediaPlayer -framework CoreMedia -framework AVFoundation -framework AssetsLibrary -framework AddressBook -framework MapKit -framework Social -lsqlite3 -framework Accounts -framework AdSupport -framework SystemConfiguration -framework StoreKit -framework Security -framework QuartzCore -lz -framework CoreLocation -framework CFNetwork -framework AudioToolbox -framework CoreGraphics -framework UIKit -framework Parse -framework Foundation -framework FacebookSDK -Xlinker -dependency_info -Xlinker /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphonesimulator/LIT.build/Objects-normal/i386/LIT_dependency_info.dat -o /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LIT.app/LIT36"98154ECB-21C0-4F8E-A877-25EE915F0CC1-
+bF9BD9C35-85FE-4077-89F2-9F14D82BBCB5
 
 CProcessInfoPlistFile /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LIT.app/Info.plist /Users/christophergu/Development/LIT/LogInTutorial/LIT-Info.plist
 s432438884.176310
@@ -5301,11 +5305,11 @@ CProcessPCH /Users/christophergu/Library/Developer/Xcode/DerivedData/LIT-gnhilnx
 r0
 
 CTouch /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LIT.app
-s432447020.875123
-e432447020.880508
+s432494917.558920
+e432494917.564128
 r1
 xTouch
 x/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LIT.app
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Touch /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LIT.app50"Touch Build/Products/Debug-iphonesimulator/LIT.app5513e02c9ec6b941^7b6ae12c9ec6b941^---0#0#1#--394"Touch Build/Products/Debug-iphonesimulator/LIT.app    cd /Users/christophergu/Development/LIT    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LIT.app36"B7B33E53-101E-44E6-922B-8239FD548CB8-
-bBA006FD0-1779-41D2-A63A-B5C787C91102
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Touch /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LIT.app50"Touch Build/Products/Debug-iphonesimulator/LIT.app86208f4559c7b941^016c904559c7b941^---0#0#1#--394"Touch Build/Products/Debug-iphonesimulator/LIT.app    cd /Users/christophergu/Development/LIT    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LIT.app36"C4DF68D0-D366-4CCD-8423-96C0B80E7081-
+bF9BD9C35-85FE-4077-89F2-9F14D82BBCB5
 

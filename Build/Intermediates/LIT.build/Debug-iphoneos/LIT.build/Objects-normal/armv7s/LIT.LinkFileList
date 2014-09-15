@@ -18,12 +18,15 @@
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphoneos/LIT.build/Objects-normal/armv7s/GTLYouTubeSearchResultSnippet.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphoneos/LIT.build/Objects-normal/armv7s/GTLYouTubePlaylist.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphoneos/LIT.build/Objects-normal/armv7s/ProfileViewController.o
+/Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphoneos/LIT.build/Objects-normal/armv7s/AddAReviewViewController.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphoneos/LIT.build/Objects-normal/armv7s/GTLYouTubeActivityListResponse.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphoneos/LIT.build/Objects-normal/armv7s/AppDelegate.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphoneos/LIT.build/Objects-normal/armv7s/GTLYouTubeVideo.o
+/Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphoneos/LIT.build/Objects-normal/armv7s/ReviewTableViewCell.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphoneos/LIT.build/Objects-normal/armv7s/GTLYouTubeConstants.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphoneos/LIT.build/Objects-normal/armv7s/GTLYouTubeVideoStatus.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphoneos/LIT.build/Objects-normal/armv7s/TagsViewController.o
+/Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphoneos/LIT.build/Objects-normal/armv7s/DYRateView.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphoneos/LIT.build/Objects-normal/armv7s/GTLYouTubePlaylistItem.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphoneos/LIT.build/Objects-normal/armv7s/GTLYouTubeChannelStatistics.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphoneos/LIT.build/Objects-normal/armv7s/GTLYouTubeActivitySnippet.o
@@ -43,6 +46,7 @@
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphoneos/LIT.build/Objects-normal/armv7s/GTLYouTubePlaylistListResponse.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphoneos/LIT.build/Objects-normal/armv7s/UploadController.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphoneos/LIT.build/Objects-normal/armv7s/GTLYouTubeSubscription.o
+/Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphoneos/LIT.build/Objects-normal/armv7s/AddTagsViewController.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphoneos/LIT.build/Objects-normal/armv7s/GTLYouTubeGuideCategorySnippet.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphoneos/LIT.build/Objects-normal/armv7s/GTLYouTubeChannelSnippet.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphoneos/LIT.build/Objects-normal/armv7s/GTLYouTubeGuideCategory.o
@@ -51,6 +55,7 @@
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphoneos/LIT.build/Objects-normal/armv7s/TagsSelectButton.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphoneos/LIT.build/Objects-normal/armv7s/SearchResultsViewController.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphoneos/LIT.build/Objects-normal/armv7s/GTLYouTubePlaylistItemListResponse.o
+/Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphoneos/LIT.build/Objects-normal/armv7s/CRTableViewController.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphoneos/LIT.build/Objects-normal/armv7s/GTLYouTubeActivityContentDetails.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphoneos/LIT.build/Objects-normal/armv7s/Utils.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphoneos/LIT.build/Objects-normal/armv7s/PushNoAnimationSegue.o
@@ -61,7 +66,7 @@
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphoneos/LIT.build/Objects-normal/armv7s/GTLYouTubeResourceId.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphoneos/LIT.build/Objects-normal/armv7s/VideoViewController.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphoneos/LIT.build/Objects-normal/armv7s/GalleryCollectionViewCell.o
-/Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphoneos/LIT.build/Objects-normal/armv7s/RecordVideoViewController.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphoneos/LIT.build/Objects-normal/armv7s/GTLYouTubeChannelTopicDetails.o
+/Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphoneos/LIT.build/Objects-normal/armv7s/CRTableViewCell.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphoneos/LIT.build/Objects-normal/armv7s/GalleryViewController.o
 /Users/christophergu/Development/LIT/Build/Intermediates/LIT.build/Debug-iphoneos/LIT.build/Objects-normal/armv7s/GTLYouTubeVideoStatistics.o

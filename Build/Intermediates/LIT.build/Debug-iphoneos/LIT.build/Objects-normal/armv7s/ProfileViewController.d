@@ -73,7 +73,11 @@ dependencies: \
   /Users/christophergu/Development/LIT/FacebookSDK.framework/Headers/FBUserSettingsViewController.h \
   /Users/christophergu/Development/LIT/FacebookSDK.framework/Headers/NSError+FBError.h \
   /Users/christophergu/Development/LIT/Parse.framework/Headers/PFFacebookUtils.h \
+  /Users/christophergu/Development/LIT/LogInTutorial/DYRateView.h \
   /Users/christophergu/Development/LIT/LogInTutorial/WebViewController.h \
   /Users/christophergu/Development/LIT/LogInTutorial/TagsViewController.h \
+  /Users/christophergu/Development/LIT/LogInTutorial/ReviewTableViewCell.h \
+  /Users/christophergu/Development/LIT/LogInTutorial/AddAReviewViewController.h \
+  /Users/christophergu/Development/LIT/LogInTutorial/CRTableViewController.h \
   /Users/christophergu/Development/LIT/LogInTutorial/GalleryViewController.h \
   /Users/christophergu/Development/LIT/LogInTutorial/InfoViewController.h

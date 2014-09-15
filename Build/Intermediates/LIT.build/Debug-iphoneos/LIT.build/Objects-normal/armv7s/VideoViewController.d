@@ -64,7 +64,6 @@ dependencies: \
   /Users/christophergu/Development/LIT/LogInTutorial/Headers/GTLFramework.h \
   /Users/christophergu/Development/LIT/LogInTutorial/Headers/GTLJSONParser.h \
   /Users/christophergu/Development/LIT/LogInTutorial/YouTubeUploadVideo.h \
-  /Users/christophergu/Development/LIT/LogInTutorial/RecordVideoViewController.h \
   /Users/christophergu/Development/LIT/Parse.framework/Headers/Parse.h \
   /Users/christophergu/Development/LIT/Parse.framework/Headers/PFACL.h \
   /Users/christophergu/Development/LIT/Parse.framework/Headers/PFAnalytics.h \
