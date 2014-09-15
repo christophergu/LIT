@@ -233,7 +233,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gGD-i3-sPz">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="770"/>
+                                        <rect key="frame" x="0.0" y="-183" width="320" height="770"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="liveItGraphicProfileBackground" translatesAutoresizingMaskIntoConstraints="NO" id="JVK-F2-Sio">
@@ -531,25 +531,49 @@
                                                         </state>
                                                         <connections>
                                                             <action selector="addAReviewButtonTapped:" destination="ek2-Ss-HTz" eventType="touchUpInside" id="8cC-Dr-cFW"/>
+                                                            <segue destination="MzB-W3-hj2" kind="modal" identifier="AddAReviewSegue" id="w6W-7f-r1O"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="SS8-0W-aQY">
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="SS8-0W-aQY">
                                                 <rect key="frame" x="0.0" y="496" width="320" height="274"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <prototypes>
-                                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="IjQ-WJ-WGd">
-                                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReviewReuseCellID" rowHeight="85" id="IjQ-WJ-WGd" customClass="ReviewTableViewCell">
+                                                        <rect key="frame" x="0.0" y="22" width="320" height="85"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IjQ-WJ-WGd" id="PjR-yt-KtM">
-                                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
                                                             <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reviewer Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pg4-ie-q7I">
+                                                                    <rect key="frame" x="11" y="0.0" width="214" height="21"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="13"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlV-zZ-9ZX">
+                                                                    <rect key="frame" x="11" y="22" width="297" height="62"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                </textView>
+                                                            </subviews>
                                                         </tableViewCellContentView>
+                                                        <connections>
+                                                            <outlet property="reviewTextView" destination="rlV-zZ-9ZX" id="cEw-wJ-ddh"/>
+                                                            <outlet property="reviewerLabel" destination="Pg4-ie-q7I" id="jEJ-nI-fP3"/>
+                                                        </connections>
                                                     </tableViewCell>
                                                 </prototypes>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="ek2-Ss-HTz" id="qWe-0X-bDX"/>
+                                                    <outlet property="delegate" destination="ek2-Ss-HTz" id="FWB-tB-9MS"/>
+                                                </connections>
                                             </tableView>
                                         </subviews>
                                     </view>
@@ -593,6 +617,7 @@
                         <outlet property="locationTextField" destination="OQ5-Sh-fxe" id="VwL-oh-otd"/>
                         <outlet property="logoutBarButtonItem" destination="6op-l9-pq4" id="wGf-Yb-kBv"/>
                         <outlet property="photoImageView" destination="zCd-lZ-w5X" id="Gfr-2V-YK4"/>
+                        <outlet property="ratingsTableView" destination="SS8-0W-aQY" id="SN4-E3-ekk"/>
                         <outlet property="ratingsView" destination="CiW-UX-ga7" id="5bh-Sh-i1H"/>
                         <outlet property="scrollView" destination="abY-i9-1E1" id="imn-gu-uLB"/>
                         <outlet property="tagsLabel" destination="7y2-r2-ZA8" id="X11-nL-Bvm"/>
@@ -755,6 +780,112 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rJc-Bk-AZz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1244" y="-716"/>
+        </scene>
+        <!--AddA Review View Controller-->
+        <scene sceneID="uki-ae-Ii9">
+            <objects>
+                <viewController id="MzB-W3-hj2" customClass="AddAReviewViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YOa-lc-fse"/>
+                        <viewControllerLayoutGuide type="bottom" id="1XH-Fs-t1p"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pcb-fn-RCB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yAc-bs-Lb6">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RjO-f1-rlH">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="700"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="By:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9rF-NG-QaJ">
+                                                <rect key="frame" x="20" y="312" width="280" height="26"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="19"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kny-Fi-TQm">
+                                                <rect key="frame" x="20" y="110" width="280" height="199"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="MzB-W3-hj2" id="8eK-aP-hpE"/>
+                                                </connections>
+                                            </textView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ci-4d-qSO">
+                                                <rect key="frame" x="0.0" y="358" width="320" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.96862745100000003" green="0.40000000000000002" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="29"/>
+                                                <state key="normal" title="Done">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="doneButtonTapped:" destination="MzB-W3-hj2" eventType="touchUpInside" id="wcb-Zi-7Nb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nbg-33-Nce">
+                                                <rect key="frame" x="0.0" y="420" width="320" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.96862745100000003" green="0.40000000000000002" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="29"/>
+                                                <state key="normal" title="Cancel">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cancelButtonTapped:" destination="MzB-W3-hj2" eventType="touchUpInside" id="qwl-XX-cmp"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rate your experience here!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1v6-ug-rP6">
+                                                <rect key="frame" x="20" y="22" width="280" height="25"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Write your review here!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSM-MA-Z5I">
+                                                <rect key="frame" x="20" y="79" width="280" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="RjO-f1-rlH" firstAttribute="leading" secondItem="yAc-bs-Lb6" secondAttribute="leading" id="QTX-rC-Rlo"/>
+                                    <constraint firstAttribute="trailing" secondItem="RjO-f1-rlH" secondAttribute="trailing" id="fXc-ZN-fu7"/>
+                                    <constraint firstAttribute="bottom" secondItem="RjO-f1-rlH" secondAttribute="bottom" id="i8x-YP-URm"/>
+                                    <constraint firstItem="RjO-f1-rlH" firstAttribute="top" secondItem="yAc-bs-Lb6" secondAttribute="top" id="j3t-o4-SFY"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="yAc-bs-Lb6" secondAttribute="bottom" id="FnO-vd-azW"/>
+                            <constraint firstItem="yAc-bs-Lb6" firstAttribute="leading" secondItem="Pcb-fn-RCB" secondAttribute="leading" id="K8h-4w-6eq"/>
+                            <constraint firstItem="yAc-bs-Lb6" firstAttribute="top" secondItem="Pcb-fn-RCB" secondAttribute="top" id="Vkv-22-uzN"/>
+                            <constraint firstAttribute="trailing" secondItem="yAc-bs-Lb6" secondAttribute="trailing" id="hI6-be-kkC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="CSJ-dr-V8Y"/>
+                    <connections>
+                        <outlet property="byReviewerLabel" destination="9rF-NG-QaJ" id="Uoc-aD-xY6"/>
+                        <outlet property="reviewTextView" destination="kny-Fi-TQm" id="ACr-LG-nhj"/>
+                        <outlet property="uiBigViewInsideScrollView" destination="RjO-f1-rlH" id="Jko-xM-VuB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WIt-eb-IXR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="372" y="591"/>
         </scene>
         <!--Add Tags View Controller-->
         <scene sceneID="mCc-Ux-fgy">

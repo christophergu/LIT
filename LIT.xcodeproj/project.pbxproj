@@ -10,6 +10,9 @@
 		DF0DD16919C641A5008F0FE2 /* AddTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0DD16819C641A5008F0FE2 /* AddTagsViewController.m */; };
 		DF0DD17219C64A26008F0FE2 /* CRTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0DD16F19C64A26008F0FE2 /* CRTableViewCell.m */; };
 		DF0DD17319C64A26008F0FE2 /* CRTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0DD17119C64A26008F0FE2 /* CRTableViewController.m */; };
+		DF0DD17719C66960008F0FE2 /* AddAReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0DD17619C66960008F0FE2 /* AddAReviewViewController.m */; };
+		DF0DD17B19C67A2F008F0FE2 /* DYRateView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0DD17A19C67A2F008F0FE2 /* DYRateView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DF0DD17E19C699B7008F0FE2 /* ReviewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0DD17D19C699B7008F0FE2 /* ReviewTableViewCell.m */; };
 		DF0F1FDE195F567A003B15A3 /* SearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0F1FDD195F567A003B15A3 /* SearchResultsViewController.m */; };
 		DF0F1FE119608531003B15A3 /* SearchResultsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0F1FE019608531003B15A3 /* SearchResultsTableViewCell.m */; };
 		DF13AAE3198ACAE900823D72 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DF13AAE2198ACAE900823D72 /* libicucore.dylib */; };
@@ -167,6 +170,12 @@
 		DF0DD16F19C64A26008F0FE2 /* CRTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRTableViewCell.m; sourceTree = "<group>"; };
 		DF0DD17019C64A26008F0FE2 /* CRTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRTableViewController.h; sourceTree = "<group>"; };
 		DF0DD17119C64A26008F0FE2 /* CRTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRTableViewController.m; sourceTree = "<group>"; };
+		DF0DD17519C66960008F0FE2 /* AddAReviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAReviewViewController.h; sourceTree = "<group>"; };
+		DF0DD17619C66960008F0FE2 /* AddAReviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAReviewViewController.m; sourceTree = "<group>"; };
+		DF0DD17919C67A2F008F0FE2 /* DYRateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYRateView.h; sourceTree = "<group>"; };
+		DF0DD17A19C67A2F008F0FE2 /* DYRateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYRateView.m; sourceTree = "<group>"; };
+		DF0DD17C19C699B7008F0FE2 /* ReviewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewTableViewCell.h; sourceTree = "<group>"; };
+		DF0DD17D19C699B7008F0FE2 /* ReviewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewTableViewCell.m; sourceTree = "<group>"; };
 		DF0F1FDC195F567A003B15A3 /* SearchResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultsViewController.h; sourceTree = "<group>"; };
 		DF0F1FDD195F567A003B15A3 /* SearchResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsViewController.m; sourceTree = "<group>"; };
 		DF0F1FDF19608531003B15A3 /* SearchResultsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultsTableViewCell.h; sourceTree = "<group>"; };
@@ -420,6 +429,7 @@
 		DF0DD16C19C649EE008F0FE2 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				DF0DD17819C67A07008F0FE2 /* DYRateView */,
 				DF0DD16D19C649F7008F0FE2 /* CRMultiRowSelector */,
 				DFA1EEB419AAC9AE00A6D0BE /* Youtube Other Files */,
 			);
@@ -435,6 +445,15 @@
 				DF0DD17119C64A26008F0FE2 /* CRTableViewController.m */,
 			);
 			name = CRMultiRowSelector;
+			sourceTree = "<group>";
+		};
+		DF0DD17819C67A07008F0FE2 /* DYRateView */ = {
+			isa = PBXGroup;
+			children = (
+				DF0DD17919C67A2F008F0FE2 /* DYRateView.h */,
+				DF0DD17A19C67A2F008F0FE2 /* DYRateView.m */,
+			);
+			name = DYRateView;
 			sourceTree = "<group>";
 		};
 		DF16B52F19A8582900463FF5 /* Products */ = {
@@ -653,6 +672,8 @@
 				DFFFF57E195E02D80002A215 /* ProfileViewController.m */,
 				DF0DD16719C641A5008F0FE2 /* AddTagsViewController.h */,
 				DF0DD16819C641A5008F0FE2 /* AddTagsViewController.m */,
+				DF0DD17519C66960008F0FE2 /* AddAReviewViewController.h */,
+				DF0DD17619C66960008F0FE2 /* AddAReviewViewController.m */,
 				DF16827C199B004500B2FC29 /* InfoViewController.h */,
 				DF16827D199B004500B2FC29 /* InfoViewController.m */,
 				DFF9C8CA197FC3A5008D6F15 /* GalleryViewController.h */,
@@ -667,6 +688,8 @@
 				DF3546C9197347AD00C00F9D /* WebViewController.m */,
 				DF5D6079192325450022C498 /* Main.storyboard */,
 				DF5D607F192325450022C498 /* Images.xcassets */,
+				DF0DD17C19C699B7008F0FE2 /* ReviewTableViewCell.h */,
+				DF0DD17D19C699B7008F0FE2 /* ReviewTableViewCell.m */,
 				DFFFF52A195CA0A30002A215 /* TagsCollectionViewCell.h */,
 				DFFFF52B195CA0A30002A215 /* TagsCollectionViewCell.m */,
 				DFEC6FA81964A9820025345A /* TagsSelectButton.h */,
@@ -889,12 +912,15 @@
 				DF16B5D419A85BDC00463FF5 /* GTLYouTubeSearchResultSnippet.m in Sources */,
 				DF16B5C919A85BDC00463FF5 /* GTLYouTubePlaylist.m in Sources */,
 				DFFFF57F195E02D80002A215 /* ProfileViewController.m in Sources */,
+				DF0DD17719C66960008F0FE2 /* AddAReviewViewController.m in Sources */,
 				DF16B5BC19A85BDC00463FF5 /* GTLYouTubeActivityListResponse.m in Sources */,
 				DF5D6078192325450022C498 /* AppDelegate.m in Sources */,
 				DF16B5DA19A85BDC00463FF5 /* GTLYouTubeVideo.m in Sources */,
+				DF0DD17E19C699B7008F0FE2 /* ReviewTableViewCell.m in Sources */,
 				DF16B5C419A85BDC00463FF5 /* GTLYouTubeConstants.m in Sources */,
 				DF16B5E319A85BDC00463FF5 /* GTLYouTubeVideoStatus.m in Sources */,
 				DFFFF529195CA07B0002A215 /* TagsViewController.m in Sources */,
+				DF0DD17B19C67A2F008F0FE2 /* DYRateView.m in Sources */,
 				DF16B5CA19A85BDC00463FF5 /* GTLYouTubePlaylistItem.m in Sources */,
 				DF16B5C219A85BDC00463FF5 /* GTLYouTubeChannelStatistics.m in Sources */,
 				DF16B5BD19A85BDC00463FF5 /* GTLYouTubeActivitySnippet.m in Sources */,

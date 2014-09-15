@@ -9,6 +9,8 @@
 #import "ProfileViewController.h"
 #import "WebViewController.h"
 #import "TagsViewController.h"
+#import "ReviewTableViewCell.h"
+#import "AddAReviewViewController.h"
 #import "CRTableViewController.h"
 #import "GalleryViewController.h"
 #import "InfoViewController.h"
@@ -20,7 +22,7 @@
 #define allTrim( object ) [object stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet] ]
 #define isiPhone5  ([[UIScreen mainScreen] bounds].size.height == 568)?TRUE:FALSE
 
-@interface ProfileViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate, CLLocationManagerDelegate, MKMapViewDelegate, MFMailComposeViewControllerDelegate>
+@interface ProfileViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate, CLLocationManagerDelegate, MKMapViewDelegate, MFMailComposeViewControllerDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *logoutBarButtonItem;
@@ -42,6 +44,8 @@
 @property BOOL backgroundButtonPressed;
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
 @property (weak, nonatomic) IBOutlet UIView *ratingsView;
+@property (nonatomic) NSArray *ratingsArray;
+@property (weak, nonatomic) IBOutlet UITableView *ratingsTableView;
 
 @property (weak, nonatomic) IBOutlet UIButton *findLocationButton;
 @property (weak, nonatomic) IBOutlet UIButton *addAReviewButton;
@@ -91,6 +95,7 @@
         self.websiteTextField.enabled = NO;
         self.saveChangesButton.alpha = 0.0;
 
+        
         if (self.selectedUserProfile[@"avatar"])
         {
             [self.selectedUserProfile[@"avatar"] getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
@@ -156,6 +161,8 @@
                 }
             }];
         }
+        
+        self.addAReviewButton.alpha = 1;
     }
     else
     {
@@ -219,18 +226,36 @@
         }
         self.websiteButton.alpha = 0.0;
         self.contactButton.enabled = NO;
+        self.addAReviewButton.alpha = 0;
+        
+        if ([self.currentUser[@"gallery"] firstObject]) {
+            
+            NSLog(@"shoudl get thumbnail");
+            [[self.currentUser[@"gallery"] firstObject] getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+                if (!error) {
+                    UIImage *photo = [UIImage imageWithData:data];
+                    self.photoImageView.image = photo;
+                }
+            }];
+        }
+        else
+        {
+            NSLog(@"no photo gallery");
+        }
+        
     }
     
-    if ([self.currentUser[@"gallery"] firstObject]) {
-        
-        NSLog(@"shoudl get thumbnail");
-        [[self.currentUser[@"gallery"] firstObject] getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-            if (!error) {
-                UIImage *photo = [UIImage imageWithData:data];
-                self.photoImageView.image = photo;
-            }
-        }];
-    }
+    
+    // tests if you find yourself on search
+    // make sure the current user is in the right place
+//    if ([self.currentUser.objectId isEqualToString: self.selectedUserProfile.objectId])
+//    {
+//        self.addAReviewButton.alpha = 0;
+//    }
+//    else
+//    {
+//        self.addAReviewButton.alpha = 1;
+//    }
 }
 
  -(void)viewWillAppear:(BOOL)animated
@@ -245,6 +270,8 @@
             [self.tagsListingLabel setNumberOfLines:0];
             [self.tagsListingLabel sizeToFit];
         }
+        
+        [self retrieveAndProcessRatings:self.currentUser];
     }
     else
     {
@@ -256,8 +283,45 @@
             [self.tagsListingLabel setNumberOfLines:0];
             [self.tagsListingLabel sizeToFit];
         }
+        
+        [self retrieveAndProcessRatings:self.selectedUserProfile];
     }
+}
 
+- (void)retrieveAndProcessRatings:(PFUser *)user
+{
+    PFQuery *cumulativeReviewQuery = [PFQuery queryWithClassName:@"Review"];
+    [cumulativeReviewQuery whereKey:@"reviewedObjectId" equalTo:user.objectId];
+    [cumulativeReviewQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        NSLog(@"objob %@",[[objects firstObject] class]);
+        self.ratingsArray = objects;
+        
+        int ratingSum = 0;
+        int ratingCount = 0;
+        
+        for (PFObject *review in objects)
+        {
+            ratingSum += [review[@"rating"]intValue];
+            ratingCount++;
+        }
+        
+        if (ratingCount > 0) {
+            int ratingAverage = ratingSum / ratingCount;
+            
+            [self setUpLeftAlignedRateView:ratingAverage];
+            
+            [self.ratingsTableView reloadData];
+        }
+    }];
+}
+
+- (void)setUpLeftAlignedRateView:(int) rating
+{
+    
+    DYRateView *rateView = [[DYRateView alloc] initWithFrame:CGRectMake(4, 27, 160, 14)];
+    rateView.rate = rating;
+    rateView.alignment = RateViewAlignmentLeft;
+    [self.ratingsView addSubview:rateView];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -321,6 +385,29 @@
 
 }
 
+#pragma mark - table view methods
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.ratingsArray.count;
+}
+
+-(ReviewTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    ReviewTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ReviewReuseCellID"];
+    cell.ratingInt = [self.ratingsArray[indexPath.row][@"rating"]intValue];
+    NSLog(@"ratinge %d",[self.ratingsArray[indexPath.row][@"rating"]intValue]);
+    
+    NSString *ratingString = [NSString stringWithFormat:@"%d",[self.ratingsArray[indexPath.row][@"rating"]intValue]];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"UpdateRatingStars" object:ratingString];
+
+    
+    cell.reviewerLabel.text = [NSString stringWithFormat:@"Reviewed by %@", self.ratingsArray[indexPath.row][@"reviewerName"]];
+    cell.reviewerLabel.font = [UIFont italicSystemFontOfSize:13.0f];
+    cell.reviewerLabel.textColor = [UIColor darkGrayColor];
+    cell.reviewTextView.text = self.ratingsArray[indexPath.row][@"reviewText"];
+    return cell;
+}
 
 #pragma mark - location methods
 // this delegate is called when the app successfully finds your current location
@@ -378,8 +465,6 @@
     } completion:^(BOOL finished) {
         
     }];
-    
-    
 }
 
 // this delegate is called when the reversegeocoder fails to find a placemark
@@ -599,6 +684,11 @@
         InfoViewController *ivc = segue.destinationViewController;
         ivc.ownProfile = self.ownProfile;
         ivc.selectedUserProfile = self.selectedUserProfile;
+    }
+    else if ([segue.identifier isEqualToString:@"AddAReviewSegue"])
+    {
+        AddAReviewViewController *aarvc = segue.destinationViewController;
+        aarvc.selectedUserProfile = self.selectedUserProfile;
     }
 }
 
