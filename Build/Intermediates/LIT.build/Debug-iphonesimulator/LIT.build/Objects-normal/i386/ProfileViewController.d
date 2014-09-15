@@ -75,5 +75,6 @@ dependencies: \
   /Users/christophergu/Development/LIT/Parse.framework/Headers/PFFacebookUtils.h \
   /Users/christophergu/Development/LIT/LogInTutorial/WebViewController.h \
   /Users/christophergu/Development/LIT/LogInTutorial/TagsViewController.h \
+  /Users/christophergu/Development/LIT/LogInTutorial/CRTableViewController.h \
   /Users/christophergu/Development/LIT/LogInTutorial/GalleryViewController.h \
   /Users/christophergu/Development/LIT/LogInTutorial/InfoViewController.h

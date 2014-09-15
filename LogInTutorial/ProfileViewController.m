@@ -9,6 +9,7 @@
 #import "ProfileViewController.h"
 #import "WebViewController.h"
 #import "TagsViewController.h"
+#import "CRTableViewController.h"
 #import "GalleryViewController.h"
 #import "InfoViewController.h"
 #import <MapKit/MapKit.h>
@@ -24,6 +25,7 @@
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *logoutBarButtonItem;
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *expertiseTextField;
 @property (weak, nonatomic) IBOutlet UITextView *aboutMeTextView;
@@ -35,7 +37,15 @@
 @property (weak, nonatomic) IBOutlet UIView *aboutMeUIView;
 @property (strong, nonatomic) PFUser *currentUser;
 @property (weak, nonatomic) IBOutlet UIButton *avatarChangeButton;
+@property (weak, nonatomic) IBOutlet UIButton *backgroundChangeButton;
+@property BOOL avatarButtonPressed;
+@property BOOL backgroundButtonPressed;
+@property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
+@property (weak, nonatomic) IBOutlet UIView *ratingsView;
+
 @property (weak, nonatomic) IBOutlet UIButton *findLocationButton;
+@property (weak, nonatomic) IBOutlet UIButton *addAReviewButton;
+
 @property (weak, nonatomic) IBOutlet UILabel *findLocationLabel;
 @property (weak, nonatomic) IBOutlet UITextField *websiteTextField;
 @property (weak, nonatomic) IBOutlet UIButton *websiteButton;
@@ -52,6 +62,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    self.photoImageView.clipsToBounds = YES;
 
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
                                    initWithTarget:self
@@ -89,6 +101,16 @@
             }];
         }
         
+        if (self.selectedUserProfile[@"backgroundImage"])
+        {
+            [self.selectedUserProfile[@"backgroundImage"] getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+                if (!error) {
+                    UIImage *photo = [UIImage imageWithData:data];
+                    self.backgroundImageView.image = photo;
+                }
+            }];
+        }
+        
         self.usernameTextField.text = self.selectedUserProfile.username;
         self.expertiseTextField.text = self.selectedUserProfile[@"expertise"];
         
@@ -96,18 +118,12 @@
         {
             NSLog(@"ya");
             self.aboutMeTextView.text = @"This user has not yet provided \"About Me\" details.";
-//            self.aboutMeTextView.textAlignment = NSTextAlignmentCenter;
             self.aboutMeTextView.textColor = [UIColor colorWithWhite: 0.8 alpha:1];
         }
         else if (self.selectedUserProfile[@"aboutMe"])
         {
             self.aboutMeTextView.text = self.selectedUserProfile[@"aboutMe"];
         }
-        
-//        if (self.selectedUserProfile[@"achievements"])
-//        {
-//            self.achievementsTextView.text = self.selectedUserProfile[@"achievements"];
-//        }
         
         if (self.selectedUserProfile[@"city"] && self.selectedUserProfile[@"state"])
         {
@@ -132,7 +148,14 @@
             self.websiteTextField.placeholder = @"";
         }
         
-//        self.contactButton.layer.cornerRadius = 5.0f;
+        if ([self.selectedUserProfile[@"gallery"] firstObject]) {
+            [[self.selectedUserProfile[@"gallery"] firstObject] getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+                if (!error) {
+                    UIImage *photo = [UIImage imageWithData:data];
+                    self.photoImageView.image = photo;
+                }
+            }];
+        }
     }
     else
     {
@@ -149,6 +172,16 @@
             }];
         }
         
+        if (self.currentUser[@"backgroundImage"])
+        {
+            [self.currentUser[@"backgroundImage"] getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+                if (!error) {
+                    UIImage *photo = [UIImage imageWithData:data];
+                    self.backgroundImageView.image = photo;
+                }
+            }];
+        }
+        
         self.usernameTextField.text = self.currentUser.username;
         self.expertiseTextField.text = self.currentUser[@"expertise"];
         
@@ -158,23 +191,13 @@
         }
         else
         {
-//            self.aboutMeTextView.text = @"About Me";
-//            self.aboutMeTextView.textAlignment = NSTextAlignmentCenter;
+
         }
         
         if ([self.aboutMeTextView.text isEqualToString:@"About Me"])
         {
             self.aboutMeTextView.textColor = [UIColor colorWithWhite: 0.8 alpha:1]; //optional
         }
-//        [self.aboutMeTextView.layer setBorderColor:[[UIColor colorWithWhite: 0.8 alpha:1] CGColor]];
-//        [self.aboutMeTextView.layer setBorderWidth:0.5];
-//        self.aboutMeTextView.layer.cornerRadius = 5;
-//        self.aboutMeTextView.clipsToBounds = YES;
-        
-//        if (self.currentUser[@"achievements"])
-//        {
-//            self.achievementsTextView.text = self.currentUser[@"achievements"];
-//        }
         
         self.findLocationLabel.layer.cornerRadius = 5.0f;
         self.findLocationButton.alpha = 1.0;
@@ -196,6 +219,17 @@
         }
         self.websiteButton.alpha = 0.0;
         self.contactButton.enabled = NO;
+    }
+    
+    if ([self.currentUser[@"gallery"] firstObject]) {
+        
+        NSLog(@"shoudl get thumbnail");
+        [[self.currentUser[@"gallery"] firstObject] getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+            if (!error) {
+                UIImage *photo = [UIImage imageWithData:data];
+                self.photoImageView.image = photo;
+            }
+        }];
     }
 }
 
@@ -397,7 +431,13 @@
     // the user clicked one of the OK/Cancel buttons
     if (buttonIndex == 0)
     {
-        [self performSegueWithIdentifier:@"ExpertiseEditedSegue" sender:self];
+//        [self performSegueWithIdentifier:@"ExpertiseEditedSegue" sender:self];
+        
+        CRTableViewController *crTableViewController = [[CRTableViewController alloc] initWithStyle:UITableViewStylePlain];
+        //CRTableViewController *tableView = [[CRTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+        
+        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:crTableViewController];
+        [self presentViewController:navController animated:YES completion:nil];
     }
 }
 
@@ -416,15 +456,29 @@
     [self performSegueWithIdentifier:@"ToGallerySegue" sender:self];
 }
 
+- (IBAction)addAReviewButtonTapped:(id)sender {
+}
 
 #pragma mark - image picker methods
 
 - (IBAction)onAvatarChangeButtonPressed:(id)sender
 {
+    self.avatarButtonPressed = 1;
+    [self presentPicker:sender];
+}
+
+- (IBAction)onBackgroundChangeButtonPressed:(id)sender
+{
+    self.backgroundButtonPressed = 1;
+    [self presentPicker:sender];
+}
+
+- (void)presentPicker:(UIButton *)sender
+{
     UIImagePickerController * picker = [[UIImagePickerController alloc] init];
 	picker.delegate = self;
     
-	if((UIButton *) sender == self.avatarChangeButton)
+	if(((UIButton *) sender == self.avatarChangeButton) || ((UIButton *) sender == self.backgroundChangeButton))
     {
 		picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
 	} else
@@ -443,16 +497,36 @@
     NSData* data = UIImagePNGRepresentation(pickedImage);// UIImageJPEGRepresentation(pickedImage,1.0f);
     PFFile *imageFile = [PFFile fileWithData:data];
     PFUser *user = [PFUser currentUser];
+
+    if (self.avatarButtonPressed)
+    {
+        NSLog(@"avatar pressed");
+        user[@"avatar"] = imageFile;
+        
+        // getting a uiimage from pffile
+        [user[@"avatar"] getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+            if (!error) {
+                UIImage *photo = [UIImage imageWithData:data];
+                self.avatarImageView.image = photo;
+            }
+        }];
+    }
+    else if (self.backgroundButtonPressed)
+    {
+        NSLog(@"background pressed");
+        user[@"backgroundImage"] = imageFile;
+        
+        // getting a uiimage from pffile
+        [user[@"backgroundImage"] getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+            if (!error) {
+                UIImage *photo = [UIImage imageWithData:data];
+                self.backgroundImageView.image = photo;
+            }
+        }];
+    }
     
-    user[@"avatar"] = imageFile;
-    
-    // getting a uiimage from pffile
-    [user[@"avatar"] getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-        if (!error) {
-            UIImage *photo = [UIImage imageWithData:data];
-            self.avatarImageView.image = photo;
-        }
-    }];
+    self.avatarButtonPressed = 0;
+    self.backgroundButtonPressed = 0;
     
     [user saveInBackground];
 }
@@ -509,12 +583,7 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.identifier isEqualToString:@"ExpertiseEditedSegue"])
-    {
-        TagsViewController *tvc = segue.destinationViewController;
-        tvc.choosingTagsForExpertise = 1;
-    }
-    else if ([segue.identifier isEqualToString:@"ToWebSegue"])
+    if ([segue.identifier isEqualToString:@"ToWebSegue"])
     {
         WebViewController *wvc = segue.destinationViewController;
         wvc.urlString = self.websiteButton.titleLabel.text;

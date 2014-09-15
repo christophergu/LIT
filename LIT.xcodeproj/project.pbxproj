@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF0DD16919C641A5008F0FE2 /* AddTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0DD16819C641A5008F0FE2 /* AddTagsViewController.m */; };
+		DF0DD17219C64A26008F0FE2 /* CRTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0DD16F19C64A26008F0FE2 /* CRTableViewCell.m */; };
+		DF0DD17319C64A26008F0FE2 /* CRTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0DD17119C64A26008F0FE2 /* CRTableViewController.m */; };
 		DF0F1FDE195F567A003B15A3 /* SearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0F1FDD195F567A003B15A3 /* SearchResultsViewController.m */; };
 		DF0F1FE119608531003B15A3 /* SearchResultsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0F1FE019608531003B15A3 /* SearchResultsTableViewCell.m */; };
 		DF13AAE3198ACAE900823D72 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DF13AAE2198ACAE900823D72 /* libicucore.dylib */; };
@@ -158,6 +161,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF0DD16719C641A5008F0FE2 /* AddTagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTagsViewController.h; sourceTree = "<group>"; };
+		DF0DD16819C641A5008F0FE2 /* AddTagsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTagsViewController.m; sourceTree = "<group>"; };
+		DF0DD16E19C64A26008F0FE2 /* CRTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRTableViewCell.h; sourceTree = "<group>"; };
+		DF0DD16F19C64A26008F0FE2 /* CRTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRTableViewCell.m; sourceTree = "<group>"; };
+		DF0DD17019C64A26008F0FE2 /* CRTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRTableViewController.h; sourceTree = "<group>"; };
+		DF0DD17119C64A26008F0FE2 /* CRTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRTableViewController.m; sourceTree = "<group>"; };
 		DF0F1FDC195F567A003B15A3 /* SearchResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultsViewController.h; sourceTree = "<group>"; };
 		DF0F1FDD195F567A003B15A3 /* SearchResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsViewController.m; sourceTree = "<group>"; };
 		DF0F1FDF19608531003B15A3 /* SearchResultsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultsTableViewCell.h; sourceTree = "<group>"; };
@@ -408,6 +417,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF0DD16C19C649EE008F0FE2 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				DF0DD16D19C649F7008F0FE2 /* CRMultiRowSelector */,
+				DFA1EEB419AAC9AE00A6D0BE /* Youtube Other Files */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		DF0DD16D19C649F7008F0FE2 /* CRMultiRowSelector */ = {
+			isa = PBXGroup;
+			children = (
+				DF0DD16E19C64A26008F0FE2 /* CRTableViewCell.h */,
+				DF0DD16F19C64A26008F0FE2 /* CRTableViewCell.m */,
+				DF0DD17019C64A26008F0FE2 /* CRTableViewController.h */,
+				DF0DD17119C64A26008F0FE2 /* CRTableViewController.m */,
+			);
+			name = CRMultiRowSelector;
+			sourceTree = "<group>";
+		};
 		DF16B52F19A8582900463FF5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -609,7 +638,7 @@
 		DF5D606D192325450022C498 /* LIT */ = {
 			isa = PBXGroup;
 			children = (
-				DFA1EEB419AAC9AE00A6D0BE /* Youtube Other Files */,
+				DF0DD16C19C649EE008F0FE2 /* Libraries */,
 				DF5D6076192325450022C498 /* AppDelegate.h */,
 				DF5D6077192325450022C498 /* AppDelegate.m */,
 				DFFFF524195C9D060002A215 /* RootViewController.h */,
@@ -622,6 +651,8 @@
 				DF0F1FDD195F567A003B15A3 /* SearchResultsViewController.m */,
 				DFFFF57D195E02D80002A215 /* ProfileViewController.h */,
 				DFFFF57E195E02D80002A215 /* ProfileViewController.m */,
+				DF0DD16719C641A5008F0FE2 /* AddTagsViewController.h */,
+				DF0DD16819C641A5008F0FE2 /* AddTagsViewController.m */,
 				DF16827C199B004500B2FC29 /* InfoViewController.h */,
 				DF16827D199B004500B2FC29 /* InfoViewController.m */,
 				DFF9C8CA197FC3A5008D6F15 /* GalleryViewController.h */,
@@ -883,6 +914,7 @@
 				DF16B5CE19A85BDC00463FF5 /* GTLYouTubePlaylistListResponse.m in Sources */,
 				DFA1EEC819AAD29D00A6D0BE /* UploadController.m in Sources */,
 				DF16B5D519A85BDC00463FF5 /* GTLYouTubeSubscription.m in Sources */,
+				DF0DD16919C641A5008F0FE2 /* AddTagsViewController.m in Sources */,
 				DF16B5C719A85BDC00463FF5 /* GTLYouTubeGuideCategorySnippet.m in Sources */,
 				DF16B5C119A85BDC00463FF5 /* GTLYouTubeChannelSnippet.m in Sources */,
 				DF16B5C519A85BDC00463FF5 /* GTLYouTubeGuideCategory.m in Sources */,
@@ -891,6 +923,7 @@
 				DFEC6FAA1964A9820025345A /* TagsSelectButton.m in Sources */,
 				DF0F1FDE195F567A003B15A3 /* SearchResultsViewController.m in Sources */,
 				DF16B5CC19A85BDC00463FF5 /* GTLYouTubePlaylistItemListResponse.m in Sources */,
+				DF0DD17319C64A26008F0FE2 /* CRTableViewController.m in Sources */,
 				DF16B5BB19A85BDC00463FF5 /* GTLYouTubeActivityContentDetails.m in Sources */,
 				DFA1EEC019AACA6C00A6D0BE /* Utils.m in Sources */,
 				DF2A613A197F9B8000DA6FE2 /* PushNoAnimationSegue.m in Sources */,
@@ -903,6 +936,7 @@
 				DFF9C8CF197FC6B5008D6F15 /* GalleryCollectionViewCell.m in Sources */,
 				DF2A6134197F980800DA6FE2 /* RecordVideoViewController.m in Sources */,
 				DF16B5C319A85BDC00463FF5 /* GTLYouTubeChannelTopicDetails.m in Sources */,
+				DF0DD17219C64A26008F0FE2 /* CRTableViewCell.m in Sources */,
 				DFF9C8CC197FC3A5008D6F15 /* GalleryViewController.m in Sources */,
 				DF16B5E219A85BDC00463FF5 /* GTLYouTubeVideoStatistics.m in Sources */,
 			);
