@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>02C33C7B-76F0-4BCB-8589-56D9A0090BE8</string>
+	<key>IDESourceControlProjectName</key>
+	<string>LIT</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>4B5D4BDE-F1FF-4BF7-8D1D-8D63B9F52711</key>
+		<string>http://gtm-oauth2.googlecode.com/svn/trunk/Source</string>
+		<key>621A48B0-119A-44C8-8367-5141D5D483C2</key>
+		<string>ssh://github.com/christophergu/LIT.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>LIT.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>4B5D4BDE-F1FF-4BF7-8D1D-8D63B9F52711</key>
+		<string>../../../../Desktop/google-api-objectivec-client-read-only/Source/OAuth2</string>
+		<key>621A48B0-119A-44C8-8367-5141D5D483C2</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>4B5D4BDE-F1FF-4BF7-8D1D-8D63B9F52711</key>
+		<string>http://gtm-oauth2.googlecode.com/svn</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/christophergu/LIT.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>621A48B0-119A-44C8-8367-5141D5D483C2</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>621A48B0-119A-44C8-8367-5141D5D483C2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>LIT</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryBranchesRelativeLocationKey</key>
+			<string>branches</string>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlRepositoryTagsRelativeLocationKey</key>
+			<string>tags</string>
+			<key>IDESourceControlRepositoryTrunkRelativeLocationKey</key>
+			<string>trunk</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4B5D4BDE-F1FF-4BF7-8D1D-8D63B9F52711</string>
+			<key>IDESourceControlWCCName</key>
+			<string>OAuth2</string>
+		</dict>
+	</array>
+</dict>
+</plist>

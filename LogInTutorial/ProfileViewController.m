@@ -66,7 +66,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
+    self.currentUser = [PFUser currentUser];
+    PFGeoPoint *lat = [[PFGeoPoint alloc] init];
+    lat = self.currentUser[@"geoPoint"];
+    
+    NSLog(@"there  %@",self.currentUser[@"latitude"]);
 
+    NSLog(@"eee %@",self.currentUser[@"geoPoint"]);
+    NSLog(@"lat man %f",lat.latitude);
+
+    
+    
+    
     self.photoImageView.clipsToBounds = YES;
 
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
@@ -293,7 +306,7 @@
     PFQuery *cumulativeReviewQuery = [PFQuery queryWithClassName:@"Review"];
     [cumulativeReviewQuery whereKey:@"reviewedObjectId" equalTo:user.objectId];
     [cumulativeReviewQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        NSLog(@"objob %@",[[objects firstObject] class]);
+        NSLog(@"objob for reviews %@",[[objects firstObject] class]);
         self.ratingsArray = objects;
         
         int ratingSum = 0;
@@ -413,68 +426,65 @@
 // this delegate is called when the app successfully finds your current location
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
-    // this creates a MKReverseGeocoder to find a placemark using the found coordinates
-    MKReverseGeocoder *geoCoder = [[MKReverseGeocoder alloc] initWithCoordinate:newLocation.coordinate];
-    geoCoder.delegate = self;
-    [geoCoder start];
+    NSLog(@"ore here");
+    // this creates a CLGeocoder to find a placemark using the found coordinates
+    CLGeocoder *geoCoder = [[CLGeocoder alloc] init];
+    
+    [geoCoder reverseGeocodeLocation:newLocation completionHandler:^(NSArray *placemarks, NSError *error) {
+                       
+                       dispatch_async(dispatch_get_main_queue(),^ {
+                           // do stuff with placemarks on the main thread
+                           
+                           if (placemarks.count == 1) {
+                               MKPlacemark * myPlacemark = [placemarks firstObject];
+                               // with the placemark you can now retrieve the city name
+                               NSString *city = [myPlacemark.addressDictionary objectForKey:(NSString*) kABPersonAddressCityKey];
+                               NSString *state = [myPlacemark.addressDictionary objectForKey:(NSString*) kABPersonAddressStateKey];
+                               
+                               [self.locationManager stopUpdatingLocation];
+                               
+                               if (city && state)
+                               {
+                                   self.currentUser[@"city"] = city;
+                                   self.currentUser[@"state"] = state;
+                               }
+                               self.currentUser[@"latitude"] = @(self.locationManager.location.coordinate.latitude);
+                               self.currentUser[@"longitude"] = @(self.locationManager.location.coordinate.longitude);
+                               
+                               CLLocationCoordinate2D coordinate = self.locationManager.location.coordinate;
+                               PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:coordinate.latitude
+                                                                             longitude:coordinate.longitude];
+                               
+                               self.currentUser[@"geoPoint"] = geoPoint;
+                               
+                               [self.currentUser saveInBackground];
+                               
+                               // findLocationLabel animations
+                               [UIView animateKeyframesWithDuration:2.0f delay:0.0f options:0 animations:^{
+                                   [UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.25 animations:^{
+                                       self.findLocationLabel.text = @"Searching...";
+                                       self.findLocationLabel.alpha = 1.0;
+                                   }];
+                                   [UIView addKeyframeWithRelativeStartTime:0.25 relativeDuration:0.5 animations:^{
+                                       // do nothing
+                                   }];
+                                   [UIView addKeyframeWithRelativeStartTime:0.75 relativeDuration:0.25 animations:^{
+                                       self.locationTextField.text = [NSString stringWithFormat:@"%@, %@",city, state];
+                                       self.findLocationLabel.alpha = 0.0;
+                                   }];
+                               } completion:^(BOOL finished) {
+                                   
+                               }];
+                           }
+                    });
+    }];
 }
-
 
 // this delegate method is called if an error occurs in locating your current location
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
     NSLog(@"locationManager:%@ didFailWithError:%@", manager, error);
-}
-
-// update these deprecated with CLGeocoder
-
-// this delegate is called when the reverseGeocoder finds a placemark
-- (void)reverseGeocoder:(MKReverseGeocoder *)geocoder didFindPlacemark:(MKPlacemark *)placemark
-{
-    MKPlacemark * myPlacemark = placemark;
-    // with the placemark you can now retrieve the city name
-    NSString *city = [myPlacemark.addressDictionary objectForKey:(NSString*) kABPersonAddressCityKey];
-    NSString *state = [myPlacemark.addressDictionary objectForKey:(NSString*) kABPersonAddressStateKey];
-    
-    [self.locationManager stopUpdatingLocation];
-    
-    if (city && state)
-    {
-        self.currentUser[@"city"] = city;
-        self.currentUser[@"state"] = state;
-    }
-    self.currentUser[@"latitude"] = @(self.locationManager.location.coordinate.latitude);
-    self.currentUser[@"longitude"] = @(self.locationManager.location.coordinate.longitude);
-    
-    [self.currentUser saveInBackground];
-
-    
-    // findLocationLabel animations
-    [UIView animateKeyframesWithDuration:2.0f delay:0.0f options:0 animations:^{
-        [UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.25 animations:^{
-            self.findLocationLabel.text = @"Searching...";
-            self.findLocationLabel.alpha = 1.0;
-        }];
-        [UIView addKeyframeWithRelativeStartTime:0.25 relativeDuration:0.5 animations:^{
-            // do nothing
-        }];
-        [UIView addKeyframeWithRelativeStartTime:0.75 relativeDuration:0.25 animations:^{
-            self.locationTextField.text = [NSString stringWithFormat:@"%@, %@",city, state];
-            self.findLocationLabel.alpha = 0.0;
-        }];
-    } completion:^(BOOL finished) {
-        
-    }];
-}
-
-// this delegate is called when the reversegeocoder fails to find a placemark
-- (void)reverseGeocoder:(MKReverseGeocoder *)geocoder didFailWithError:(NSError *)error
-{
-    NSLog(@"reverseGeocoder:%@ didFailWithError:%@", geocoder, error);
-    
-    // put an alert here that says they aren't connected to the internet or something to that effect
-    UIAlertView *noConnectionAlert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"You must have an internet connection to find your location." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
-    [noConnectionAlert show];
+    [manager stopUpdatingLocation];
 }
 
 #pragma mark - text view related methods
@@ -534,6 +544,8 @@
     self.locationManager.delegate = self;
     self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
     [self.locationManager startUpdatingLocation];
+    
+    NSLog(@"pressed");
 }
 
 - (IBAction)onGalleryButtonPressed:(id)sender

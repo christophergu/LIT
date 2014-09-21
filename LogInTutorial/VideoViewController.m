@@ -86,24 +86,10 @@
     [[self navigationController] pushViewController:[self createAuthController] animated:NO];
 }
 
-- (IBAction)onPlayButtonPressed:(id)sender
-{
-    
-}
-
 - (IBAction)onRecordVideoPressed:(id)sender
 {
     self.recordButtonTappedBOOL = 1;
     [self startCameraControllerFromViewController:self usingDelegate:self];
-    
-//    UIBarButtonItem *newBackButton =
-//    [[UIBarButtonItem alloc] initWithTitle:@"Profile"
-//                                     style:UIBarButtonItemStyleBordered
-//                                    target:nil
-//                                    action:nil];
-//    [[self navigationItem] setBackBarButtonItem:newBackButton];
-//
-//    [self performSegueWithIdentifier:@"RecordVideoSegue" sender:self];
 }
 
 -(BOOL)startCameraControllerFromViewController:(UIViewController*)controller
@@ -136,11 +122,6 @@
 
     }];
 }
-
-
-
-
-
 
 -(void)videoFinished:(NSNotification*)aNotification{
     int value = [[aNotification.userInfo valueForKey:MPMoviePlayerPlaybackDidFinishReasonUserInfoKey] intValue];
@@ -244,12 +225,9 @@
       didFinishWithResults:(GTLYouTubeVideo *)video {
     NSLog(@"ya?");
     [Utils showAlert:@"Video Uploaded" message:video.identifier];
+    
+    self.currentUser[@"videoIdentifier"] = video.identifier;
+    [self.currentUser saveInBackground];
 }
-
-- (IBAction)unwindToVideoVC:(UIStoryboardSegue *)unwindSegue
-{
-
-}
-
 
 @end

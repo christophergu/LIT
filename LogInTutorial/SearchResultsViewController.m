@@ -258,10 +258,17 @@
 {
     NSMutableArray *radiusFilteredMutableArray = [NSMutableArray new];
 
+    PFGeoPoint *userGeoPoint = [[PFGeoPoint alloc] init];
+    userGeoPoint = self.currentUser[@"geoPoint"];
+    
     for (PFUser *user in self.searchResultsArray)
     {
-        CLLocation *locA = [[CLLocation alloc] initWithLatitude:[self.currentUser[@"latitude"] doubleValue] longitude:[self.currentUser[@"longitude"] doubleValue]];
-        CLLocation *locB = [[CLLocation alloc] initWithLatitude:[user[@"latitude"] doubleValue] longitude:[user[@"longitude"] doubleValue]];
+        PFGeoPoint *geoPoint = [[PFGeoPoint alloc] init];
+        geoPoint = user[@"geoPoint"];
+        
+        
+        CLLocation *locA = [[CLLocation alloc] initWithLatitude:userGeoPoint.latitude longitude:userGeoPoint.longitude];
+        CLLocation *locB = [[CLLocation alloc] initWithLatitude:geoPoint.latitude longitude:geoPoint.longitude];
         CLLocationDistance distance = [locA distanceFromLocation:locB]/1609.34;
         NSLog(@"user %@ distance %f",user.username, distance);
         
@@ -313,10 +320,43 @@
 // this delegate is called when the app successfully finds your current location
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
-    // this creates a MKReverseGeocoder to find a placemark using the found coordinates
-    MKReverseGeocoder *geoCoder = [[MKReverseGeocoder alloc] initWithCoordinate:newLocation.coordinate];
-    geoCoder.delegate = self;
-    [geoCoder start];
+    NSLog(@"ore here");
+    // this creates a CLGeocoder to find a placemark using the found coordinates
+    CLGeocoder *geoCoder = [[CLGeocoder alloc] init];
+    
+    [geoCoder reverseGeocodeLocation:newLocation completionHandler:^(NSArray *placemarks, NSError *error) {
+        
+        dispatch_async(dispatch_get_main_queue(),^ {
+            // do stuff with placemarks on the main thread
+            
+            if (placemarks.count == 1) {
+                MKPlacemark * myPlacemark = [placemarks firstObject];
+                // with the placemark you can now retrieve the city name
+                NSString *city = [myPlacemark.addressDictionary objectForKey:(NSString*) kABPersonAddressCityKey];
+                NSString *state = [myPlacemark.addressDictionary objectForKey:(NSString*) kABPersonAddressStateKey];
+                
+                [self.locationManager stopUpdatingLocation];
+
+                self.currentUser[@"city"] = city;
+                self.currentUser[@"state"] = state;
+                self.currentUser[@"latitude"] = @(self.locationManager.location.coordinate.latitude);
+                self.currentUser[@"longitude"] = @(self.locationManager.location.coordinate.longitude);
+                
+                CLLocationCoordinate2D coordinate = self.locationManager.location.coordinate;
+                PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:coordinate.latitude
+                                                              longitude:coordinate.longitude];
+                
+                self.currentUser[@"geoPoint"] = geoPoint;
+                
+                [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                    self.locationCheckButton.alpha = 0.0;
+                    
+                    [self.radiusTextField becomeFirstResponder];
+                }];
+            }
+        });
+    }];
+
 }
 
 
@@ -324,40 +364,7 @@
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
     NSLog(@"locationManager:%@ didFailWithError:%@", manager, error);
-}
-
-// update these deprecated with CLGeocoder
-
-// this delegate is called when the reverseGeocoder finds a placemark
-- (void)reverseGeocoder:(MKReverseGeocoder *)geocoder didFindPlacemark:(MKPlacemark *)placemark
-{
-    MKPlacemark * myPlacemark = placemark;
-    // with the placemark you can now retrieve the city name
-    NSString *city = [myPlacemark.addressDictionary objectForKey:(NSString*) kABPersonAddressCityKey];
-    NSString *state = [myPlacemark.addressDictionary objectForKey:(NSString*) kABPersonAddressStateKey];
-    
-    [self.locationManager stopUpdatingLocation];
-    
-    self.currentUser[@"city"] = city;
-    self.currentUser[@"state"] = state;
-    self.currentUser[@"latitude"] = @(self.locationManager.location.coordinate.latitude);
-    self.currentUser[@"longitude"] = @(self.locationManager.location.coordinate.longitude);
-
-    [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        self.locationCheckButton.alpha = 0.0;
-        
-        [self.radiusTextField becomeFirstResponder];
-    }];
-}
-
-// this delegate is called when the reversegeocoder fails to find a placemark
-- (void)reverseGeocoder:(MKReverseGeocoder *)geocoder didFailWithError:(NSError *)error
-{
-    NSLog(@"reverseGeocoder:%@ didFailWithError:%@", geocoder, error);
-    
-    // put an alert here that says they aren't connected to the internet or something to that effect
-    UIAlertView *noConnectionAlert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"You must have an internet connection to find your location." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
-    [noConnectionAlert show];
+    [manager stopUpdatingLocation];
 }
 
 #pragma mark - segue methods
