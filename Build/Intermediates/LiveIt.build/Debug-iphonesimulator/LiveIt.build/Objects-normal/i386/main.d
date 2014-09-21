@@ -1,2 +1,3 @@
-dependencies: /Users/christophergu/Development/LIT/LogInTutorial/main.m \
-  /Users/christophergu/Development/LIT/LogInTutorial/AppDelegate.h
+dependencies: \
+  /Users/christophergu/Development/LIT-messedUp/LogInTutorial/main.m \
+  /Users/christophergu/Development/LIT-messedUp/LogInTutorial/AppDelegate.h

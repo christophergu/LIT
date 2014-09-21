@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/christophergu/Development/LIT/LogInTutorial/DYRateView.m \
-  /Users/christophergu/Development/LIT/LogInTutorial/DYRateView.h
+  /Users/christophergu/Development/LIT-messedUp/LogInTutorial/DYRateView.m \
+  /Users/christophergu/Development/LIT-messedUp/LogInTutorial/DYRateView.h

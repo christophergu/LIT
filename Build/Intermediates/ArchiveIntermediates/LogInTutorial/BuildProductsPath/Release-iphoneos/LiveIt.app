@@ -1,0 +1,1 @@
+/Users/christophergu/Development/LIT/Build/Intermediates/ArchiveIntermediates/LogInTutorial/IntermediateBuildFilesPath/UninstalledProducts/LiveIt.app

@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/christophergu/Development/LIT/LogInTutorial/TagsSelectButton.m \
-  /Users/christophergu/Development/LIT/LogInTutorial/TagsSelectButton.h
+  /Users/christophergu/Development/LIT-messedUp/LogInTutorial/TagsSelectButton.m \
+  /Users/christophergu/Development/LIT-messedUp/LogInTutorial/TagsSelectButton.h

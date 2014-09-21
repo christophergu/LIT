@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/christophergu/Development/LIT/LogInTutorial/TagsCollectionViewCell.m \
-  /Users/christophergu/Development/LIT/LogInTutorial/TagsCollectionViewCell.h
+  /Users/christophergu/Development/LIT-messedUp/LogInTutorial/TagsCollectionViewCell.m \
+  /Users/christophergu/Development/LIT-messedUp/LogInTutorial/TagsCollectionViewCell.h

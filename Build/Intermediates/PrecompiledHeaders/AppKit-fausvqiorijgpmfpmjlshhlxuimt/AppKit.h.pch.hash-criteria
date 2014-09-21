@@ -1,0 +1,20 @@
+-x
+objective-c
+-arch
+i386
+-std=c99
+-fpascal-strings
+-O0
+-DOBJC_OLD_DISPATCH_PROTOTYPES=0
+-isysroot
+/Applications/Xcode 6.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk
+-fasm-blocks
+-g
+-I/Users/christophergu/Development/LIT/Build/Products/Debug/include
+-I/Applications/Xcode 6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
+-F/Users/christophergu/Development/LIT/Build/Products/Debug
+-DDEBUG=1
+i386-apple-darwin13.3.0
+"4.2.1 Compatible Apple LLVM 6.0 (clang-600.0.51)"
+SDK_PRODUCT_BUILD_VERSION=13F26
+13F26

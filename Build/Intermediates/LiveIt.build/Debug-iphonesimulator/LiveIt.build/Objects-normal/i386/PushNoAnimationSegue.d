@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/christophergu/Development/LIT/LogInTutorial/PushNoAnimationSegue.m \
-  /Users/christophergu/Development/LIT/LogInTutorial/PushNoAnimationSegue.h
+  /Users/christophergu/Development/LIT-messedUp/LogInTutorial/PushNoAnimationSegue.m \
+  /Users/christophergu/Development/LIT-messedUp/LogInTutorial/PushNoAnimationSegue.h
