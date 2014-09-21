@@ -112,6 +112,7 @@
 		DFEC6FAA1964A9820025345A /* TagsSelectButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DFEC6FA91964A9820025345A /* TagsSelectButton.m */; };
 		DFF9C8CC197FC3A5008D6F15 /* GalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF9C8CB197FC3A5008D6F15 /* GalleryViewController.m */; };
 		DFF9C8CF197FC6B5008D6F15 /* GalleryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF9C8CE197FC6B5008D6F15 /* GalleryCollectionViewCell.m */; };
+		DFFA8A0919CF585A00AF672B /* IntermediateSearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFFA8A0819CF585A00AF672B /* IntermediateSearchResultsViewController.m */; };
 		DFFFF526195C9D060002A215 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFFFF525195C9D060002A215 /* RootViewController.m */; };
 		DFFFF529195CA07B0002A215 /* TagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFFFF528195CA07B0002A215 /* TagsViewController.m */; };
 		DFFFF52C195CA0A30002A215 /* TagsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFFFF52B195CA0A30002A215 /* TagsCollectionViewCell.m */; };
@@ -370,6 +371,8 @@
 		DFF9C8CB197FC3A5008D6F15 /* GalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryViewController.m; sourceTree = "<group>"; };
 		DFF9C8CD197FC6B5008D6F15 /* GalleryCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryCollectionViewCell.h; sourceTree = "<group>"; };
 		DFF9C8CE197FC6B5008D6F15 /* GalleryCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryCollectionViewCell.m; sourceTree = "<group>"; };
+		DFFA8A0719CF585A00AF672B /* IntermediateSearchResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntermediateSearchResultsViewController.h; sourceTree = "<group>"; };
+		DFFA8A0819CF585A00AF672B /* IntermediateSearchResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntermediateSearchResultsViewController.m; sourceTree = "<group>"; };
 		DFFFF524195C9D060002A215 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		DFFFF525195C9D060002A215 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		DFFFF527195CA07B0002A215 /* TagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagsViewController.h; sourceTree = "<group>"; };
@@ -671,6 +674,8 @@
 				DF5D60B4192328EF0022C498 /* LogInViewController.m */,
 				DFFFF527195CA07B0002A215 /* TagsViewController.h */,
 				DFFFF528195CA07B0002A215 /* TagsViewController.m */,
+				DFFA8A0719CF585A00AF672B /* IntermediateSearchResultsViewController.h */,
+				DFFA8A0819CF585A00AF672B /* IntermediateSearchResultsViewController.m */,
 				DF0F1FDC195F567A003B15A3 /* SearchResultsViewController.h */,
 				DF0F1FDD195F567A003B15A3 /* SearchResultsViewController.m */,
 				DFFFF57D195E02D80002A215 /* ProfileViewController.h */,
@@ -900,6 +905,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFFA8A0919CF585A00AF672B /* IntermediateSearchResultsViewController.m in Sources */,
 				DF5D60B5192328EF0022C498 /* LogInViewController.m in Sources */,
 				DF16B5E119A85BDC00463FF5 /* GTLYouTubeVideoSnippet.m in Sources */,
 				DF16B5DB19A85BDC00463FF5 /* GTLYouTubeVideoCategory.m in Sources */,

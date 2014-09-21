@@ -11,5 +11,6 @@
 @interface SearchResultsViewController : UIViewController
 @property (copy, nonatomic) NSDictionary *selectedTagsDictionary;
 @property (assign, nonatomic) BOOL viewAllChosen;
+@property (nonatomic) NSArray *selectedExpertiseUsersArray;
 
 @end

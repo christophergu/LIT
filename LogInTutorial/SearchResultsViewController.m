@@ -72,28 +72,47 @@
     }
     else
     {
-        PFQuery *usersWithMatchingTagsQuery = [PFUser query];
-        [usersWithMatchingTagsQuery whereKey:@"expertise" notEqualTo:[NSNull null]];
-        [usersWithMatchingTagsQuery whereKey:@"tags" containsAllObjectsInArray:[self.selectedTagsDictionary allKeys]];
-        [usersWithMatchingTagsQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-            self.searchResultsArray = objects;
-            NSArray *tempSearchResultsArray = self.searchResultsArray;
+//        PFQuery *usersWithMatchingTagsQuery = [PFUser query];
+//        [usersWithMatchingTagsQuery whereKey:@"expertise" notEqualTo:[NSNull null]];
+//        [usersWithMatchingTagsQuery whereKey:@"tags" containsAllObjectsInArray:[self.selectedTagsDictionary allKeys]];
+//        [usersWithMatchingTagsQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+//            self.searchResultsArray = objects;
+//            NSArray *tempSearchResultsArray = self.searchResultsArray;
+//            
+//            self.searchResultsArray = [tempSearchResultsArray sortedArrayUsingComparator:^NSComparisonResult(PFUser *user1, PFUser *user2) {
+//                NSString *expertise1 = [user1[@"expertise"] lowercaseString];
+//                NSString *expertise2 = [user2[@"expertise"] lowercaseString];
+//                
+//                if ([expertise1 compare: expertise2] == NSOrderedAscending)
+//                {
+//                    return NSOrderedAscending;
+//                }
+//                else{
+//                    return NSOrderedDescending;
+//                }
+//            }];
+//            
+//            [self radiusHelper];
+//        }];
+        
+        
+        self.searchResultsArray = self.selectedExpertiseUsersArray;
+        NSArray *tempSearchResultsArray = self.searchResultsArray;
+        
+        self.searchResultsArray = [tempSearchResultsArray sortedArrayUsingComparator:^NSComparisonResult(PFUser *user1, PFUser *user2) {
+            NSString *expertise1 = [user1[@"expertise"] lowercaseString];
+            NSString *expertise2 = [user2[@"expertise"] lowercaseString];
             
-            self.searchResultsArray = [tempSearchResultsArray sortedArrayUsingComparator:^NSComparisonResult(PFUser *user1, PFUser *user2) {
-                NSString *expertise1 = [user1[@"expertise"] lowercaseString];
-                NSString *expertise2 = [user2[@"expertise"] lowercaseString];
-                
-                if ([expertise1 compare: expertise2] == NSOrderedAscending)
-                {
-                    return NSOrderedAscending;
-                }
-                else{
-                    return NSOrderedDescending;
-                }
-            }];
-            
-            [self radiusHelper];
+            if ([expertise1 compare: expertise2] == NSOrderedAscending)
+            {
+                return NSOrderedAscending;
+            }
+            else{
+                return NSOrderedDescending;
+            }
         }];
+        
+        [self radiusHelper];
     }
 }
 

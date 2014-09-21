@@ -11,6 +11,7 @@
 #import "TagsCollectionViewCell.h"
 #import "TagsSelectButton.h"
 #import <Parse/Parse.h>
+#import "IntermediateSearchResultsViewController.h"
 
 @interface TagsViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (copy, nonatomic) NSArray *categoriesArray;
@@ -18,6 +19,7 @@
 
 @property (strong, nonatomic) PFUser *currentUser;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *browseRandomBarButtonItem;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 
 
@@ -94,6 +96,11 @@
 
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 44;
+}
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.categoriesKeysArray.count;
@@ -107,15 +114,18 @@
     return cell;
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableViewCell *)senderCell
 {
-    SearchResultsViewController *srvc = segue.destinationViewController;
-
-    if ([segue.identifier isEqualToString:@"TagsToResultsSegue"])
+    if ([segue.identifier isEqualToString:@"IntermediateSearchSegue"])
     {
+        IntermediateSearchResultsViewController *isrvc = segue.destinationViewController;
+
+        isrvc.selectedCategory = self.categoriesKeysArray[[self.tableView indexPathForCell:senderCell].row];
     }
     if ([segue.identifier isEqualToString:@"ViewAllSegue"])
     {
+        SearchResultsViewController *srvc = segue.destinationViewController;
+
         srvc.viewAllChosen = 1;
     }
 }
