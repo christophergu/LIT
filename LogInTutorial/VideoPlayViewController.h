@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface VideoPlayViewController : UIViewController
-
+@property BOOL *ownProfile;
+@property (nonatomic) NSString *videoIdentifier;
 @end

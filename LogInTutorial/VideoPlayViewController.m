@@ -18,11 +18,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    NSString *videoIdentifierString = self.videoIdentifier;
+    
     NSError *error = nil;
     NSString *path = [[NSBundle mainBundle] pathForResource:@"iframe-player" ofType:@"html"];
     NSString *embedHTML =
     [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
-    NSString *embedHTMLWithId = [NSString stringWithFormat:embedHTML, @"5zGSqiyCXa0"];
+    NSString *embedHTMLWithId = [NSString stringWithFormat:embedHTML, videoIdentifierString];
     
     NSLog(@"%@",embedHTMLWithId);
     

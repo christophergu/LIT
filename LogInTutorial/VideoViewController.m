@@ -7,6 +7,7 @@
 //
 
 #import "VideoViewController.h"
+#import "VideoPlayViewController.h"
 #import <MobileCoreServices/UTCoreTypes.h>
 #import <Parse/Parse.h>
 #import <MediaPlayer/MediaPlayer.h>
@@ -81,9 +82,19 @@
     }
 }
 
-- (IBAction)signInForNowButtonTapped:(id)sender
+- (IBAction)playButtonTapped:(id)sender
 {
-    [[self navigationController] pushViewController:[self createAuthController] animated:NO];
+    if (self.currentUser[@"videoIdentifier"])
+    {
+        [self performSegueWithIdentifier:@"VideoToVideoPlayVC" sender:self];
+    }
+    else
+    {
+        NSLog(@"no video");
+        UIAlertView *noVideoAlert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"You have not yet shared a video. Please use the \"Upload\" button below to share a video!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [noVideoAlert show];
+    }
+    
 }
 
 - (IBAction)onRecordVideoPressed:(id)sender
@@ -228,6 +239,16 @@
     
     self.currentUser[@"videoIdentifier"] = video.identifier;
     [self.currentUser saveInBackground];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"VideoToVideoPlayVC"])
+    {
+        VideoPlayViewController *vpvc = segue.destinationViewController;
+        vpvc.ownProfile = 1;
+        vpvc.videoIdentifier = self.currentUser[@"videoIdentifier"];
+    }
 }
 
 @end

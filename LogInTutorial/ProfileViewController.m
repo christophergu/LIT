@@ -18,6 +18,8 @@
 #import <AddressBook/AddressBook.h>
 #import <QuartzCore/QuartzCore.h>
 #import <MessageUI/MessageUI.h>
+#import "VideoViewController.h"
+#import "VideoPlayViewController.h"
 
 #define allTrim( object ) [object stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet] ]
 #define isiPhone5  ([[UIScreen mainScreen] bounds].size.height == 568)?TRUE:FALSE
@@ -524,19 +526,47 @@
 
 - (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     // the user clicked one of the OK/Cancel buttons
-    if (buttonIndex == 0)
+    
+    // so the following action only happens when you change your expertise, prompting you to choose new tags
+    // the action sheets title is and must be Thanks for this to work currently
+    if ([actionSheet.title isEqualToString:@"Thanks!"])
     {
-//        [self performSegueWithIdentifier:@"ExpertiseEditedSegue" sender:self];
-        
-        CRTableViewController *crTableViewController = [[CRTableViewController alloc] initWithStyle:UITableViewStylePlain];
-        //CRTableViewController *tableView = [[CRTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
-        
-        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:crTableViewController];
-        [self presentViewController:navController animated:YES completion:nil];
+        if (buttonIndex == 0)
+        {
+            CRTableViewController *crTableViewController = [[CRTableViewController alloc] initWithStyle:UITableViewStylePlain];
+            //CRTableViewController *tableView = [[CRTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+            
+            UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:crTableViewController];
+            [self presentViewController:navController animated:YES completion:nil];
+        }
     }
 }
 
 #pragma mark - button methods
+
+- (IBAction)videoButtonTapped:(id)sender
+{
+    NSLog(@"own? %hhd", self.ownProfile);
+    
+    if (self.ownProfile)
+    {
+        [self performSegueWithIdentifier:@"ToOwnVideoVC" sender:self];
+    }
+    else
+    {
+        if (self.selectedUserProfile[@"videoIdentifier"])
+        {
+            [self performSegueWithIdentifier:@"ToOthersVideoViewVC" sender:self];
+        }
+        else
+        {
+            NSLog(@"no video");
+            UIAlertView *noVideoAlert = [[UIAlertView alloc] initWithTitle:@"Video Unavailable" message:@"This Expert has not shared a video." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            [noVideoAlert show];
+        }
+    }
+}
+
 
 - (IBAction)onFindLocationButtonPressed:(id)sender
 {
@@ -701,6 +731,15 @@
     {
         AddAReviewViewController *aarvc = segue.destinationViewController;
         aarvc.selectedUserProfile = self.selectedUserProfile;
+    }
+    else if ([segue.identifier isEqualToString:@"ToOwnVideoVC"])
+    {
+
+    }
+    else if ([segue.identifier isEqualToString:@"ToOthersVideoViewVC"])
+    {
+        VideoPlayViewController *vpvc = segue.destinationViewController;
+        vpvc.videoIdentifier = self.selectedUserProfile[@"videoIdentifier"];
     }
 }
 
