@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface SearchResultsViewController : UIViewController
-@property (copy, nonatomic) NSDictionary *selectedTagsDictionary;
+@property (nonatomic) NSString *selectedCategory;
 @property (assign, nonatomic) BOOL viewAllChosen;
 @property (nonatomic) NSArray *selectedExpertiseUsersArray;
 

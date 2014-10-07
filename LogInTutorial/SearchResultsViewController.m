@@ -19,7 +19,6 @@
 @property (copy, nonatomic) NSArray *searchResultsArray;
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 @property (strong, nonatomic) NSIndexPath *chosenIndexPath;
-@property (weak, nonatomic) IBOutlet UITextField *distanceTextField;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *mySegmentedControl;
 @property (weak, nonatomic) IBOutlet UIButton *locationCheckButton;
 @property (strong, nonatomic) PFUser *currentUser;
@@ -127,6 +126,7 @@
 {
     SearchResultsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ResultsCellReuseID"];
     
+    // if there is an avatar image saved on the backend, load that image, otherwise load a default avatar image
     if (self.searchResultsArray[indexPath.row][@"avatar"])
     {
         [self.searchResultsArray[indexPath.row][@"avatar"] getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
@@ -141,6 +141,7 @@
         cell.myImageView.image = [UIImage imageNamed:@"default_user"];
     }
     
+    cell.myExpertiseLabel.font = [UIFont fontWithName:@"Futura" size:17];
     cell.myExpertiseLabel.text = self.searchResultsArray[indexPath.row][@"expertise"];
     cell.myUsernameLabel.text = self.searchResultsArray[indexPath.row][@"username"];
     
@@ -232,8 +233,10 @@
 
 #pragma mark - text field methods
 
-- (IBAction)radiusTextFieldDidEndOnExit:(id)sender
+- (IBAction)radiusChosenButtonTapped:(id)sender
 {
+    [self.radiusTextField resignFirstResponder];
+    
     if (self.viewAllChosen)
     {
         PFQuery *allUsersQuery = [PFUser query];
@@ -256,20 +259,13 @@
                     return NSOrderedDescending;
                 }
             }];
-            
             [self radiusHelper];
         }];
-
     }
     else
     {
-        PFQuery *usersWithMatchingTagsQuery = [PFUser query];
-        [usersWithMatchingTagsQuery whereKey:@"expertise" notEqualTo:[NSNull null]];
-        [usersWithMatchingTagsQuery whereKey:@"tags" containsAllObjectsInArray:[self.selectedTagsDictionary allKeys]];
-        [usersWithMatchingTagsQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-            self.searchResultsArray = objects;
-            [self radiusHelper];
-        }];
+        self.searchResultsArray = self.selectedExpertiseUsersArray;
+        [self radiusHelper];
     }
 }
 
@@ -313,7 +309,11 @@
     }
     
     [self addTheDistances];
-    [self.myTableView reloadData];
+    
+    // this reloads the self.myTableView reloadData so there is no need to write it here too
+    // list the results based on distance
+    self.mySegmentedControl.selectedSegmentIndex = 1;
+    [self.mySegmentedControl sendActionsForControlEvents:UIControlEventValueChanged];
 }
 
 #pragma mark - button methods

@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/christophergu/Development/LIT/LogInTutorial/CRTableViewCell.m \
-  /Users/christophergu/Development/LIT/LogInTutorial/CRTableViewCell.h
+  /Users/christophergu/Development/LIT-messedUp/LogInTutorial/CRTableViewCell.m \
+  /Users/christophergu/Development/LIT-messedUp/LogInTutorial/CRTableViewCell.h

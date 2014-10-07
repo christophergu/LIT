@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/christophergu/Development/LIT-messedUp/LogInTutorial/AddTagsViewController.m \
-  /Users/christophergu/Development/LIT-messedUp/LogInTutorial/AddTagsViewController.h
+  /Users/christophergu/Development/LIT/LogInTutorial/AddTagsViewController.m \
+  /Users/christophergu/Development/LIT/LogInTutorial/AddTagsViewController.h

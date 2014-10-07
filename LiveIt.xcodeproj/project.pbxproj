@@ -113,6 +113,7 @@
 		DFF9C8CC197FC3A5008D6F15 /* GalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF9C8CB197FC3A5008D6F15 /* GalleryViewController.m */; };
 		DFF9C8CF197FC6B5008D6F15 /* GalleryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF9C8CE197FC6B5008D6F15 /* GalleryCollectionViewCell.m */; };
 		DFFA8A0919CF585A00AF672B /* IntermediateSearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFFA8A0819CF585A00AF672B /* IntermediateSearchResultsViewController.m */; };
+		DFFA8A3219CF8D4C00AF672B /* libGTLTouchStaticLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DFFA8A3119CF8D4C00AF672B /* libGTLTouchStaticLib.a */; };
 		DFFFF526195C9D060002A215 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFFFF525195C9D060002A215 /* RootViewController.m */; };
 		DFFFF529195CA07B0002A215 /* TagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFFFF528195CA07B0002A215 /* TagsViewController.m */; };
 		DFFFF52C195CA0A30002A215 /* TagsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFFFF52B195CA0A30002A215 /* TagsCollectionViewCell.m */; };
@@ -373,6 +374,7 @@
 		DFF9C8CE197FC6B5008D6F15 /* GalleryCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryCollectionViewCell.m; sourceTree = "<group>"; };
 		DFFA8A0719CF585A00AF672B /* IntermediateSearchResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntermediateSearchResultsViewController.h; sourceTree = "<group>"; };
 		DFFA8A0819CF585A00AF672B /* IntermediateSearchResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntermediateSearchResultsViewController.m; sourceTree = "<group>"; };
+		DFFA8A3119CF8D4C00AF672B /* libGTLTouchStaticLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGTLTouchStaticLib.a; sourceTree = "<group>"; };
 		DFFFF524195C9D060002A215 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		DFFFF525195C9D060002A215 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		DFFFF527195CA07B0002A215 /* TagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagsViewController.h; sourceTree = "<group>"; };
@@ -399,6 +401,7 @@
 				DF2A613E197FA14D00DA6FE2 /* AVFoundation.framework in Frameworks */,
 				DF2A613C197FA14400DA6FE2 /* AssetsLibrary.framework in Frameworks */,
 				DFFFF583195E3ACD0002A215 /* AddressBook.framework in Frameworks */,
+				DFFA8A3219CF8D4C00AF672B /* libGTLTouchStaticLib.a in Frameworks */,
 				DFFFF581195E3ABD0002A215 /* MapKit.framework in Frameworks */,
 				DF5D60C219232BD40022C498 /* Social.framework in Frameworks */,
 				DF5D60C019232BC60022C498 /* libsqlite3.dylib in Frameworks */,
@@ -610,6 +613,7 @@
 			isa = PBXGroup;
 			children = (
 				DF64FF2819CA608800C39E85 /* GTMOAuth2ViewTouch.xib */,
+				DFFA8A3119CF8D4C00AF672B /* libGTLTouchStaticLib.a */,
 				DF16B52E19A8582900463FF5 /* GTL.xcodeproj */,
 				DF5D606D192325450022C498 /* LIT */,
 				DF5D608C192325450022C498 /* LITTests */,
@@ -1073,6 +1077,7 @@
 					"-all_load",
 				);
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				VALID_ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 			};
 			name = Debug;
@@ -1110,6 +1115,7 @@
 					"-all_load",
 				);
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 			};
@@ -1129,8 +1135,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LogInTutorial/LiveIt-Prefix.pch";
 				INFOPLIST_FILE = "LogInTutorial/LiveIt-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = LiveIt;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "6eee92b7-6ae2-48bb-b858-2e1d65932bf6";
+				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1149,8 +1160,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LogInTutorial/LiveIt-Prefix.pch";
 				INFOPLIST_FILE = "LogInTutorial/LiveIt-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = LiveIt;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "6eee92b7-6ae2-48bb-b858-2e1d65932bf6";
+				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

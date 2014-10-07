@@ -1,2 +1,3 @@
-dependencies: /Users/christophergu/Development/LIT/LogInTutorial/Utils.m \
-  /Users/christophergu/Development/LIT/LogInTutorial/Utils.h
+dependencies: \
+  /Users/christophergu/Development/LIT-messedUp/LogInTutorial/Utils.m \
+  /Users/christophergu/Development/LIT-messedUp/LogInTutorial/Utils.h

@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/christophergu/Development/LIT-messedUp/LogInTutorial/VideoPlayViewController.m \
-  /Users/christophergu/Development/LIT-messedUp/LogInTutorial/VideoPlayViewController.h
+  /Users/christophergu/Development/LIT/LogInTutorial/VideoPlayViewController.m \
+  /Users/christophergu/Development/LIT/LogInTutorial/VideoPlayViewController.h

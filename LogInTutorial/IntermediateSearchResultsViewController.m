@@ -18,8 +18,6 @@
 @property (copy, nonatomic) NSArray *searchResultsArray;
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 @property (strong, nonatomic) NSIndexPath *chosenIndexPath;
-@property (weak, nonatomic) IBOutlet UITextField *distanceTextField;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *mySegmentedControl;
 @property (weak, nonatomic) IBOutlet UIButton *locationCheckButton;
 @property (strong, nonatomic) PFUser *currentUser;
 @property (strong, nonatomic) CLLocationManager *locationManager;
@@ -31,7 +29,6 @@
 
 @property (nonatomic) NSMutableArray *expertiseCheckerMutableArray;
 @property (nonatomic) NSMutableArray *organizedByExpertiseMutableArray;
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 
 @end
@@ -65,6 +62,8 @@
         self.searchResultsArray = objects;
         NSArray *tempSearchResultsArray = self.searchResultsArray;
         
+        // takes the returned users that have selected an expertise and also have a tag that matches the searched tag
+        // alphabetizes them
         self.searchResultsArray = [tempSearchResultsArray sortedArrayUsingComparator:^NSComparisonResult(PFUser *user1, PFUser *user2) {
             NSString *expertise1 = [user1[@"expertise"] lowercaseString];
             NSString *expertise2 = [user2[@"expertise"] lowercaseString];
@@ -78,77 +77,44 @@
             }
         }];
         
-        for (PFUser *user in self.searchResultsArray)
-        {
-            NSString *currentMutableDictionaryKey = user[@"expertise"];
-            
-            if (![self.categoryCheckerMutableArray containsObject:user[@"expertise"]]) {
-                [self.categoryCheckerMutableArray addObject:user[@"expertise"]];
-                NSMutableDictionary *categoryMutableDictionary = [NSMutableDictionary dictionaryWithObject:@[user] forKey:user[@"expertise"]];
+        [self consolidateReturnedExperts];
+        
+        [self.myTableView reloadData];
 
-                [self.categoryCheckerMutableArray addObject:user[@"expertise"]];
-                [self.organizedByCategoryMutableArray addObject:categoryMutableDictionary];
-            }
-            else
+        // this is to limit the returned users to within a 50 mile radius
+        [self radiusHelper];
+    }];
+}
+
+-(void)consolidateReturnedExperts
+{
+    // groups ppl with the same expertise into a single cell of that expertise's name
+    for (PFUser *user in self.searchResultsArray)
+    {
+        NSString *currentMutableDictionaryKey = [user[@"expertise"] uppercaseString];
+        
+        if (![self.categoryCheckerMutableArray containsObject:[user[@"expertise"] uppercaseString]])
+        {
+            [self.categoryCheckerMutableArray addObject:[user[@"expertise"] uppercaseString]];
+            NSMutableDictionary *categoryMutableDictionary = [NSMutableDictionary dictionaryWithObject:@[user] forKey:[user[@"expertise"] uppercaseString]];
+            
+            [self.categoryCheckerMutableArray addObject:[user[@"expertise"] uppercaseString]];
+            [self.organizedByCategoryMutableArray addObject:categoryMutableDictionary];
+        }
+        else
+        {
+            for (NSMutableDictionary *existingMutableDictionary in self.organizedByCategoryMutableArray)
             {
-                for (NSMutableDictionary *existingMutableDictionary in self.organizedByCategoryMutableArray)
+                if ([[[existingMutableDictionary allKeys]firstObject]isEqualToString:currentMutableDictionaryKey])
                 {
-                    if ([[[existingMutableDictionary allKeys]firstObject]isEqualToString:currentMutableDictionaryKey])
-                    {
-                        NSMutableArray *tempMutableArray = [NSMutableArray new];
-                        [tempMutableArray addObjectsFromArray:existingMutableDictionary[currentMutableDictionaryKey]];
-                        [tempMutableArray addObject:user];
-                        [existingMutableDictionary setObject:tempMutableArray forKey:currentMutableDictionaryKey];
-                    }
+                    NSMutableArray *tempMutableArray = [NSMutableArray new];
+                    [tempMutableArray addObjectsFromArray:existingMutableDictionary[currentMutableDictionaryKey]];
+                    [tempMutableArray addObject:user];
+                    [existingMutableDictionary setObject:tempMutableArray forKey:currentMutableDictionaryKey];
                 }
             }
         }
-
-//        // already encoutered this expertise
-//        for (NSMutableDictionary *mutableDictionary in self.organizedByCategoryMutableArray)
-//        {
-//            NSString *currentMutableDictionaryKey = [[mutableDictionary allKeys] firstObject];
-//            NSLog(@"key %@",currentMutableDictionaryKey);
-//            
-//            // check if dictionary with key exists already
-//            if (![self.expertiseCheckerMutableArray containsObject:currentMutableDictionaryKey])
-//            {
-//                NSLog(@"Does Not Exist");
-//                [self.expertiseCheckerMutableArray addObject:currentMutableDictionaryKey];
-//                NSMutableDictionary *expertiseMutableDictionary = [NSMutableDictionary dictionaryWithObject:@[mutableDictionary[currentMutableDictionaryKey]] forKey:currentMutableDictionaryKey];
-//                [self.organizedByExpertiseMutableArray addObject:expertiseMutableDictionary];
-//                
-//                NSLog(@"%@",self.expertiseCheckerMutableArray);
-//            }
-//            else
-//            {
-//                NSLog(@"Already Exists");
-//                for (NSMutableDictionary *existingMutableDictionary in self.organizedByExpertiseMutableArray)
-//                {
-//                    if ([[[existingMutableDictionary allKeys]firstObject]isEqualToString:currentMutableDictionaryKey])
-//                    {
-//                        NSMutableArray *tempMutableArray = [NSMutableArray new];
-//                        [tempMutableArray addObjectsFromArray:existingMutableDictionary[currentMutableDictionaryKey]];
-//                        [tempMutableArray addObject:mutableDictionary[currentMutableDictionaryKey]];
-//                        [existingMutableDictionary setObject:tempMutableArray forKey:currentMutableDictionaryKey];
-//                        
-//                        NSLog(@"existingMutableDictionary %@",existingMutableDictionary);
-//                        
-//                    }
-//                }
-//                
-//            }
-//
-//        }
-        
-        [self.tableView reloadData];
-        NSLog(@"catoo contenst %@",self.organizedByCategoryMutableArray);
-//        NSLog(@"exppoo contents %@",self.organizedByExpertiseMutableArray);
-
-        
-//        [self radiusHelper];
-    }];
-
+    }
 }
 
 #pragma mark - table view methods
@@ -168,81 +134,19 @@
     
     cell.textLabel.text = [[[self.organizedByCategoryMutableArray[indexPath.row] allKeys] firstObject] uppercaseString];
     cell.textLabel.font = [UIFont fontWithName:@"Futura" size:22];
-
+    int numberOfExperts = [self.organizedByCategoryMutableArray[indexPath.row][[[self.organizedByCategoryMutableArray[indexPath.row] allKeys] firstObject]] count];
     
-//    if (self.searchResultsArray[indexPath.row][@"avatar"])
-//    {
-//        [self.searchResultsArray[indexPath.row][@"avatar"] getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-//            if (!error) {
-//                UIImage *photo = [UIImage imageWithData:data];
-//                cell.myImageView.image = photo;
-//            }
-//        }];
-//    }
-//    else
-//    {
-//        cell.myImageView.image = [UIImage imageNamed:@"default_user"];
-//    }
-//    
-//    cell.myExpertiseLabel.text = self.searchResultsArray[indexPath.row][@"expertise"];
-//    cell.myUsernameLabel.text = self.searchResultsArray[indexPath.row][@"username"];
-//    
-//    if (self.distanceMutableArray && self.distanceMutableArray.count)
-//    {
-//        cell.myDistanceLabel.text = self.distanceMutableArray[indexPath.row];
-//    }
+    if (numberOfExperts < 2)
+    {
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%d Expert in your area", numberOfExperts];
+    }
+    else
+    {
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%d Experts in your area", numberOfExperts];
+    }
     
+    NSLog(@"lele %d",numberOfExperts);
     return cell;
-}
-
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    self.chosenIndexPath = indexPath;
-//    [self performSegueWithIdentifier:@"SearchToProfileSegue" sender:self];
-//}
-
-#pragma mark - segmented control method
-
-- (IBAction)onSegmentedControlChanged:(id)sender
-{
-    self.distanceMutableArray = nil;
-    self.distanceMutableArray = [NSMutableArray new];
-    
-    if (self.mySegmentedControl.selectedSegmentIndex == 0)
-    {
-        NSArray *tempSearchResultsArray = self.searchResultsArray;
-        
-        self.searchResultsArray = [tempSearchResultsArray sortedArrayUsingComparator:^NSComparisonResult(PFUser *user1, PFUser *user2) {
-            NSString *expertise1 = [user1[@"expertise"] lowercaseString];
-            NSString *expertise2 = [user2[@"expertise"] lowercaseString];
-            
-            if ([expertise1 compare: expertise2] == NSOrderedAscending)
-            {
-                return NSOrderedAscending;
-            }
-            else{
-                return NSOrderedDescending;
-            }
-        }];
-    }
-    else if (self.mySegmentedControl.selectedSegmentIndex == 1)
-    {
-        CLLocation *locA = [[CLLocation alloc] initWithLatitude:[self.currentUser[@"latitude"] doubleValue] longitude:[self.currentUser[@"longitude"] doubleValue]];
-        
-        self.searchResultsArray = [self.searchResultsArray sortedArrayUsingComparator:^NSComparisonResult(PFUser *user1, PFUser *user2) {
-            float distance1 = [[[CLLocation alloc] initWithLatitude:[user1[@"latitude"] doubleValue] longitude:[user1[@"longitude"] doubleValue]] distanceFromLocation:locA];
-            float distance2 = [[[CLLocation alloc] initWithLatitude:[user2[@"latitude"] doubleValue] longitude:[user2[@"longitude"] doubleValue]] distanceFromLocation:locA];
-            if (distance1 < distance2) {
-                return NSOrderedAscending;
-            }
-            else{
-                return NSOrderedDescending;
-            }
-        }];
-    }
-    
-    [self addTheDistances];
-    [self.myTableView reloadData];
 }
 
 #pragma mark - helper methods
@@ -251,8 +155,6 @@
 {
     self.distanceMutableArray = nil;
     self.distanceMutableArray = [NSMutableArray new];
-    
-    
     
     for (PFUser *user in self.searchResultsArray)
     {
@@ -274,46 +176,22 @@
 }
 
 #pragma mark - text field methods
-
-- (IBAction)radiusTextFieldDidEndOnExit:(id)sender
+- (IBAction)radiusChosenButtonTapped:(id)sender
 {
-//    if (self.viewAllChosen)
-//    {
-//        PFQuery *allUsersQuery = [PFUser query];
-//        [allUsersQuery whereKey:@"expertise" notEqualTo:[NSNull null]];
-//        NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey: @"expertise"
-//                                                                     ascending: YES
-//                                                                      selector: @selector(caseInsensitiveCompare:)];
-//        [allUsersQuery orderBySortDescriptor: descriptor];
-//        [allUsersQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-//            
-//            self.searchResultsArray = [objects sortedArrayUsingComparator:^NSComparisonResult(PFUser *user1, PFUser *user2) {
-//                NSString *expertise1 = [user1[@"expertise"] lowercaseString];
-//                NSString *expertise2 = [user2[@"expertise"] lowercaseString];
-//                
-//                if ([expertise1 compare: expertise2] == NSOrderedAscending)
-//                {
-//                    return NSOrderedAscending;
-//                }
-//                else{
-//                    return NSOrderedDescending;
-//                }
-//            }];
-//            
-//            [self radiusHelper];
-//        }];
-//        
-//    }
-//    else
-//    {
-//        PFQuery *usersWithMatchingTagsQuery = [PFUser query];
-//        [usersWithMatchingTagsQuery whereKey:@"expertise" notEqualTo:[NSNull null]];
-//        [usersWithMatchingTagsQuery whereKey:@"tags" containsAllObjectsInArray:[self.selectedTagsDictionary allKeys]];
-//        [usersWithMatchingTagsQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-//            self.searchResultsArray = objects;
-//            [self radiusHelper];
-//        }];
-//    }
+    [self.radiusTextField resignFirstResponder];
+    
+    
+
+    NSLog(@"radiusTextField");
+    PFQuery *usersWithMatchingTagsQuery = [PFUser query];
+    [usersWithMatchingTagsQuery whereKey:@"expertise" notEqualTo:[NSNull null]];
+    [usersWithMatchingTagsQuery whereKey:@"tags" containsAllObjectsInArray:@[self.selectedCategory]];
+    [usersWithMatchingTagsQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        self.searchResultsArray = objects;
+        
+        NSLog(@"obj %@",objects);
+        [self radiusHelper];
+    }];
 }
 
 -(void)radiusHelper
@@ -356,6 +234,11 @@
     }
     
     [self addTheDistances];
+    
+    self.categoryCheckerMutableArray = [NSMutableArray new];
+    self.organizedByCategoryMutableArray = [NSMutableArray new];
+    [self consolidateReturnedExperts];
+    
     [self.myTableView reloadData];
 }
 
@@ -382,7 +265,6 @@
 // this delegate is called when the app successfully finds your current location
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
-    NSLog(@"ore here");
     // this creates a CLGeocoder to find a placemark using the found coordinates
     CLGeocoder *geoCoder = [[CLGeocoder alloc] init];
     
@@ -434,7 +316,7 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableViewCell *)senderCell
 {
     SearchResultsViewController *srvc = segue.destinationViewController;
-    NSIndexPath *indexPath = [self.tableView indexPathForCell:senderCell];
+    NSIndexPath *indexPath = [self.myTableView indexPathForCell:senderCell];
     NSMutableDictionary *dict = self.organizedByCategoryMutableArray[indexPath.row];
     srvc.selectedExpertiseUsersArray = dict[[[dict allKeys]firstObject]];
 }
