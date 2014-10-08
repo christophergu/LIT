@@ -29,6 +29,7 @@
 
 @property (nonatomic) NSMutableArray *expertiseCheckerMutableArray;
 @property (nonatomic) NSMutableArray *organizedByExpertiseMutableArray;
+@property (weak, nonatomic) IBOutlet UIButton *distanceDoneButton;
 
 
 @end
@@ -38,9 +39,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    // set up new search bar button
+    UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.titleLabel.numberOfLines = 0;
+    button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
+    button.titleLabel.font = [UIFont fontWithName:@"Futura" size:11.0];
+    [button setTitleColor:[UIColor colorWithRed:247/255.0 green:102/255.0 blue:38/255.0 alpha:1.0] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(unwindToInitialSearch) forControlEvents:UIControlEventTouchUpInside];
+    [button setTitle:NSLocalizedString(@"NEW\nSEARCH", nil) forState:UIControlStateNormal];
+    [button sizeToFit];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
     
-    NSLog(@"sel %@",self.selectedCategory);
+    self.distanceDoneButton.layer.cornerRadius = 5.0f;
     
     self.currentUser = [PFUser currentUser];
     if (self.currentUser[@"geoPoint"])
@@ -84,6 +95,11 @@
         // this is to limit the returned users to within a 50 mile radius
         [self radiusHelper];
     }];
+}
+
+-(void) unwindToInitialSearch
+{
+    [self performSegueWithIdentifier:@"UnwindToInitialSearchSegue" sender:self];
 }
 
 -(void)consolidateReturnedExperts
@@ -315,10 +331,13 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableViewCell *)senderCell
 {
-    SearchResultsViewController *srvc = segue.destinationViewController;
-    NSIndexPath *indexPath = [self.myTableView indexPathForCell:senderCell];
-    NSMutableDictionary *dict = self.organizedByCategoryMutableArray[indexPath.row];
-    srvc.selectedExpertiseUsersArray = dict[[[dict allKeys]firstObject]];
+    if ([segue.identifier isEqualToString:@"SearchResultSegue"])
+    {
+        SearchResultsViewController *srvc = segue.destinationViewController;
+        NSIndexPath *indexPath = [self.myTableView indexPathForCell:senderCell];
+        NSMutableDictionary *dict = self.organizedByCategoryMutableArray[indexPath.row];
+        srvc.selectedExpertiseUsersArray = dict[[[dict allKeys]firstObject]];
+    }
 }
                                             
 

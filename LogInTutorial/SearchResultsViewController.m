@@ -25,6 +25,8 @@
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (weak, nonatomic) IBOutlet UITextField *radiusTextField;
 @property (strong, nonatomic) NSMutableArray *distanceMutableArray;
+@property (weak, nonatomic) IBOutlet UIButton *distanceDoneButton;
+@property (weak, nonatomic) IBOutlet UIView *segmentedControlHolderView;
 
 @end
 
@@ -33,13 +35,26 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    [self.view addSubview:self.segmentedControlHolderView];
     
+    // set up new search bar button
+    UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.titleLabel.numberOfLines = 0;
+    button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
+    button.titleLabel.font = [UIFont fontWithName:@"Futura" size:11.0];
+    [button setTitleColor:[UIColor colorWithRed:247/255.0 green:102/255.0 blue:38/255.0 alpha:1.0] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(unwindToInitialSearch) forControlEvents:UIControlEventTouchUpInside];
+    [button setTitle:NSLocalizedString(@"NEW\nSEARCH", nil) forState:UIControlStateNormal];
+    [button sizeToFit];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
     self.currentUser = [PFUser currentUser];
     if (self.currentUser[@"latitude"] && self.currentUser[@"longitude"])
     {
         self.locationCheckButton.alpha = 0.0;
     }
+    
+    self.distanceDoneButton.layer.cornerRadius = 5.0f;
     
     self.distanceMutableArray = [NSMutableArray new];
     
@@ -71,30 +86,6 @@
     }
     else
     {
-//        PFQuery *usersWithMatchingTagsQuery = [PFUser query];
-//        [usersWithMatchingTagsQuery whereKey:@"expertise" notEqualTo:[NSNull null]];
-//        [usersWithMatchingTagsQuery whereKey:@"tags" containsAllObjectsInArray:[self.selectedTagsDictionary allKeys]];
-//        [usersWithMatchingTagsQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-//            self.searchResultsArray = objects;
-//            NSArray *tempSearchResultsArray = self.searchResultsArray;
-//            
-//            self.searchResultsArray = [tempSearchResultsArray sortedArrayUsingComparator:^NSComparisonResult(PFUser *user1, PFUser *user2) {
-//                NSString *expertise1 = [user1[@"expertise"] lowercaseString];
-//                NSString *expertise2 = [user2[@"expertise"] lowercaseString];
-//                
-//                if ([expertise1 compare: expertise2] == NSOrderedAscending)
-//                {
-//                    return NSOrderedAscending;
-//                }
-//                else{
-//                    return NSOrderedDescending;
-//                }
-//            }];
-//            
-//            [self radiusHelper];
-//        }];
-        
-        
         self.searchResultsArray = self.selectedExpertiseUsersArray;
         NSArray *tempSearchResultsArray = self.searchResultsArray;
         
@@ -113,6 +104,19 @@
         
         [self radiusHelper];
     }
+}
+
+//-(void)viewWillAppear:(BOOL)animated
+//{
+//    self.segmentedControlHolderView.frame = CGRectMake(0, -35, 320, 20);
+//
+//    self.myTableView.frame = CGRectMake(0, 35, 320, self.view.frame.size.height - 35);
+//}
+
+
+-(void) unwindToInitialSearch
+{
+    [self performSegueWithIdentifier:@"UnwindToInitialSearchSegue" sender:self];
 }
 
 #pragma mark - table view methods
@@ -143,7 +147,16 @@
     
     cell.myExpertiseLabel.font = [UIFont fontWithName:@"Futura" size:17];
     cell.myExpertiseLabel.text = self.searchResultsArray[indexPath.row][@"expertise"];
-    cell.myUsernameLabel.text = self.searchResultsArray[indexPath.row][@"username"];
+    if ([self.currentUser[@"username"] isEqualToString:self.searchResultsArray[indexPath.row][@"username"] ])
+    {
+        cell.myUsernameLabel.text = @"YOU!";
+        cell.myUsernameLabel.textColor = [UIColor colorWithRed:247/255.0 green:102/255.0 blue:38/255.0 alpha:1.0];
+    }
+    else
+    {
+        cell.myUsernameLabel.text = self.searchResultsArray[indexPath.row][@"username"];
+        cell.myUsernameLabel.textColor = [UIColor blackColor];
+    }
     
     if (self.distanceMutableArray && self.distanceMutableArray.count)
     {
@@ -390,9 +403,12 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    ProfileViewController *pvc = segue.destinationViewController;
+    if ([segue.identifier isEqualToString:@"SearchToProfileSegue"])
     {
-        pvc.selectedUserProfile = self.searchResultsArray[self.chosenIndexPath.row];
+        ProfileViewController *pvc = segue.destinationViewController;
+        {
+            pvc.selectedUserProfile = self.searchResultsArray[self.chosenIndexPath.row];
+        }
     }
 }
 

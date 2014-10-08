@@ -26,8 +26,23 @@
 //        [self performSegueWithIdentifier:@"LogInToProfileSegue" sender:self];
 //    }
     
+    self.logInView.signUpLabel.shadowOffset = CGSizeMake(0, 0);
+    self.logInView.dismissButton.alpha = 0;
+    
     self.delegate = self;
     self.signUpController.delegate = self;
+    
+    UIImageView *backgroundImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"loginBackgroundWithLogo"]];
+    [self.signUpController.view addSubview:backgroundImage];
+    [self.signUpController.view sendSubviewToBack:backgroundImage];
+    
+    [self.signUpController.signUpView.signUpButton setBackgroundImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
+    [self.signUpController.signUpView.signUpButton setBackgroundImage:[UIImage imageNamed:@""] forState:UIControlStateHighlighted];
+    [self.signUpController.signUpView.signUpButton setBackgroundColor:[UIColor colorWithRed:0.07f green:0.48f blue:0.07f alpha:1.0f]];
+    self.signUpController.signUpView.signUpButton.titleLabel.font = [UIFont fontWithName:@"Futura" size:23.0];
+    self.signUpController.signUpView.signUpButton.titleLabel.shadowOffset = CGSizeMake(0, 0);
+
+    self.signUpController.signUpView.logo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@""]];
 }
 
 

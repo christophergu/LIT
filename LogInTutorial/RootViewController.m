@@ -8,6 +8,7 @@
 
 #import "RootViewController.h"
 #import "ProfileViewController.h"
+#import "LogInViewController.h"
 #import <Parse/Parse.h>
 
 @interface RootViewController ()
@@ -62,6 +63,30 @@
     {
         ProfileViewController *pvc = segue.destinationViewController;
         pvc.ownProfile = 1;
+    }
+    else if ([segue.identifier isEqualToString:@"RootToLogInSegue"])
+    {
+        LogInViewController *livc = segue.destinationViewController;
+        UIImageView *backgroundImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"loginBackgroundWithLogo"]];
+        [livc.view addSubview:backgroundImage];
+        [livc.view sendSubviewToBack:backgroundImage];
+        livc.logInView.logo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@""]];
+        
+        [livc.logInView.logInButton setBackgroundImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
+        [livc.logInView.logInButton setBackgroundImage:[UIImage imageNamed:@""] forState:UIControlStateHighlighted];
+        [livc.logInView.logInButton setBackgroundColor:[UIColor colorWithRed:247/255.0f green:102/255.0f blue:38/255.0f alpha:1.0f]];
+        livc.logInView.logInButton.titleLabel.font = [UIFont fontWithName:@"Futura" size:23.0];
+        livc.logInView.logInButton.titleLabel.shadowOffset = CGSizeMake(0, 0);
+//        [livc.logInView.facebookButton setBackgroundImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
+//        [livc.logInView.facebookButton setBackgroundImage:[UIImage imageNamed:@""] forState:UIControlStateHighlighted];
+//        [livc.logInView.facebookButton setBackgroundColor:[UIColor colorWithRed:0.22f green:0.42f blue:0.58f alpha:0.8f]];
+        
+        [livc.logInView.signUpButton setBackgroundImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
+        [livc.logInView.signUpButton setBackgroundImage:[UIImage imageNamed:@""] forState:UIControlStateHighlighted];
+        [livc.logInView.signUpButton setBackgroundColor:[UIColor colorWithRed:0.07f green:0.48f blue:0.07f alpha:1.0f]];
+        livc.logInView.signUpButton.titleLabel.font = [UIFont fontWithName:@"Futura" size:23.0];
+        livc.logInView.signUpButton.titleLabel.shadowOffset = CGSizeMake(0, 0);
+
     }
 }
 

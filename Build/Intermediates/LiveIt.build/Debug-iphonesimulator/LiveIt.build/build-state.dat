@@ -436,8 +436,8 @@ t1412652118
 s61616
 
 N/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/CRTableViewController.o
-t1412652118
-s64336
+t1412738841
+s67420
 
 N/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/DYRateView.o
 t1412652117
@@ -636,8 +636,8 @@ t1412652116
 s54364
 
 N/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/IntermediateSearchResultsViewController.o
-t1412659283
-s141900
+t1412738841
+s147912
 
 N/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/LiveIt.LinkFileList
 c0000000054335C530000000000002B9C
@@ -645,16 +645,16 @@ t1412652115
 s11164
 
 N/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/LogInViewController.o
-t1412652116
-s58244
+t1412717382
+s63832
 
 N/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/PhotoViewController.o
 t1412652118
 s59332
 
 N/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/ProfileViewController.o
-t1412652117
-s230488
+t1412740021
+s242908
 
 N/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/PushNoAnimationSegue.o
 t1412652118
@@ -665,16 +665,16 @@ t1412652117
 s54788
 
 N/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/RootViewController.o
-t1412652117
-s45416
+t1412716938
+s59276
 
 N/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/SearchResultsTableViewCell.o
 t1412652117
 s50216
 
 N/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/SearchResultsViewController.o
-t1412696705
-s148068
+t1412744276
+s156876
 
 N/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/TagsCollectionViewCell.o
 t1412652116
@@ -685,8 +685,8 @@ t1412652118
 s45620
 
 N/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/TagsViewController.o
-t1412659169
-s71684
+t1412719273
+s72244
 
 N/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/UploadController.o
 t1412652117
@@ -701,12 +701,12 @@ t1412652116
 s20368
 
 N/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/VideoPlayViewController.o
-t1412652117
-s49240
+t1412738841
+s53160
 
 N/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/VideoViewController.o
-t1412652118
-s110868
+t1412715215
+s113584
 
 N/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/WebViewController.o
 t1412652117
@@ -721,11 +721,11 @@ t1412652117
 s3540
 
 N/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/assetcatalog_dependencies.txt
-t1412652121
+t1412715790
 s364
 
 N/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/assetcatalog_generated_info.plist
-t1412652121
+t1412715790
 s525
 
 N/Users/christophergu/Development/LIT/Build/Intermediates/PrecompiledHeaders/LiveIt-Prefix-cdkiqzeycgsbzudshwqioelrlnpa/LiveIt-Prefix.pch.pch
@@ -737,15 +737,15 @@ t1412652116
 s115556
 
 N/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app
-t1412696910
+t1412744674
 s408
 
 N/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app.dSYM
-t1412696710
+t1412744279
 s102
 
 N/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app/Base.lproj/Main.storyboardc
-t1412697259
+t1412744694
 s1054
 
 N/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app/FBUserSettingsViewResources.bundle
@@ -757,15 +757,15 @@ t1412652119
 s5413
 
 N/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app/Info.plist
-t1412652121
+t1412715790
 s932
 
 N/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app/LiveIt
-t1412696706
-s4979528
+t1412744276
+s5001096
 
 N/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app/PkgInfo
-t1412652121
+t1412715790
 s8
 
 N/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app/en.lproj/InfoPlist.strings
@@ -1037,9 +1037,9 @@ t1411337683
 s2264
 
 N/Users/christophergu/Development/LIT/LogInTutorial/Base.lproj/Main.storyboard
-c0000000054340CA8000000000001FD02
-t1412697256
-s130306
+c000000005434C5F5000000000002155F
+t1412744693
+s136543
 
 N/Users/christophergu/Development/LIT/LogInTutorial/CRTableViewCell.h
 c00000000541F4DD300000000000001CD
@@ -1057,9 +1057,9 @@ t1411337683
 s352
 
 N/Users/christophergu/Development/LIT/LogInTutorial/CRTableViewController.m
-c00000000541F4DD30000000000001310
-t1411337683
-s4880
+c0000000054346C2C00000000000014E6
+t1412721708
+s5350
 
 N/Users/christophergu/Development/LIT/LogInTutorial/DYRateView.h
 c00000000541F4DD30000000000000976
@@ -1632,9 +1632,9 @@ t1411337683
 s13388
 
 N/Users/christophergu/Development/LIT/LogInTutorial/Images.xcassets
-c00000000541F4DD30000000000000330
-t1411337683
-s816
+c000000005434550B0000000000000352
+t1412715787
+s850
 
 N/Users/christophergu/Development/LIT/LogInTutorial/InfoViewController.h
 c00000000541F4DD30000000000000164
@@ -1652,9 +1652,9 @@ t1411337683
 s320
 
 N/Users/christophergu/Development/LIT/LogInTutorial/IntermediateSearchResultsViewController.m
-c0000000054337853000000000000327D
-t1412659283
-s12925
+c0000000054346CA4000000000000365E
+t1412721828
+s13918
 
 N/Users/christophergu/Development/LIT/LogInTutorial/LiveIt-Info.plist
 c00000000541F4DD3000000000000045F
@@ -1672,9 +1672,9 @@ t1411337683
 s242
 
 N/Users/christophergu/Development/LIT/LogInTutorial/LogInViewController.m
-c00000000541F4DD30000000000000A1C
-t1411337683
-s2588
+c0000000054345B460000000000000E52
+t1412717382
+s3666
 
 N/Users/christophergu/Development/LIT/LogInTutorial/PhotoViewController.h
 c00000000541F4DD30000000000000196
@@ -1692,9 +1692,9 @@ t1411337683
 s386
 
 N/Users/christophergu/Development/LIT/LogInTutorial/ProfileViewController.m
-c00000000541F4DD300000000000068D8
-t1411337683
-s26840
+c000000005434B3B500000000000072B5
+t1412740021
+s29365
 
 N/Users/christophergu/Development/LIT/LogInTutorial/PushNoAnimationSegue.h
 c00000000541F4DD300000000000000E6
@@ -1722,9 +1722,9 @@ t1411337683
 s225
 
 N/Users/christophergu/Development/LIT/LogInTutorial/RootViewController.m
-c00000000541F4DD300000000000008D0
-t1411337683
-s2256
+c000000005434598A000000000000106F
+t1412716938
+s4207
 
 N/Users/christophergu/Development/LIT/LogInTutorial/SearchResultsTableViewCell.h
 c00000000541F4DD300000000000001ED
@@ -1742,9 +1742,9 @@ t1412659169
 s403
 
 N/Users/christophergu/Development/LIT/LogInTutorial/SearchResultsViewController.m
-c00000000543379450000000000003D6F
-t1412659525
-s15727
+c000000005434C4540000000000003FA2
+t1412744276
+s16290
 
 N/Users/christophergu/Development/LIT/LogInTutorial/TagsCollectionViewCell.h
 c00000000541F4DD30000000000000167
@@ -1772,9 +1772,9 @@ t1411337683
 s286
 
 N/Users/christophergu/Development/LIT/LogInTutorial/TagsViewController.m
-c00000000541F4DD300000000000015BF
-t1411337683
-s5567
+c00000000543462A9000000000000160C
+t1412719273
+s5644
 
 N/Users/christophergu/Development/LIT/LogInTutorial/UploadController.h
 c00000000541F4DD30000000000000133
@@ -1807,14 +1807,14 @@ t1411337683
 s1107
 
 N/Users/christophergu/Development/LIT/LogInTutorial/VideoPlayViewController.h
-c00000000541F4DD300000000000000EE
-t1411337683
-s238
+c00000000543420F9000000000000013A
+t1412702457
+s314
 
 N/Users/christophergu/Development/LIT/LogInTutorial/VideoPlayViewController.m
-c00000000541F4DD300000000000005BE
-t1411337683
-s1470
+c0000000054346869000000000000072F
+t1412720745
+s1839
 
 N/Users/christophergu/Development/LIT/LogInTutorial/VideoViewController.h
 c00000000541F4DD300000000000002C6
@@ -1822,9 +1822,9 @@ t1411337683
 s710
 
 N/Users/christophergu/Development/LIT/LogInTutorial/VideoViewController.m
-c00000000541F4DD300000000000022F1
-t1411337683
-s8945
+c00000000543420F900000000000025BF
+t1412702457
+s9663
 
 N/Users/christophergu/Development/LIT/LogInTutorial/WebViewController.h
 c00000000541F4DD30000000000000110
@@ -2050,6 +2050,11 @@ N/usr/lib/system/libcorecrypto.dylib
 c000000005271FC2900000000000BD920
 t1383201833
 s776480
+
+N/usr/lib/system/libdyld.dylib
+c00000000537E738C00000000000141F0
+t1400796044
+s82416
 
 N/usr/lib/system/libkeymgr.dylib
 c000000005271FC29000000000000A120
@@ -2375,11 +2380,11 @@ r0
 
 CCheck dependencies
 r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies4a0da52844e4b941^af27a62844e4b941^--1(21%IDEActivityLogMessage2@66"Missing dependency target "GTLTouchStaticLib (from GTL.xcodeproj)"-434390056#18446744073709551615#0#-1#-----0#1#1#--18"Check dependencies36"EB48EC0A-FB43-4621-B930-7F34F08B2F29-
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies93705975fde4b941^cec65a75fde4b941^--1(21%IDEActivityLogMessage2@66"Missing dependency target "GTLTouchStaticLib (from GTL.xcodeproj)"-434437493#18446744073709551615#0#-1#-----0#1#1#--18"Check dependencies36"6E912409-DBA4-411D-A8C8-DB5CF7E55C4C-
 
 CCompileAssetCatalog /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app /Users/christophergu/Development/LIT/LogInTutorial/Images.xcassets
-s434344919.290830
-e434344921.135474
+s434408589.555296
+e434408590.524623
 r1
 xCompileAssetCatalog
 x/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app
@@ -2389,8 +2394,8 @@ o/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveI
 o/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app/Assets.car
 o/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/assetcatalog_generated_info.plist
 o
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection97"CompileAssetCatalog Build/Products/Debug-iphonesimulator/LiveIt.app LogInTutorial/Images.xcassets97"CompileAssetCatalog Build/Products/Debug-iphonesimulator/LiveIt.app LogInTutorial/Images.xcassetse4874ad793e3b941^9fae22d993e3b941^-392"/* com.apple.actool.compilation-results *//Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app/LaunchImage-700-568h@2x.png/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app/Assets.car/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/assetcatalog_generated_info.plist-0#0#1#-19%DVTDocumentLocation2@74"file:///Users/christophergu/Development/LIT/LogInTutorial/Images.xcassets/0000000000000000^1141"CompileAssetCatalog Build/Products/Debug-iphonesimulator/LiveIt.app LogInTutorial/Images.xcassets    cd /Users/christophergu/Development/LIT    export PATH="/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode 5.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode\ 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/actool --output-format human-readable-text --notices --warnings --export-dependency-info /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/assetcatalog_dependencies.txt --output-partial-info-plist /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/assetcatalog_generated_info.plist --app-icon AppIcon --launch-image LaunchImage --platform iphonesimulator --minimum-deployment-target 7.1 --target-device iphone --compress-pngs --compile /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app /Users/christophergu/Development/LIT/LogInTutorial/Images.xcassets36"5CC3AA5D-5D24-441F-BABB-7F08537C60F7-
-b95F3B9BD-F8DE-44BB-82C8-D4C4F99E372F
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection97"CompileAssetCatalog Build/Products/Debug-iphonesimulator/LiveIt.app LogInTutorial/Images.xcassets97"CompileAssetCatalog Build/Products/Debug-iphonesimulator/LiveIt.app LogInTutorial/Images.xcassets76348e8d8ce4b941^334f868e8ce4b941^-392"/* com.apple.actool.compilation-results *//Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app/LaunchImage-700-568h@2x.png/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app/Assets.car/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/assetcatalog_generated_info.plist-0#0#1#-19%DVTDocumentLocation2@74"file:///Users/christophergu/Development/LIT/LogInTutorial/Images.xcassets/0000000000000000^1141"CompileAssetCatalog Build/Products/Debug-iphonesimulator/LiveIt.app LogInTutorial/Images.xcassets    cd /Users/christophergu/Development/LIT    export PATH="/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode 5.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode\ 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/actool --output-format human-readable-text --notices --warnings --export-dependency-info /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/assetcatalog_dependencies.txt --output-partial-info-plist /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/assetcatalog_generated_info.plist --app-icon AppIcon --launch-image LaunchImage --platform iphonesimulator --minimum-deployment-target 7.1 --target-device iphone --compress-pngs --compile /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app /Users/christophergu/Development/LIT/LogInTutorial/Images.xcassets36"9591D96A-4628-4736-9613-BEC3F8415684-
+b306E4D70-1C74-4D59-AD59-E19F7F2CA9E9
 
 CCompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/AddAReviewViewController.o /Users/christophergu/Development/LIT/LogInTutorial/AddAReviewViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s434344917.135278
@@ -2610,8 +2615,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Compile
 b95F3B9BD-F8DE-44BB-82C8-D4C4F99E372F
 
 CCompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/CRTableViewController.o /Users/christophergu/Development/LIT/LogInTutorial/CRTableViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s434344918.097320
-e434344918.239574
+s434431641.259986
+e434431641.380960
 r1
 xCompileC
 xBuild/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/CRTableViewController.o
@@ -2695,12 +2700,8 @@ d/Users/christophergu/Development/LIT/FacebookSDK.framework/Headers/FBShareDialo
 d/Users/christophergu/Development/LIT/FacebookSDK.framework/Headers/FBUserSettingsViewController.h
 d/Users/christophergu/Development/LIT/FacebookSDK.framework/Headers/NSError+FBError.h
 d/Users/christophergu/Development/LIT/Parse.framework/Headers/PFFacebookUtils.h
-o/Users/christophergu/Development/LIT/LogInTutorial/CRTableViewController.m:42:79: warning: implicit conversion from enumeration type 'enum UIBarButtonSystemItem' to different enumeration type 'UIBarButtonItemStyle' (aka 'enum UIBarButtonItemStyle') [-Wenum-conversion]
-o                                                                        style:UIBarButtonSystemItemDone target:self action:@selector(done:)];
-o                                                                              ^~~~~~~~~~~~~~~~~~~~~~~~~
-o1 warning generated.
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Compile /Users/christophergu/Development/LIT/LogInTutorial/CRTableViewController.m226"CompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/CRTableViewController.o LogInTutorial/CRTableViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilerbc0619d693e3b941^ce6e3dd693e3b941^-536"/Users/christophergu/Development/LIT/LogInTutorial/CRTableViewController.m:42:79: warning: implicit conversion from enumeration type 'enum UIBarButtonSystemItem' to different enumeration type 'UIBarButtonItemStyle' (aka 'enum UIBarButtonItemStyle') [-Wenum-conversion]                                                                        style:UIBarButtonSystemItemDone target:self action:@selector(done:)];                                                                              ^~~~~~~~~~~~~~~~~~~~~~~~~1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@157"Implicit conversion from enumeration type 'enum UIBarButtonSystemItem' to different enumeration type 'UIBarButtonItemStyle' (aka 'enum UIBarButtonItemStyle')-434344918#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@81"file:///Users/christophergu/Development/LIT/LogInTutorial/CRTableViewController.m0000000000000000^41#78#41#78#1581#0#22"Value Conversion Issue2(3@81"file:///Users/christophergu/Development/LIT/LogInTutorial/CRTableViewController.m0000000000000000^41#78#41#103#1581#0#3@81"file:///Users/christophergu/Development/LIT/LogInTutorial/CRTableViewController.m0000000000000000^40#39#40#40#1456#0#-0#0#1#-19%DVTDocumentLocation4@81"file:///Users/christophergu/Development/LIT/LogInTutorial/CRTableViewController.m0000000000000000^3729"CompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/CRTableViewController.o LogInTutorial/CRTableViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/christophergu/Development/LIT    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode 5.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode\ 5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/christophergu/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode\ 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-generated-files.hmap -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-own-target-headers.hmap -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-all-target-headers.hmap -iquote /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-project-headers.hmap -I/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode\ 5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/DerivedSources/i386 -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/DerivedSources -F/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator -F/Users/christophergu/Development/LIT -include /Users/christophergu/Development/LIT/Build/Intermediates/PrecompiledHeaders/LiveIt-Prefix-cdkiqzeycgsbzudshwqioelrlnpa/LiveIt-Prefix.pch -MMD -MT dependencies -MF /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/CRTableViewController.d --serialize-diagnostics /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/CRTableViewController.dia -c /Users/christophergu/Development/LIT/LogInTutorial/CRTableViewController.m -o /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/CRTableViewController.o36"187B2281-64AD-4460-968D-9A6786D2F663-
-b95F3B9BD-F8DE-44BB-82C8-D4C4F99E372F
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Compile /Users/christophergu/Development/LIT/LogInTutorial/CRTableViewController.m226"CompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/CRTableViewController.o LogInTutorial/CRTableViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilerebfd4299e6e4b941^ec866199e6e4b941^---0#0#1#-19%DVTDocumentLocation2@81"file:///Users/christophergu/Development/LIT/LogInTutorial/CRTableViewController.m0000000000000000^3729"CompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/CRTableViewController.o LogInTutorial/CRTableViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/christophergu/Development/LIT    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode 5.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode\ 5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/christophergu/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode\ 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-generated-files.hmap -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-own-target-headers.hmap -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-all-target-headers.hmap -iquote /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-project-headers.hmap -I/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode\ 5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/DerivedSources/i386 -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/DerivedSources -F/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator -F/Users/christophergu/Development/LIT -include /Users/christophergu/Development/LIT/Build/Intermediates/PrecompiledHeaders/LiveIt-Prefix-cdkiqzeycgsbzudshwqioelrlnpa/LiveIt-Prefix.pch -MMD -MT dependencies -MF /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/CRTableViewController.d --serialize-diagnostics /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/CRTableViewController.dia -c /Users/christophergu/Development/LIT/LogInTutorial/CRTableViewController.m -o /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/CRTableViewController.o36"38B584CC-F03B-4273-91A4-37300C67425F-
+b5EE6FF73-A1FC-4E41-9E71-8725647B952C
 
 CCompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/DYRateView.o /Users/christophergu/Development/LIT/LogInTutorial/DYRateView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s434344917.422542
@@ -3929,8 +3930,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection79"Compile
 b95F3B9BD-F8DE-44BB-82C8-D4C4F99E372F
 
 CCompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/IntermediateSearchResultsViewController.o /Users/christophergu/Development/LIT/LogInTutorial/IntermediateSearchResultsViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s434352083.544913
-e434352083.694739
+s434431640.930222
+e434431641.303124
 r1
 xCompileC
 xBuild/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/IntermediateSearchResultsViewController.o
@@ -4014,12 +4015,12 @@ d/Users/christophergu/Development/LIT/FacebookSDK.framework/Headers/FBShareDialo
 d/Users/christophergu/Development/LIT/FacebookSDK.framework/Headers/FBUserSettingsViewController.h
 d/Users/christophergu/Development/LIT/FacebookSDK.framework/Headers/NSError+FBError.h
 d/Users/christophergu/Development/LIT/Parse.framework/Headers/PFFacebookUtils.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"Compile /Users/christophergu/Development/LIT/LogInTutorial/IntermediateSearchResultsViewController.m262"CompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/IntermediateSearchResultsViewController.o LogInTutorial/IntermediateSearchResultsViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler0f9c8bd3afe3b941^16deb1d3afe3b941^---0#0#1#-19%DVTDocumentLocation2@99"file:///Users/christophergu/Development/LIT/LogInTutorial/IntermediateSearchResultsViewController.m0000000000000000^3837"CompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/IntermediateSearchResultsViewController.o LogInTutorial/IntermediateSearchResultsViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/christophergu/Development/LIT    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode 5.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode\ 5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/christophergu/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode\ 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-generated-files.hmap -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-own-target-headers.hmap -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-all-target-headers.hmap -iquote /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-project-headers.hmap -I/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode\ 5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/DerivedSources/i386 -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/DerivedSources -F/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator -F/Users/christophergu/Development/LIT -include /Users/christophergu/Development/LIT/Build/Intermediates/PrecompiledHeaders/LiveIt-Prefix-cdkiqzeycgsbzudshwqioelrlnpa/LiveIt-Prefix.pch -MMD -MT dependencies -MF /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/IntermediateSearchResultsViewController.d --serialize-diagnostics /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/IntermediateSearchResultsViewController.dia -c /Users/christophergu/Development/LIT/LogInTutorial/IntermediateSearchResultsViewController.m -o /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/IntermediateSearchResultsViewController.o36"BB24C8DF-0D53-4E11-8D7D-475ABF69D8A3-
-bF07C7664-0909-4305-9A6C-7CDB214D84C5
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"Compile /Users/christophergu/Development/LIT/LogInTutorial/IntermediateSearchResultsViewController.m262"CompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/IntermediateSearchResultsViewController.o LogInTutorial/IntermediateSearchResultsViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler9450ee98e6e4b941^d68f4d99e6e4b941^---0#0#1#-19%DVTDocumentLocation2@99"file:///Users/christophergu/Development/LIT/LogInTutorial/IntermediateSearchResultsViewController.m0000000000000000^3837"CompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/IntermediateSearchResultsViewController.o LogInTutorial/IntermediateSearchResultsViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/christophergu/Development/LIT    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode 5.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode\ 5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/christophergu/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode\ 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-generated-files.hmap -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-own-target-headers.hmap -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-all-target-headers.hmap -iquote /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-project-headers.hmap -I/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode\ 5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/DerivedSources/i386 -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/DerivedSources -F/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator -F/Users/christophergu/Development/LIT -include /Users/christophergu/Development/LIT/Build/Intermediates/PrecompiledHeaders/LiveIt-Prefix-cdkiqzeycgsbzudshwqioelrlnpa/LiveIt-Prefix.pch -MMD -MT dependencies -MF /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/IntermediateSearchResultsViewController.d --serialize-diagnostics /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/IntermediateSearchResultsViewController.dia -c /Users/christophergu/Development/LIT/LogInTutorial/IntermediateSearchResultsViewController.m -o /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/IntermediateSearchResultsViewController.o36"58F60B13-EF0F-4740-B6AC-84F571C83BAE-
+b5EE6FF73-A1FC-4E41-9E71-8725647B952C
 
 CCompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/LogInViewController.o /Users/christophergu/Development/LIT/LogInTutorial/LogInViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s434344916.470841
-e434344916.953563
+s434410182.498713
+e434410182.605488
 r1
 xCompileC
 xBuild/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/LogInViewController.o
@@ -4104,8 +4105,8 @@ d/Users/christophergu/Development/LIT/FacebookSDK.framework/Headers/NSError+FBEr
 d/Users/christophergu/Development/LIT/Parse.framework/Headers/PFFacebookUtils.h
 d/Users/christophergu/Development/LIT/LogInTutorial/ProfileViewController.h
 d/Users/christophergu/Development/LIT/LogInTutorial/DYRateView.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compile /Users/christophergu/Development/LIT/LogInTutorial/LogInViewController.m222"CompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/LogInViewController.o LogInTutorial/LogInViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler51a378d493e3b941^7903f4d493e3b941^---0#0#1#-19%DVTDocumentLocation2@79"file:///Users/christophergu/Development/LIT/LogInTutorial/LogInViewController.m0000000000000000^3717"CompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/LogInViewController.o LogInTutorial/LogInViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/christophergu/Development/LIT    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode 5.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode\ 5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/christophergu/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode\ 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-generated-files.hmap -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-own-target-headers.hmap -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-all-target-headers.hmap -iquote /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-project-headers.hmap -I/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode\ 5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/DerivedSources/i386 -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/DerivedSources -F/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator -F/Users/christophergu/Development/LIT -include /Users/christophergu/Development/LIT/Build/Intermediates/PrecompiledHeaders/LiveIt-Prefix-cdkiqzeycgsbzudshwqioelrlnpa/LiveIt-Prefix.pch -MMD -MT dependencies -MF /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/LogInViewController.d --serialize-diagnostics /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/LogInViewController.dia -c /Users/christophergu/Development/LIT/LogInTutorial/LogInViewController.m -o /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/LogInViewController.o36"B7E2F642-7CB7-44FB-A19F-9DBDC41B9A9C-
-b95F3B9BD-F8DE-44BB-82C8-D4C4F99E372F
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compile /Users/christophergu/Development/LIT/LogInTutorial/LogInViewController.m222"CompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/LogInViewController.o LogInTutorial/LogInViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilerafcc7fc692e4b941^b4029bc692e4b941^---0#0#1#-19%DVTDocumentLocation2@79"file:///Users/christophergu/Development/LIT/LogInTutorial/LogInViewController.m0000000000000000^3717"CompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/LogInViewController.o LogInTutorial/LogInViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/christophergu/Development/LIT    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode 5.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode\ 5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/christophergu/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode\ 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-generated-files.hmap -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-own-target-headers.hmap -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-all-target-headers.hmap -iquote /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-project-headers.hmap -I/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode\ 5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/DerivedSources/i386 -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/DerivedSources -F/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator -F/Users/christophergu/Development/LIT -include /Users/christophergu/Development/LIT/Build/Intermediates/PrecompiledHeaders/LiveIt-Prefix-cdkiqzeycgsbzudshwqioelrlnpa/LiveIt-Prefix.pch -MMD -MT dependencies -MF /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/LogInViewController.d --serialize-diagnostics /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/LogInViewController.dia -c /Users/christophergu/Development/LIT/LogInTutorial/LogInViewController.m -o /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/LogInViewController.o36"057BFC4A-43A1-4C57-9B1E-8BF325817E65-
+b78028D9F-AAFF-4457-80A1-F9545B656119
 
 CCompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/PhotoViewController.o /Users/christophergu/Development/LIT/LogInTutorial/PhotoViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s434344917.976604
@@ -4196,8 +4197,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compile
 b95F3B9BD-F8DE-44BB-82C8-D4C4F99E372F
 
 CCompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/ProfileViewController.o /Users/christophergu/Development/LIT/LogInTutorial/ProfileViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s434344917.113396
-e434344917.819530
+s434432821.511559
+e434432821.729933
 r1
 xCompileC
 xBuild/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/ProfileViewController.o
@@ -4288,8 +4289,73 @@ d/Users/christophergu/Development/LIT/LogInTutorial/AddAReviewViewController.h
 d/Users/christophergu/Development/LIT/LogInTutorial/CRTableViewController.h
 d/Users/christophergu/Development/LIT/LogInTutorial/GalleryViewController.h
 d/Users/christophergu/Development/LIT/LogInTutorial/InfoViewController.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Compile /Users/christophergu/Development/LIT/LogInTutorial/ProfileViewController.m226"CompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/ProfileViewController.o LogInTutorial/ProfileViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler0c591dd593e3b941^29ced1d593e3b941^---0#0#1#-19%DVTDocumentLocation2@81"file:///Users/christophergu/Development/LIT/LogInTutorial/ProfileViewController.m0000000000000000^3729"CompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/ProfileViewController.o LogInTutorial/ProfileViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/christophergu/Development/LIT    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode 5.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode\ 5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/christophergu/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode\ 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-generated-files.hmap -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-own-target-headers.hmap -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-all-target-headers.hmap -iquote /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-project-headers.hmap -I/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode\ 5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/DerivedSources/i386 -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/DerivedSources -F/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator -F/Users/christophergu/Development/LIT -include /Users/christophergu/Development/LIT/Build/Intermediates/PrecompiledHeaders/LiveIt-Prefix-cdkiqzeycgsbzudshwqioelrlnpa/LiveIt-Prefix.pch -MMD -MT dependencies -MF /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/ProfileViewController.d --serialize-diagnostics /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/ProfileViewController.dia -c /Users/christophergu/Development/LIT/LogInTutorial/ProfileViewController.m -o /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/ProfileViewController.o36"351EB84D-7A2B-4682-A9F8-D3726CFDB7D5-
-b95F3B9BD-F8DE-44BB-82C8-D4C4F99E372F
+d/Users/christophergu/Development/LIT/LogInTutorial/VideoViewController.h
+d/Users/christophergu/Development/LIT/LogInTutorial/VideoData.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTube.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubeConstants.h
+d/Users/christophergu/Development/LIT/LogInTutorial/Headers/GTLDefines.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubeActivity.h
+d/Users/christophergu/Development/LIT/LogInTutorial/Headers/GTLObject.h
+d/Users/christophergu/Development/LIT/LogInTutorial/Headers/GTLUtilities.h
+d/Users/christophergu/Development/LIT/LogInTutorial/Headers/GTLDateTime.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubeActivityContentDetails.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubeActivityListResponse.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubeActivitySnippet.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubeChannel.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubeChannelContentDetails.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubeChannelListResponse.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubeChannelSnippet.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubeChannelStatistics.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubeChannelTopicDetails.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubeGuideCategory.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubeGuideCategoryListResponse.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubeGuideCategorySnippet.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubePageInfo.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubePlaylist.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubePlaylistItem.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubePlaylistItemContentDetails.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubePlaylistItemListResponse.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubePlaylistItemSnippet.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubePlaylistListResponse.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubePlaylistSnippet.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubePlaylistStatus.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubeResourceId.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubeSearchListResponse.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubeSearchResult.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubeSearchResultSnippet.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubeSubscription.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubeSubscriptionContentDetails.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubeSubscriptionListResponse.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubeSubscriptionSnippet.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubeThumbnail.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubeVideo.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubeVideoCategory.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubeVideoCategoryListResponse.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubeVideoCategorySnippet.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubeVideoContentDetails.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubeVideoListResponse.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubeVideoPlayer.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubeVideoSnippet.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubeVideoStatistics.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubeVideoStatus.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLYouTubeVideoTopicDetails.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLQueryYouTube.h
+d/Users/christophergu/Development/LIT/LogInTutorial/Headers/GTLQuery.h
+d/Users/christophergu/Development/LIT/LogInTutorial/Headers/GTLUploadParameters.h
+d/Users/christophergu/Development/LIT/LogInTutorial/GTLServiceYouTube.h
+d/Users/christophergu/Development/LIT/LogInTutorial/Headers/GTLService.h
+d/Users/christophergu/Development/LIT/LogInTutorial/Headers/GTMHTTPFetcherService.h
+d/Users/christophergu/Development/LIT/LogInTutorial/Headers/GTMHTTPFetcher.h
+d/Users/christophergu/Development/LIT/LogInTutorial/Headers/GTMHTTPFetchHistory.h
+d/Users/christophergu/Development/LIT/LogInTutorial/Headers/GTLBatchQuery.h
+d/Users/christophergu/Development/LIT/LogInTutorial/Headers/GTLBatchResult.h
+d/Users/christophergu/Development/LIT/LogInTutorial/Headers/GTLErrorObject.h
+d/Users/christophergu/Development/LIT/LogInTutorial/Headers/GTLFramework.h
+d/Users/christophergu/Development/LIT/LogInTutorial/Headers/GTLJSONParser.h
+d/Users/christophergu/Development/LIT/LogInTutorial/YouTubeUploadVideo.h
+d/Users/christophergu/Development/LIT/LogInTutorial/VideoPlayViewController.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Compile /Users/christophergu/Development/LIT/LogInTutorial/ProfileViewController.m226"CompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/ProfileViewController.o LogInTutorial/ProfileViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler5d1a8335ebe4b941^87deba35ebe4b941^---0#0#1#-19%DVTDocumentLocation2@81"file:///Users/christophergu/Development/LIT/LogInTutorial/ProfileViewController.m0000000000000000^3729"CompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/ProfileViewController.o LogInTutorial/ProfileViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/christophergu/Development/LIT    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode 5.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode\ 5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/christophergu/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode\ 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-generated-files.hmap -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-own-target-headers.hmap -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-all-target-headers.hmap -iquote /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-project-headers.hmap -I/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode\ 5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/DerivedSources/i386 -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/DerivedSources -F/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator -F/Users/christophergu/Development/LIT -include /Users/christophergu/Development/LIT/Build/Intermediates/PrecompiledHeaders/LiveIt-Prefix-cdkiqzeycgsbzudshwqioelrlnpa/LiveIt-Prefix.pch -MMD -MT dependencies -MF /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/ProfileViewController.d --serialize-diagnostics /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/ProfileViewController.dia -c /Users/christophergu/Development/LIT/LogInTutorial/ProfileViewController.m -o /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/ProfileViewController.o36"20550A7B-894F-4FC3-BD20-4E85B1D63104-
+b72830880-CC83-48E8-B359-1CD6C1D58838
 
 CCompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/PushNoAnimationSegue.o /Users/christophergu/Development/LIT/LogInTutorial/PushNoAnimationSegue.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s434344918.166188
@@ -4329,8 +4395,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compile
 b95F3B9BD-F8DE-44BB-82C8-D4C4F99E372F
 
 CCompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/RootViewController.o /Users/christophergu/Development/LIT/LogInTutorial/RootViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s434344917.633448
-e434344917.780386
+s434409738.750647
+e434409738.860337
 r1
 xCompileC
 xBuild/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/RootViewController.o
@@ -4415,7 +4481,8 @@ d/Users/christophergu/Development/LIT/FacebookSDK.framework/Headers/FBUserSettin
 d/Users/christophergu/Development/LIT/FacebookSDK.framework/Headers/NSError+FBError.h
 d/Users/christophergu/Development/LIT/Parse.framework/Headers/PFFacebookUtils.h
 d/Users/christophergu/Development/LIT/LogInTutorial/DYRateView.h
-o/Users/christophergu/Development/LIT/LogInTutorial/RootViewController.m:29:71: warning: 'UITextAttributeFont' is deprecated: first deprecated in iOS 7.0 - Use NSFontAttributeName [-Wdeprecated-declarations]
+d/Users/christophergu/Development/LIT/LogInTutorial/LogInViewController.h
+o/Users/christophergu/Development/LIT/LogInTutorial/RootViewController.m:30:71: warning: 'UITextAttributeFont' is deprecated: first deprecated in iOS 7.0 - Use NSFontAttributeName [-Wdeprecated-declarations]
 o    [self.navigationController.navigationBar setTitleTextAttributes:@{UITextAttributeFont:[UIFont fontWithName:@"Futura" size:21.0f]}];
 o                                                                      ^
 oIn module 'UIKit' imported from /Users/christophergu/Development/LIT/LogInTutorial/RootViewController.h:9:
@@ -4423,8 +4490,8 @@ o/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform
 oUIKIT_EXTERN NSString *const UITextAttributeFont NS_DEPRECATED_IOS(5_0, 7_0, "Use NSFontAttributeName");
 o                             ^
 o1 warning generated.
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection79"Compile /Users/christophergu/Development/LIT/LogInTutorial/RootViewController.m220"CompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/RootViewController.o LogInTutorial/RootViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler5244a2d593e3b941^86c6c7d593e3b941^-914"/Users/christophergu/Development/LIT/LogInTutorial/RootViewController.m:29:71: warning: 'UITextAttributeFont' is deprecated: first deprecated in iOS 7.0 - Use NSFontAttributeName [-Wdeprecated-declarations]    [self.navigationController.navigationBar setTitleTextAttributes:@{UITextAttributeFont:[UIFont fontWithName:@"Futura" size:21.0f]}];                                                                      ^In module 'UIKit' imported from /Users/christophergu/Development/LIT/LogInTutorial/RootViewController.h:9:/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIStringDrawing.h:21:30: note: 'UITextAttributeFont' declared hereUIKIT_EXTERN NSString *const UITextAttributeFont NS_DEPRECATED_IOS(5_0, 7_0, "Use NSFontAttributeName");                             ^1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@90"'UITextAttributeFont' is deprecated: first deprecated in iOS 7.0 - Use NSFontAttributeName-434344917#18446744073709551615#0#1(2@35"'UITextAttributeFont' declared here-434344917#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@194"file:///Applications/Xcode%205.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIStringDrawing.h0000000000000000^20#29#20#29#728#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@78"file:///Users/christophergu/Development/LIT/LogInTutorial/RootViewController.m0000000000000000^28#70#28#70#939#0#12"Deprecations--0#0#1#-19%DVTDocumentLocation4@78"file:///Users/christophergu/Development/LIT/LogInTutorial/RootViewController.m0000000000000000^3711"CompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/RootViewController.o LogInTutorial/RootViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/christophergu/Development/LIT    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode 5.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode\ 5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/christophergu/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode\ 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-generated-files.hmap -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-own-target-headers.hmap -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-all-target-headers.hmap -iquote /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-project-headers.hmap -I/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode\ 5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/DerivedSources/i386 -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/DerivedSources -F/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator -F/Users/christophergu/Development/LIT -include /Users/christophergu/Development/LIT/Build/Intermediates/PrecompiledHeaders/LiveIt-Prefix-cdkiqzeycgsbzudshwqioelrlnpa/LiveIt-Prefix.pch -MMD -MT dependencies -MF /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/RootViewController.d --serialize-diagnostics /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/RootViewController.dia -c /Users/christophergu/Development/LIT/LogInTutorial/RootViewController.m -o /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/RootViewController.o36"B1EC1F6A-6BB9-4A16-BA90-DC6383CA4A8C-
-b95F3B9BD-F8DE-44BB-82C8-D4C4F99E372F
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection79"Compile /Users/christophergu/Development/LIT/LogInTutorial/RootViewController.m220"CompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/RootViewController.o LogInTutorial/RootViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler7252c00a91e4b941^e63fdc0a91e4b941^-914"/Users/christophergu/Development/LIT/LogInTutorial/RootViewController.m:30:71: warning: 'UITextAttributeFont' is deprecated: first deprecated in iOS 7.0 - Use NSFontAttributeName [-Wdeprecated-declarations]    [self.navigationController.navigationBar setTitleTextAttributes:@{UITextAttributeFont:[UIFont fontWithName:@"Futura" size:21.0f]}];                                                                      ^In module 'UIKit' imported from /Users/christophergu/Development/LIT/LogInTutorial/RootViewController.h:9:/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIStringDrawing.h:21:30: note: 'UITextAttributeFont' declared hereUIKIT_EXTERN NSString *const UITextAttributeFont NS_DEPRECATED_IOS(5_0, 7_0, "Use NSFontAttributeName");                             ^1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@90"'UITextAttributeFont' is deprecated: first deprecated in iOS 7.0 - Use NSFontAttributeName-434409738#18446744073709551615#0#1(2@35"'UITextAttributeFont' declared here-434409738#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@194"file:///Applications/Xcode%205.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIStringDrawing.h0000000000000000^20#29#20#29#728#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@78"file:///Users/christophergu/Development/LIT/LogInTutorial/RootViewController.m0000000000000000^29#70#29#70#971#0#12"Deprecations--0#0#1#-19%DVTDocumentLocation4@78"file:///Users/christophergu/Development/LIT/LogInTutorial/RootViewController.m0000000000000000^3711"CompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/RootViewController.o LogInTutorial/RootViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/christophergu/Development/LIT    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode 5.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode\ 5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/christophergu/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode\ 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-generated-files.hmap -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-own-target-headers.hmap -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-all-target-headers.hmap -iquote /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-project-headers.hmap -I/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode\ 5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/DerivedSources/i386 -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/DerivedSources -F/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator -F/Users/christophergu/Development/LIT -include /Users/christophergu/Development/LIT/Build/Intermediates/PrecompiledHeaders/LiveIt-Prefix-cdkiqzeycgsbzudshwqioelrlnpa/LiveIt-Prefix.pch -MMD -MT dependencies -MF /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/RootViewController.d --serialize-diagnostics /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/RootViewController.dia -c /Users/christophergu/Development/LIT/LogInTutorial/RootViewController.m -o /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/RootViewController.o36"E464CBA3-3A49-4345-859E-E66D68958A7A-
+b33AA8DE9-75EA-4083-9C87-9BE43E5D1E18
 
 CCompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/SearchResultsTableViewCell.o /Users/christophergu/Development/LIT/LogInTutorial/SearchResultsTableViewCell.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s434344917.821917
@@ -4443,8 +4510,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Compile
 b95F3B9BD-F8DE-44BB-82C8-D4C4F99E372F
 
 CCompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/SearchResultsViewController.o /Users/christophergu/Development/LIT/LogInTutorial/SearchResultsViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s434389505.148687
-e434389505.537846
+s434437076.431303
+e434437076.585761
 r1
 xCompileC
 xBuild/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/SearchResultsViewController.o
@@ -4530,8 +4597,8 @@ d/Users/christophergu/Development/LIT/FacebookSDK.framework/Headers/FBUserSettin
 d/Users/christophergu/Development/LIT/FacebookSDK.framework/Headers/NSError+FBError.h
 d/Users/christophergu/Development/LIT/Parse.framework/Headers/PFFacebookUtils.h
 d/Users/christophergu/Development/LIT/LogInTutorial/DYRateView.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection88"Compile /Users/christophergu/Development/LIT/LogInTutorial/SearchResultsViewController.m238"CompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/SearchResultsViewController.o LogInTutorial/SearchResultsViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler3334260142e4b941^c8b1890142e4b941^---0#0#1#-19%DVTDocumentLocation2@87"file:///Users/christophergu/Development/LIT/LogInTutorial/SearchResultsViewController.m0000000000000000^3765"CompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/SearchResultsViewController.o LogInTutorial/SearchResultsViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/christophergu/Development/LIT    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode 5.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode\ 5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/christophergu/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode\ 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-generated-files.hmap -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-own-target-headers.hmap -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-all-target-headers.hmap -iquote /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-project-headers.hmap -I/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode\ 5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/DerivedSources/i386 -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/DerivedSources -F/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator -F/Users/christophergu/Development/LIT -include /Users/christophergu/Development/LIT/Build/Intermediates/PrecompiledHeaders/LiveIt-Prefix-cdkiqzeycgsbzudshwqioelrlnpa/LiveIt-Prefix.pch -MMD -MT dependencies -MF /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/SearchResultsViewController.d --serialize-diagnostics /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/SearchResultsViewController.dia -c /Users/christophergu/Development/LIT/LogInTutorial/SearchResultsViewController.m -o /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/SearchResultsViewController.o36"4F3C6322-7F35-49AD-A974-BC3A2CB4AF6B-
-b3DFDFA9A-45F9-4605-8A5A-E34E714F62F0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection88"Compile /Users/christophergu/Development/LIT/LogInTutorial/SearchResultsViewController.m238"CompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/SearchResultsViewController.o LogInTutorial/SearchResultsViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler44896ed4fbe4b941^d3f495d4fbe4b941^---0#0#1#-19%DVTDocumentLocation2@87"file:///Users/christophergu/Development/LIT/LogInTutorial/SearchResultsViewController.m0000000000000000^3765"CompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/SearchResultsViewController.o LogInTutorial/SearchResultsViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/christophergu/Development/LIT    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode 5.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode\ 5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/christophergu/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode\ 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-generated-files.hmap -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-own-target-headers.hmap -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-all-target-headers.hmap -iquote /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-project-headers.hmap -I/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode\ 5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/DerivedSources/i386 -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/DerivedSources -F/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator -F/Users/christophergu/Development/LIT -include /Users/christophergu/Development/LIT/Build/Intermediates/PrecompiledHeaders/LiveIt-Prefix-cdkiqzeycgsbzudshwqioelrlnpa/LiveIt-Prefix.pch -MMD -MT dependencies -MF /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/SearchResultsViewController.d --serialize-diagnostics /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/SearchResultsViewController.dia -c /Users/christophergu/Development/LIT/LogInTutorial/SearchResultsViewController.m -o /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/SearchResultsViewController.o36"DD096B94-81A1-4DAB-AB3D-CCED5CE4C0CA-
+b4925FA11-AE86-44B5-BB9A-6403C7BB6C2E
 
 CCompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/TagsCollectionViewCell.o /Users/christophergu/Development/LIT/LogInTutorial/TagsCollectionViewCell.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s434344916.631271
@@ -4566,8 +4633,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Compile
 b95F3B9BD-F8DE-44BB-82C8-D4C4F99E372F
 
 CCompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/TagsViewController.o /Users/christophergu/Development/LIT/LogInTutorial/TagsViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s434351969.387619
-e434351969.540294
+s434412073.232855
+e434412073.794881
 r1
 xCompileC
 xBuild/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/TagsViewController.o
@@ -4654,8 +4721,8 @@ d/Users/christophergu/Development/LIT/FacebookSDK.framework/Headers/FBUserSettin
 d/Users/christophergu/Development/LIT/FacebookSDK.framework/Headers/NSError+FBError.h
 d/Users/christophergu/Development/LIT/Parse.framework/Headers/PFFacebookUtils.h
 d/Users/christophergu/Development/LIT/LogInTutorial/IntermediateSearchResultsViewController.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection79"Compile /Users/christophergu/Development/LIT/LogInTutorial/TagsViewController.m220"CompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/TagsViewController.o LogInTutorial/TagsViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler18606361afe3b941^6cd18a61afe3b941^---0#0#1#-19%DVTDocumentLocation2@78"file:///Users/christophergu/Development/LIT/LogInTutorial/TagsViewController.m0000000000000000^3711"CompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/TagsViewController.o LogInTutorial/TagsViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/christophergu/Development/LIT    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode 5.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode\ 5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/christophergu/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode\ 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-generated-files.hmap -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-own-target-headers.hmap -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-all-target-headers.hmap -iquote /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-project-headers.hmap -I/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode\ 5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/DerivedSources/i386 -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/DerivedSources -F/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator -F/Users/christophergu/Development/LIT -include /Users/christophergu/Development/LIT/Build/Intermediates/PrecompiledHeaders/LiveIt-Prefix-cdkiqzeycgsbzudshwqioelrlnpa/LiveIt-Prefix.pch -MMD -MT dependencies -MF /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/TagsViewController.d --serialize-diagnostics /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/TagsViewController.dia -c /Users/christophergu/Development/LIT/LogInTutorial/TagsViewController.m -o /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/TagsViewController.o36"30F8D3B6-BD2A-45D0-9F17-4EE3BDD36DC9-
-bB30861F1-FD8F-4A95-B19A-25C5C3CC98DC
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection79"Compile /Users/christophergu/Development/LIT/LogInTutorial/TagsViewController.m220"CompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/TagsViewController.o LogInTutorial/TagsViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler89b23b299ae4b941^c87dcb299ae4b941^---0#0#1#-19%DVTDocumentLocation2@78"file:///Users/christophergu/Development/LIT/LogInTutorial/TagsViewController.m0000000000000000^3711"CompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/TagsViewController.o LogInTutorial/TagsViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/christophergu/Development/LIT    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode 5.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode\ 5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/christophergu/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode\ 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-generated-files.hmap -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-own-target-headers.hmap -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-all-target-headers.hmap -iquote /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-project-headers.hmap -I/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode\ 5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/DerivedSources/i386 -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/DerivedSources -F/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator -F/Users/christophergu/Development/LIT -include /Users/christophergu/Development/LIT/Build/Intermediates/PrecompiledHeaders/LiveIt-Prefix-cdkiqzeycgsbzudshwqioelrlnpa/LiveIt-Prefix.pch -MMD -MT dependencies -MF /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/TagsViewController.d --serialize-diagnostics /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/TagsViewController.dia -c /Users/christophergu/Development/LIT/LogInTutorial/TagsViewController.m -o /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/TagsViewController.o36"C5239608-3AE8-4A7A-B0F2-17B1649C747B-
+bCC7663EB-0260-4A75-94C4-89E200C098F4
 
 CCompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/UploadController.o /Users/christophergu/Development/LIT/LogInTutorial/UploadController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s434344917.872941
@@ -4776,8 +4843,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Compile
 b95F3B9BD-F8DE-44BB-82C8-D4C4F99E372F
 
 CCompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/VideoPlayViewController.o /Users/christophergu/Development/LIT/LogInTutorial/VideoPlayViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s434344917.352663
-e434344917.464922
+s434431640.940480
+e434431641.258405
 r1
 xCompileC
 xBuild/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/VideoPlayViewController.o
@@ -4788,7 +4855,7 @@ xobjective-c
 xcom.apple.compilers.llvm.clang.1_0.compiler
 d/Users/christophergu/Development/LIT/LogInTutorial/VideoPlayViewController.m
 d/Users/christophergu/Development/LIT/LogInTutorial/VideoPlayViewController.h
-o/Users/christophergu/Development/LIT/LogInTutorial/VideoPlayViewController.m:32:31: warning: sending 'VideoPlayViewController *const __strong' to parameter of incompatible type 'id<UIWebViewDelegate>'
+o/Users/christophergu/Development/LIT/LogInTutorial/VideoPlayViewController.m:36:31: warning: sending 'VideoPlayViewController *const __strong' to parameter of incompatible type 'id<UIWebViewDelegate>'
 o    [self.webView setDelegate:self];
 o                              ^~~~
 oIn module 'UIKit' imported from /Users/christophergu/Development/LIT/LogInTutorial/VideoPlayViewController.h:9:
@@ -4796,12 +4863,12 @@ o/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform
 o@property(nonatomic,assign) id<UIWebViewDelegate> delegate;
 o                                                  ^
 o1 warning generated.
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Compile /Users/christophergu/Development/LIT/LogInTutorial/VideoPlayViewController.m230"CompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/VideoPlayViewController.o LogInTutorial/VideoPlayViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilere5645ad593e3b941^65727ad593e3b941^-757"/Users/christophergu/Development/LIT/LogInTutorial/VideoPlayViewController.m:32:31: warning: sending 'VideoPlayViewController *const __strong' to parameter of incompatible type 'id<UIWebViewDelegate>'    [self.webView setDelegate:self];                              ^~~~In module 'UIKit' imported from /Users/christophergu/Development/LIT/LogInTutorial/VideoPlayViewController.h:9:/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIWebView.h:43:51: note: passing argument to parameter 'delegate' here@property(nonatomic,assign) id<UIWebViewDelegate> delegate;                                                  ^1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@107"Sending 'VideoPlayViewController *const __strong' to parameter of incompatible type 'id<UIWebViewDelegate>'-434344917#18446744073709551615#0#1(2@45"Passing argument to parameter 'delegate' here-434344917#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@188"file:///Applications/Xcode%205.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIWebView.h0000000000000000^42#50#42#50#1161#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@83"file:///Users/christophergu/Development/LIT/LogInTutorial/VideoPlayViewController.m0000000000000000^31#30#31#30#1012#0#14"Semantic Issue1(3@83"file:///Users/christophergu/Development/LIT/LogInTutorial/VideoPlayViewController.m0000000000000000^31#30#31#34#1012#0#-0#0#1#-19%DVTDocumentLocation4@83"file:///Users/christophergu/Development/LIT/LogInTutorial/VideoPlayViewController.m0000000000000000^3741"CompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/VideoPlayViewController.o LogInTutorial/VideoPlayViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/christophergu/Development/LIT    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode 5.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode\ 5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/christophergu/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode\ 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-generated-files.hmap -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-own-target-headers.hmap -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-all-target-headers.hmap -iquote /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-project-headers.hmap -I/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode\ 5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/DerivedSources/i386 -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/DerivedSources -F/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator -F/Users/christophergu/Development/LIT -include /Users/christophergu/Development/LIT/Build/Intermediates/PrecompiledHeaders/LiveIt-Prefix-cdkiqzeycgsbzudshwqioelrlnpa/LiveIt-Prefix.pch -MMD -MT dependencies -MF /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/VideoPlayViewController.d --serialize-diagnostics /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/VideoPlayViewController.dia -c /Users/christophergu/Development/LIT/LogInTutorial/VideoPlayViewController.m -o /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/VideoPlayViewController.o36"1DBC8BA2-0DA9-463A-BADD-EC38241F3AB8-
-b95F3B9BD-F8DE-44BB-82C8-D4C4F99E372F
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Compile /Users/christophergu/Development/LIT/LogInTutorial/VideoPlayViewController.m230"CompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/VideoPlayViewController.o LogInTutorial/VideoPlayViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler61e1f098e6e4b941^e23e4299e6e4b941^-757"/Users/christophergu/Development/LIT/LogInTutorial/VideoPlayViewController.m:36:31: warning: sending 'VideoPlayViewController *const __strong' to parameter of incompatible type 'id<UIWebViewDelegate>'    [self.webView setDelegate:self];                              ^~~~In module 'UIKit' imported from /Users/christophergu/Development/LIT/LogInTutorial/VideoPlayViewController.h:9:/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIWebView.h:43:51: note: passing argument to parameter 'delegate' here@property(nonatomic,assign) id<UIWebViewDelegate> delegate;                                                  ^1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@107"Sending 'VideoPlayViewController *const __strong' to parameter of incompatible type 'id<UIWebViewDelegate>'-434431641#18446744073709551615#0#1(2@45"Passing argument to parameter 'delegate' here-434431641#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@188"file:///Applications/Xcode%205.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIWebView.h0000000000000000^42#50#42#50#1161#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@83"file:///Users/christophergu/Development/LIT/LogInTutorial/VideoPlayViewController.m0000000000000000^35#30#35#30#1216#0#14"Semantic Issue1(3@83"file:///Users/christophergu/Development/LIT/LogInTutorial/VideoPlayViewController.m0000000000000000^35#30#35#34#1216#0#-0#0#1#-19%DVTDocumentLocation4@83"file:///Users/christophergu/Development/LIT/LogInTutorial/VideoPlayViewController.m0000000000000000^3741"CompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/VideoPlayViewController.o LogInTutorial/VideoPlayViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/christophergu/Development/LIT    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode 5.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode\ 5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/christophergu/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode\ 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-generated-files.hmap -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-own-target-headers.hmap -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-all-target-headers.hmap -iquote /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-project-headers.hmap -I/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode\ 5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/DerivedSources/i386 -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/DerivedSources -F/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator -F/Users/christophergu/Development/LIT -include /Users/christophergu/Development/LIT/Build/Intermediates/PrecompiledHeaders/LiveIt-Prefix-cdkiqzeycgsbzudshwqioelrlnpa/LiveIt-Prefix.pch -MMD -MT dependencies -MF /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/VideoPlayViewController.d --serialize-diagnostics /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/VideoPlayViewController.dia -c /Users/christophergu/Development/LIT/LogInTutorial/VideoPlayViewController.m -o /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/VideoPlayViewController.o36"B162A535-B65E-4EAA-B347-E8990751DCE9-
+b5EE6FF73-A1FC-4E41-9E71-8725647B952C
 
 CCompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/VideoViewController.o /Users/christophergu/Development/LIT/LogInTutorial/VideoViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s434344918.288806
-e434344918.811241
+s434408014.988170
+e434408015.261270
 r1
 xCompileC
 xBuild/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/VideoViewController.o
@@ -4875,6 +4942,7 @@ d/Users/christophergu/Development/LIT/LogInTutorial/Headers/GTLErrorObject.h
 d/Users/christophergu/Development/LIT/LogInTutorial/Headers/GTLFramework.h
 d/Users/christophergu/Development/LIT/LogInTutorial/Headers/GTLJSONParser.h
 d/Users/christophergu/Development/LIT/LogInTutorial/YouTubeUploadVideo.h
+d/Users/christophergu/Development/LIT/LogInTutorial/VideoPlayViewController.h
 d/Users/christophergu/Development/LIT/Parse.framework/Headers/Parse.h
 d/Users/christophergu/Development/LIT/Parse.framework/Headers/PFACL.h
 d/Users/christophergu/Development/LIT/Parse.framework/Headers/PFAnalytics.h
@@ -4950,12 +5018,15 @@ d/Users/christophergu/Development/LIT/Parse.framework/Headers/PFFacebookUtils.h
 d/Users/christophergu/Development/LIT/LogInTutorial/Utils.h
 d/Users/christophergu/Development/LIT/LogInTutorial/Headers/GTMOAuth2ViewControllerTouch.h
 d/Users/christophergu/Development/LIT/LogInTutorial/Headers/GTMOAuth2Authentication.h
-o/Users/christophergu/Development/LIT/LogInTutorial/VideoViewController.m:174:23: warning: incompatible pointer types initializing 'NSString *__strong' with an expression of type 'CGPathRef' (aka 'const struct CGPath *') [-Wincompatible-pointer-types]
+o/Users/christophergu/Development/LIT/LogInTutorial/VideoViewController.m:185:23: warning: incompatible pointer types initializing 'NSString *__strong' with an expression of type 'CGPathRef' (aka 'const struct CGPath *') [-Wincompatible-pointer-types]
 o            NSString *moviePath = [[info objectForKey:UIImagePickerControllerMediaURL] path];
 o                      ^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-o1 warning generated.
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compile /Users/christophergu/Development/LIT/LogInTutorial/VideoViewController.m222"CompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/VideoViewController.o LogInTutorial/VideoViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilerff094ad693e3b941^ffaecfd693e3b941^-459"/Users/christophergu/Development/LIT/LogInTutorial/VideoViewController.m:174:23: warning: incompatible pointer types initializing 'NSString *__strong' with an expression of type 'CGPathRef' (aka 'const struct CGPath *') [-Wincompatible-pointer-types]            NSString *moviePath = [[info objectForKey:UIImagePickerControllerMediaURL] path];                      ^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@129"Incompatible pointer types initializing 'NSString *__strong' with an expression of type 'CGPathRef' (aka 'const struct CGPath *')-434344918#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@79"file:///Users/christophergu/Development/LIT/LogInTutorial/VideoViewController.m0000000000000000^173#22#173#22#6409#0#14"Semantic Issue1(3@79"file:///Users/christophergu/Development/LIT/LogInTutorial/VideoViewController.m0000000000000000^173#34#173#92#6421#57#-0#0#1#-19%DVTDocumentLocation4@79"file:///Users/christophergu/Development/LIT/LogInTutorial/VideoViewController.m0000000000000000^3717"CompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/VideoViewController.o LogInTutorial/VideoViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/christophergu/Development/LIT    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode 5.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode\ 5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/christophergu/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode\ 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-generated-files.hmap -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-own-target-headers.hmap -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-all-target-headers.hmap -iquote /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-project-headers.hmap -I/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode\ 5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/DerivedSources/i386 -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/DerivedSources -F/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator -F/Users/christophergu/Development/LIT -include /Users/christophergu/Development/LIT/Build/Intermediates/PrecompiledHeaders/LiveIt-Prefix-cdkiqzeycgsbzudshwqioelrlnpa/LiveIt-Prefix.pch -MMD -MT dependencies -MF /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/VideoViewController.d --serialize-diagnostics /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/VideoViewController.dia -c /Users/christophergu/Development/LIT/LogInTutorial/VideoViewController.m -o /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/VideoViewController.o36"A065FBC2-F453-4640-80A3-EDC1D66C6A6A-
-b95F3B9BD-F8DE-44BB-82C8-D4C4F99E372F
+o/Users/christophergu/Development/LIT/LogInTutorial/VideoViewController.m:249:25: warning: incompatible integer to pointer conversion assigning to 'BOOL *' (aka 'signed char *') from 'int' [-Wint-conversion]
+o        vpvc.ownProfile = 1;
+o                        ^ ~
+o2 warnings generated.
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compile /Users/christophergu/Development/LIT/LogInTutorial/VideoViewController.m222"CompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/VideoViewController.o LogInTutorial/VideoViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler4babfd4e8ae4b941^97e2424f8ae4b941^-724"/Users/christophergu/Development/LIT/LogInTutorial/VideoViewController.m:185:23: warning: incompatible pointer types initializing 'NSString *__strong' with an expression of type 'CGPathRef' (aka 'const struct CGPath *') [-Wincompatible-pointer-types]            NSString *moviePath = [[info objectForKey:UIImagePickerControllerMediaURL] path];                      ^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~/Users/christophergu/Development/LIT/LogInTutorial/VideoViewController.m:249:25: warning: incompatible integer to pointer conversion assigning to 'BOOL *' (aka 'signed char *') from 'int' [-Wint-conversion]        vpvc.ownProfile = 1;                        ^ ~2 warnings generated.-0#0#1#-19%DVTDocumentLocation2@79"file:///Users/christophergu/Development/LIT/LogInTutorial/VideoViewController.m0000000000000000^3717"CompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/VideoViewController.o LogInTutorial/VideoViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/christophergu/Development/LIT    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode 5.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode\ 5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/christophergu/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode\ 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-generated-files.hmap -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-own-target-headers.hmap -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-all-target-headers.hmap -iquote /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/LiveIt-project-headers.hmap -I/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode\ 5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/DerivedSources/i386 -I/Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/DerivedSources -F/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator -F/Users/christophergu/Development/LIT -include /Users/christophergu/Development/LIT/Build/Intermediates/PrecompiledHeaders/LiveIt-Prefix-cdkiqzeycgsbzudshwqioelrlnpa/LiveIt-Prefix.pch -MMD -MT dependencies -MF /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/VideoViewController.d --serialize-diagnostics /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/VideoViewController.dia -c /Users/christophergu/Development/LIT/LogInTutorial/VideoViewController.m -o /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/VideoViewController.o36"DD52E09E-C9A7-4EF5-A45A-02F9F3B7AF54-
+b220A2B78-83D4-4BB5-AF49-AD1E89FE0A1C
 
 CCompileC Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/WebViewController.o /Users/christophergu/Development/LIT/LogInTutorial/WebViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s434344916.973867
@@ -5074,14 +5145,13 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection65"Compile
 b95F3B9BD-F8DE-44BB-82C8-D4C4F99E372F
 
 CCompileStoryboard /Users/christophergu/Development/LIT/LogInTutorial/Base.lproj/Main.storyboard
-s434390056.667355
-e434390059.125687
+s434437493.364352
+e434437494.696212
 r1
 xCompileStoryboard
 x/Users/christophergu/Development/LIT/LogInTutorial/Base.lproj/Main.storyboard
-onwi_state: registration failed (1000000)
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection58"CompileStoryboard LogInTutorial/Base.lproj/Main.storyboard58"CompileStoryboard LogInTutorial/Base.lproj/Main.storyboardb11aab2844e4b941^be2d202b44e4b941^-41"nwi_state: registration failed (1000000)-0#0#1#-19%DVTDocumentLocation2@84"file:///Users/christophergu/Development/LIT/LogInTutorial/Base.lproj/Main.storyboard0000000000000000^855"CompileStoryboard LogInTutorial/Base.lproj/Main.storyboard    cd /Users/christophergu/Development/LIT    export IBSC_MINIMUM_COMPATIBILITY_VERSION=7.1    export PATH="/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode 5.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    export XCODE_DEVELOPER_USR_PATH="/Applications/Xcode 5.app/Contents/Developer/usr/bin/.."    /Applications/Xcode\ 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --minimum-deployment-target 7.1 --output-format human-readable-text --compile /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app/Base.lproj/Main.storyboardc /Users/christophergu/Development/LIT/LogInTutorial/Base.lproj/Main.storyboard36"BDB689FB-F47B-4303-A163-5E3862122DA7-
-b0844F804-AF41-4FAA-B879-A4D6F67AD985
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection58"CompileStoryboard LogInTutorial/Base.lproj/Main.storyboard58"CompileStoryboard LogInTutorial/Base.lproj/Main.storyboardaf5a5d75fde4b941^da3cb276fde4b941^---0#0#1#-19%DVTDocumentLocation2@84"file:///Users/christophergu/Development/LIT/LogInTutorial/Base.lproj/Main.storyboard0000000000000000^855"CompileStoryboard LogInTutorial/Base.lproj/Main.storyboard    cd /Users/christophergu/Development/LIT    export IBSC_MINIMUM_COMPATIBILITY_VERSION=7.1    export PATH="/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode 5.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    export XCODE_DEVELOPER_USR_PATH="/Applications/Xcode 5.app/Contents/Developer/usr/bin/.."    /Applications/Xcode\ 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --minimum-deployment-target 7.1 --output-format human-readable-text --compile /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app/Base.lproj/Main.storyboardc /Users/christophergu/Development/LIT/LogInTutorial/Base.lproj/Main.storyboard36"9DFBC252-B8EA-4A55-8BF3-59D2B7E5785A-
+b461E6842-06C7-44A6-89DE-C667EDCEF8DF
 
 CCompileXIB /Users/christophergu/Development/LIT/GTMOAuth2ViewTouch.xib
 s434344919.278674
@@ -5124,18 +5194,18 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection71"Copy Bu
 b95F3B9BD-F8DE-44BB-82C8-D4C4F99E372F
 
 CGenerateDSYMFile /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app.dSYM /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app/LiveIt
-s434389510.360057
-e434389510.559454
+s434437079.318797
+e434437079.496889
 r1
 xGenerateDSYMFile
 x/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app.dSYM
 x/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app/LiveIt
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"Generate /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app.dSYM124"GenerateDSYMFile Build/Products/Debug-iphonesimulator/LiveIt.app.dSYM Build/Products/Debug-iphonesimulator/LiveIt.app/LiveIt4c385c0642e4b941^9f398f0642e4b941^---0#0#1#-19%DVTDocumentLocation2@97"file:///Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app.dSYM/0000000000000000^656"GenerateDSYMFile Build/Products/Debug-iphonesimulator/LiveIt.app.dSYM Build/Products/Debug-iphonesimulator/LiveIt.app/LiveIt    cd /Users/christophergu/Development/LIT    export PATH="/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode 5.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode\ 5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app/LiveIt -o /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app.dSYM36"1D3321F3-942B-4127-949C-FC757626A4FA-
-b3DFDFA9A-45F9-4605-8A5A-E34E714F62F0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"Generate /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app.dSYM124"GenerateDSYMFile Build/Products/Debug-iphonesimulator/LiveIt.app.dSYM Build/Products/Debug-iphonesimulator/LiveIt.app/LiveIt69ac51d7fbe4b941^b5347fd7fbe4b941^---0#0#1#-19%DVTDocumentLocation2@97"file:///Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app.dSYM/0000000000000000^656"GenerateDSYMFile Build/Products/Debug-iphonesimulator/LiveIt.app.dSYM Build/Products/Debug-iphonesimulator/LiveIt.app/LiveIt    cd /Users/christophergu/Development/LIT    export PATH="/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode 5.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode\ 5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app/LiveIt -o /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app.dSYM36"CCAE9AF5-FF4B-4CE4-B863-B7A1E1A00B7A-
+b4925FA11-AE86-44B5-BB9A-6403C7BB6C2E
 
 CLd /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app/LiveIt normal i386
-s434389505.547955
-e434389506.042015
+s434437076.588917
+e434437076.840800
 r1
 xLd
 x/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app/LiveIt
@@ -5256,9 +5326,9 @@ d/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform
 d/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/OpenGLES.framework/OpenGLES
 d/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreImage.framework/CoreImage
 d/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreText.framework/CoreText
-d/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libc++abi.dylib
-d/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/PrivateFrameworks/UIFoundation.framework/UIFoundation
 d/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/AVFoundation.framework/libAVFAudio.dylib
+d/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/PrivateFrameworks/UIFoundation.framework/UIFoundation
+d/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libc++abi.dylib
 d/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_override.dylib
 d/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcache_sim.dylib
 d/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcommonCrypto_sim.dylib
@@ -5307,18 +5377,18 @@ d/usr/lib/system/libsystem_pthread.dylib
 d/usr/lib/system/libsystem_sandbox.dylib
 d/usr/lib/system/libunc.dylib
 d/usr/lib/system/libunwind.dylib
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection96"Link /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app/LiveIt69"Ld Build/Products/Debug-iphonesimulator/LiveIt.app/LiveIt normal i386fb598c0142e4b941^65c30a0242e4b941^---0#0#1#--1966"Ld Build/Products/Debug-iphonesimulator/LiveIt.app/LiveIt normal i386    cd /Users/christophergu/Development/LIT    export IPHONEOS_DEPLOYMENT_TARGET=7.1    export PATH="/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode 5.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode\ 5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode\ 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -L/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator -L/Users/christophergu/Development/LIT -F/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator -F/Users/christophergu/Development/LIT -filelist /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/LiveIt.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -ObjC -all_load -fobjc-arc -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=7.1 -lGTLTouchStaticLib -lc++ -licucore -framework MobileCoreServices -framework MediaPlayer -framework CoreMedia -framework AVFoundation -framework AssetsLibrary -framework AddressBook -lGTLTouchStaticLib -framework MapKit -framework Social -lsqlite3 -framework Accounts -framework AdSupport -framework SystemConfiguration -framework StoreKit -framework Security -framework QuartzCore -lz -framework CoreLocation -framework CFNetwork -framework AudioToolbox -framework CoreGraphics -framework UIKit -framework Parse -framework Foundation -framework FacebookSDK -Xlinker -dependency_info -Xlinker /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/LiveIt_dependency_info.dat -o /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app/LiveIt36"2F9D7C85-A22D-4AE4-8263-80727C81761D-
-b3DFDFA9A-45F9-4605-8A5A-E34E714F62F0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection96"Link /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app/LiveIt69"Ld Build/Products/Debug-iphonesimulator/LiveIt.app/LiveIt normal i3860fd396d4fbe4b941^8140d7d4fbe4b941^---0#0#1#--1966"Ld Build/Products/Debug-iphonesimulator/LiveIt.app/LiveIt normal i386    cd /Users/christophergu/Development/LIT    export IPHONEOS_DEPLOYMENT_TARGET=7.1    export PATH="/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode 5.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode\ 5.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode\ 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -L/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator -L/Users/christophergu/Development/LIT -F/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator -F/Users/christophergu/Development/LIT -filelist /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/LiveIt.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -ObjC -all_load -fobjc-arc -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=7.1 -lGTLTouchStaticLib -lc++ -licucore -framework MobileCoreServices -framework MediaPlayer -framework CoreMedia -framework AVFoundation -framework AssetsLibrary -framework AddressBook -lGTLTouchStaticLib -framework MapKit -framework Social -lsqlite3 -framework Accounts -framework AdSupport -framework SystemConfiguration -framework StoreKit -framework Security -framework QuartzCore -lz -framework CoreLocation -framework CFNetwork -framework AudioToolbox -framework CoreGraphics -framework UIKit -framework Parse -framework Foundation -framework FacebookSDK -Xlinker -dependency_info -Xlinker /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/Objects-normal/i386/LiveIt_dependency_info.dat -o /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app/LiveIt36"2B957462-1743-4740-99AC-D940651980CD-
+b4925FA11-AE86-44B5-BB9A-6403C7BB6C2E
 
 CProcessInfoPlistFile /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app/Info.plist /Users/christophergu/Development/LIT/LogInTutorial/LiveIt-Info.plist
-s434344921.987364
-e434344921.988956
+s434408590.525066
+e434408590.526722
 r1
 xProcessInfoPlistFile
 x/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app/Info.plist
 x/Users/christophergu/Development/LIT/LogInTutorial/LiveIt-Info.plist
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Process /Users/christophergu/Development/LIT/LogInTutorial/LiveIt-Info.plist111"ProcessInfoPlistFile Build/Products/Debug-iphonesimulator/LiveIt.app/Info.plist LogInTutorial/LiveIt-Info.plist7bdbfcd993e3b941^5a2cfdd993e3b941^---0#0#1#-19%DVTDocumentLocation2@75"file:///Users/christophergu/Development/LIT/LogInTutorial/LiveIt-Info.plist0000000000000000^881"ProcessInfoPlistFile Build/Products/Debug-iphonesimulator/LiveIt.app/Info.plist LogInTutorial/LiveIt-Info.plist    cd /Users/christophergu/Development/LIT    export PATH="/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode 5.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility /Users/christophergu/Development/LIT/LogInTutorial/LiveIt-Info.plist -genpkginfo /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -additionalcontentfile /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/assetcatalog_generated_info.plist -o /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app/Info.plist36"84D6EF9E-FE56-4849-AFF3-BA30DD5382DB-
-b95F3B9BD-F8DE-44BB-82C8-D4C4F99E372F
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Process /Users/christophergu/Development/LIT/LogInTutorial/LiveIt-Info.plist111"ProcessInfoPlistFile Build/Products/Debug-iphonesimulator/LiveIt.app/Info.plist LogInTutorial/LiveIt-Info.plistd174868e8ce4b941^26e1868e8ce4b941^---0#0#1#-19%DVTDocumentLocation2@75"file:///Users/christophergu/Development/LIT/LogInTutorial/LiveIt-Info.plist0000000000000000^881"ProcessInfoPlistFile Build/Products/Debug-iphonesimulator/LiveIt.app/Info.plist LogInTutorial/LiveIt-Info.plist    cd /Users/christophergu/Development/LIT    export PATH="/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode 5.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility /Users/christophergu/Development/LIT/LogInTutorial/LiveIt-Info.plist -genpkginfo /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -additionalcontentfile /Users/christophergu/Development/LIT/Build/Intermediates/LiveIt.build/Debug-iphonesimulator/LiveIt.build/assetcatalog_generated_info.plist -o /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app/Info.plist36"E32A0124-515F-4E88-AE0F-ECBC892629B8-
+b306E4D70-1C74-4D59-AD59-E19F7F2CA9E9
 
 CProcessPCH /Users/christophergu/Development/LIT/Build/Intermediates/PrecompiledHeaders/LiveIt-Prefix-cdkiqzeycgsbzudshwqioelrlnpa/LiveIt-Prefix.pch.pch LogInTutorial/LiveIt-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s434344915.206786
@@ -5357,11 +5427,11 @@ CProcessPCH /Users/christophergu/Library/Developer/Xcode/DerivedData/LiveIt-frzi
 r0
 
 CTouch /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app
-s434390059.126618
-e434390059.130777
+s434437494.697284
+e434437494.701487
 r1
 xTouch
 x/Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection90"Touch /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app53"Touch Build/Products/Debug-iphonesimulator/LiveIt.appef73202b44e4b941^637b212b44e4b941^---0#0#1#--404"Touch Build/Products/Debug-iphonesimulator/LiveIt.app    cd /Users/christophergu/Development/LIT    export PATH="/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode 5.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app36"6B01F04E-78C5-4E3B-AE5B-2DE998F47F82-
-b0844F804-AF41-4FAA-B879-A4D6F67AD985
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection90"Touch /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app53"Touch Build/Products/Debug-iphonesimulator/LiveIt.app7e8fb276fde4b941^a395b376fde4b941^---0#0#1#--404"Touch Build/Products/Debug-iphonesimulator/LiveIt.app    cd /Users/christophergu/Development/LIT    export PATH="/Applications/Xcode 5.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode 5.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/christophergu/Development/LIT/Build/Products/Debug-iphonesimulator/LiveIt.app36"5EC69CAB-8771-45DA-9F9B-3E92761E4B06-
+b461E6842-06C7-44A6-89DE-C667EDCEF8DF
 

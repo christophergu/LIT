@@ -74,4 +74,5 @@ dependencies: \
   /Users/christophergu/Development/LIT/FacebookSDK.framework/Headers/FBUserSettingsViewController.h \
   /Users/christophergu/Development/LIT/FacebookSDK.framework/Headers/NSError+FBError.h \
   /Users/christophergu/Development/LIT/Parse.framework/Headers/PFFacebookUtils.h \
-  /Users/christophergu/Development/LIT/LogInTutorial/DYRateView.h
+  /Users/christophergu/Development/LIT/LogInTutorial/DYRateView.h \
+  /Users/christophergu/Development/LIT/LogInTutorial/LogInViewController.h

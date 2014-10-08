@@ -114,6 +114,11 @@
     return cell;
 }
 
+- (IBAction)unwindToInitialSearch:(UIStoryboardSegue *)unwindSegue
+{
+    
+}
+
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableViewCell *)senderCell
 {
     if ([segue.identifier isEqualToString:@"IntermediateSearchSegue"])

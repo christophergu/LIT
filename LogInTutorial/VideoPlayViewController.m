@@ -18,6 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+//    self.navigationController.navigationItem.backBarButtonItem.enabled = NO;
+//
+//    [self performSelector:@selector(enableBackButton) withObject:nil afterDelay:1.5];
+
     NSString *videoIdentifierString = self.videoIdentifier;
     
     NSError *error = nil;
@@ -25,8 +29,6 @@
     NSString *embedHTML =
     [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
     NSString *embedHTMLWithId = [NSString stringWithFormat:embedHTML, videoIdentifierString];
-    
-    NSLog(@"%@",embedHTMLWithId);
     
     self.webView = [[UIWebView alloc]
                     initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
@@ -36,6 +38,16 @@
     self.webView.mediaPlaybackRequiresUserAction = NO;
     
     [self.view addSubview:_webView];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+
+}
+
+- (void) enableBackButton
+{
+    self.navigationController.navigationItem.backBarButtonItem.enabled = YES;
 }
 
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation

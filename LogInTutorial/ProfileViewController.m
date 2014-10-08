@@ -59,7 +59,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *tagsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *tagsListingLabel;
 @property CGFloat containerViewHeight;
-//@property (weak, nonatomic) IBOutlet UITextView *achievementsTextView;
+
+@property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *expertiseLabel;
+@property (weak, nonatomic) IBOutlet UILabel *locationLabel;
+
 
 @end
 
@@ -94,10 +98,21 @@
     {
         // if this is not your profile, but someone you searched
         
+        // set up new search bar button
+        UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
+        button.titleLabel.numberOfLines = 0;
+        button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
+        button.titleLabel.font = [UIFont fontWithName:@"Futura" size:11.0];
+        [button setTitleColor:[UIColor colorWithRed:247/255.0 green:102/255.0 blue:38/255.0 alpha:1.0] forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(unwindToInitialSearch) forControlEvents:UIControlEventTouchUpInside];
+        [button setTitle:NSLocalizedString(@"NEW\nSEARCH", nil) forState:UIControlStateNormal];
+        [button sizeToFit];
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+        
+        
         [self.logoutBarButtonItem setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor clearColor]} forState:UIControlStateNormal];
         self.logoutBarButtonItem.enabled = NO;
         self.aboutMeTextView.editable = NO;
-//        self.achievementsTextView.editable = NO;
         self.usernameTextField.borderStyle = UITextBorderStyleNone;
         self.usernameTextField.enabled = NO;
         self.expertiseTextField.borderStyle = UITextBorderStyleNone;
@@ -109,6 +124,7 @@
         self.websiteTextField.borderStyle = UITextBorderStyleNone;
         self.websiteTextField.enabled = NO;
         self.saveChangesButton.alpha = 0.0;
+
 
         
         if (self.selectedUserProfile[@"avatar"])
@@ -131,8 +147,12 @@
             }];
         }
         
-        self.usernameTextField.text = self.selectedUserProfile.username;
-        self.expertiseTextField.text = self.selectedUserProfile[@"expertise"];
+        self.usernameTextField.alpha = 0;
+        self.expertiseTextField.alpha = 0;
+        self.locationTextField.alpha = 0;
+        
+        self.usernameLabel.text = self.selectedUserProfile.username;
+        self.expertiseLabel.text = self.selectedUserProfile[@"expertise"];
         
         if ([self.selectedUserProfile[@"aboutMe"] isEqualToString:@"About Me"])
         {
@@ -147,7 +167,7 @@
         
         if (self.selectedUserProfile[@"city"] && self.selectedUserProfile[@"state"])
         {
-            self.locationTextField.text = [NSString stringWithFormat:@"%@, %@",self.selectedUserProfile[@"city"],self.selectedUserProfile[@"state"]];
+            self.locationLabel.text = [NSString stringWithFormat:@"%@, %@",self.selectedUserProfile[@"city"],self.selectedUserProfile[@"state"]];
         }
         else
         {
@@ -182,6 +202,11 @@
     else
     {
         // this is if it's your own profile
+        
+        self.usernameLabel.alpha = 0;
+        self.expertiseLabel.alpha = 0;
+        self.locationLabel.alpha = 0;
+        
         self.currentUser = [PFUser currentUser];
 
         if (self.currentUser[@"avatar"])
@@ -271,6 +296,11 @@
 //    {
 //        self.addAReviewButton.alpha = 1;
 //    }
+}
+
+-(void) unwindToInitialSearch
+{
+    [self performSegueWithIdentifier:@"UnwindToInitialSearchSegue" sender:self];
 }
 
  -(void)viewWillAppear:(BOOL)animated

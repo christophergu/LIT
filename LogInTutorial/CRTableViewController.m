@@ -38,16 +38,20 @@
 //          [UIFont fontWithName:@"Futura" size:21],
 //          NSFontAttributeName, nil]];
         
-        UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Done"
-                                                                        style:UIBarButtonSystemItemDone target:self action:@selector(done:)];
         
-        [rightButton setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-                                                                [UIFont fontWithName:@"Futura" size:25.0], NSFontAttributeName,
-                                                                [UIColor orangeColor], NSForegroundColorAttributeName,
-                                                                nil]
-                                                      forState:UIControlStateNormal];
+        UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
+        button.titleLabel.numberOfLines = 0;
+        button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
+        button.titleLabel.font = [UIFont fontWithName:@"Futura" size:22.0];
+        [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        button.backgroundColor = [UIColor colorWithRed:247/255.0 green:102/255.0 blue:38/255.0 alpha:1.0];
+        [button addTarget:self action:@selector(done:) forControlEvents:UIControlEventTouchUpInside];
+        button.layer.cornerRadius = 5.0;
+        [button setTitle:NSLocalizedString(@"Done", nil) forState:UIControlStateNormal];
+        [button sizeToFit];
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+
         
-        self.navigationItem.rightBarButtonItem = rightButton;
         
         dataSource = [[NSArray alloc] initWithObjects:
                       @"ACADEMICS",
@@ -71,6 +75,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+//    self.navigationController.navigationBar.backgroundColor = [UIColor blackColor];
+//    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
+
+    [self.navigationController.navigationBar setTitleTextAttributes:
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      [UIFont fontWithName:@"Futura" size:21],
+      NSFontAttributeName, nil]];
 }
 
 - (void)viewDidUnload
